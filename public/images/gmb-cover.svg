@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+    <defs>
+        <!-- Blue Gradient -->
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e3a8a" />
+            <stop offset="100%" stop-color="#1173d4" />
+        </linearGradient>
+        <linearGradient id="highlight" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f59e0b" />
+            <stop offset="100%" stop-color="#ea580c" />
+        </linearGradient>
+    </defs>
+    
+    <rect width="1200" height="675" fill="url(#bgGrad)"/>
+    
+    <!-- Decorative faint abstract wave/curves -->
+    <path d="M0,450 Q300,550 600,450 T1200,450 L1200,675 L0,675 Z" fill="#ffffff" opacity="0.05"/>
+    <path d="M0,550 Q300,650 600,550 T1200,550 L1200,675 L0,675 Z" fill="#ffffff" opacity="0.08"/>
+
+    <g transform="translate(600, 210) scale(0.65) translate(-400, -400)">
+        <g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M 230 380 L 400 210 L 570 380" stroke-width="36"/>
+            <path d="M 290 315 L 290 510" stroke-width="36"/>
+            <path d="M 510 315 L 510 510" stroke-width="36"/>
+            <path d="M 260 510 L 540 510" stroke-width="36"/>
+        </g>
+        <g transform="translate(325, 310) scale(0.28)" fill="#ffffff">
+            <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.6 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/>
+        </g>
+    </g>
+
+    <text x="600" y="370" font-family="'Inter', 'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="64" fill="#ffffff" text-anchor="middle" letter-spacing="1">Сантехник Алматы</text>
+    <text x="600" y="460" font-family="'Inter', 'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="82" fill="#ffffff" text-anchor="middle" letter-spacing="2">Манас Мастер</text>
+    
+    <!-- Call to action pill -->
+    <g transform="translate(600, 560)">
+        <rect x="-275" y="-45" width="550" height="90" rx="45" fill="url(#highlight)"/>
+        <g transform="translate(-235, -18) scale(1.5)" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </g>
+        <text x="25" y="14" font-family="'Inter', 'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="40" fill="#ffffff" text-anchor="middle" letter-spacing="2">+7 (705) 553-53-32</text>
+    </g>
+
+    <!-- Top Left Badge -->
+    <g transform="translate(40, 40)">
+        <rect width="250" height="40" rx="10" fill="#ffffff" opacity="0.2"/>
+        <text x="125" y="26" font-family="'Inter', 'Montserrat', sans-serif" font-weight="700" font-size="18" fill="#ffffff" text-anchor="middle">Работаем 24/7</text>
+    </g>
+
+    <!-- Top Right Badge -->
+    <g transform="translate(860, 40)">
+        <rect width="300" height="40" rx="10" fill="#ffffff" opacity="0.2"/>
+        <text x="150" y="26" font-family="'Inter', 'Montserrat', sans-serif" font-weight="700" font-size="18" fill="#ffffff" text-anchor="middle">Выезд за 30 минут</text>
+    </g>
+</svg>
