@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import { trackConversion } from "../utils/googleAds";
 
 const Hero = () => {
   return (
@@ -33,6 +34,7 @@ const Hero = () => {
 
           <a
             href="tel:+77055535332"
+            onClick={trackConversion}
             className="inline-flex items-center gap-3 bg-gradient-to-r from-[#1173D4] to-[#13B6EC] hover:from-[#0d5ca8] hover:to-[#0f9bc9] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 shadow-[0_8px_30px_rgba(17,115,212,0.4)] hover:shadow-[0_8px_30px_rgba(17,115,212,0.6)] animate-pulse"
             style={{ animationDuration: '3s' }}
           >

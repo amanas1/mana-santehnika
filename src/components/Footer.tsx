@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Clock, MessageCircle, Droplet, ChevronRight } from "lucide-react";
+import { trackConversion } from "../utils/googleAds";
 
 const Footer = () => {
   return (
@@ -76,7 +77,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <div className="flex flex-col gap-3">
-                  <a href="tel:+77055535332" className="flex items-start gap-3 group">
+                  <a href="tel:+77055535332" onClick={trackConversion} className="flex items-start gap-3 group">
                     <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-[#1173D4] transition-colors">
                       <Phone size={14} className="text-[#1173D4] group-hover:text-white transition-colors" />
                     </div>
@@ -84,7 +85,7 @@ const Footer = () => {
                       <div className="text-sm font-bold text-gray-900 group-hover:text-[#1173D4] transition-colors">+7 (705) 553-53-32</div>
                     </div>
                   </a>
-                  <a href="tel:+77074791020" className="flex items-start gap-3 group ml-11">
+                  <a href="tel:+77074791020" onClick={trackConversion} className="flex items-start gap-3 group ml-11">
                     <div>
                       <div className="text-sm font-bold text-gray-900 group-hover:text-[#1173D4] transition-colors">+7 (707) 479-10-20</div>
                     </div>
@@ -93,7 +94,9 @@ const Footer = () => {
                 </div>
               </li>
               <li>
-                <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" 
+                   onClick={trackConversion}
+                   className="flex items-start gap-3 group">
                   <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center shrink-0 group-hover:bg-[#25D366] transition-colors">
                     <MessageCircle size={14} className="text-[#25D366] group-hover:text-white transition-colors" />
                   </div>

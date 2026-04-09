@@ -1,6 +1,7 @@
 import { Phone, Clock, MapPin, Menu, X, ChevronDown, Droplet, Calculator, Calendar, MessageSquare, Map } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { trackConversion } from "../utils/googleAds";
 
 const LogoSVG = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 400" className={className}>
@@ -65,12 +66,12 @@ const Header = () => {
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4">
-              <a href="tel:+77055535332" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <a href="tel:+77055535332" onClick={trackConversion} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <Phone size={16} />
                 +7 (705) 553-53-32
               </a>
               <span className="opacity-50 text-white/50">|</span>
-              <a href="tel:+77074791020" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <a href="tel:+77074791020" onClick={trackConversion} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 +7 (707) 479-10-20
               </a>
             </div>
@@ -165,7 +166,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="hidden lg:block bg-gradient-to-r from-[#1173D4] to-[#13B6EC] text-white px-7 py-2.5 rounded-full font-bold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
+            <button onClick={trackConversion} className="hidden lg:block bg-gradient-to-r from-[#1173D4] to-[#13B6EC] text-white px-7 py-2.5 rounded-full font-bold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
               Вызвать мастера
             </button>
             
@@ -263,23 +264,24 @@ const Header = () => {
           <div className="p-5 border-t border-slate-100 bg-slate-50/80 backdrop-blur-sm relative mt-auto">
             {/* WhatsApp Floating Overlay */}
             <a href="https://wa.me/77074791020" target="_blank" rel="noopener noreferrer" 
+               onClick={trackConversion}
                className="absolute -top-7 right-8 w-14 h-14 bg-[#22c55e] border-4 border-white text-white rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition-transform z-10"
                title="WhatsApp">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.171.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.174.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.548-.68.116-.174.231-.144.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.414-.101.819z"/></svg>
             </a>
 
             <div className="flex flex-col gap-4">
-              <a href="tel:+77055535332" className="bg-[#1173D4] text-white py-3.5 rounded-2xl font-bold text-[16px] flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 active:scale-95 transition-all">
+              <a href="tel:+77055535332" onClick={trackConversion} className="bg-[#1173D4] text-white py-3.5 rounded-2xl font-bold text-[16px] flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 active:scale-95 transition-all">
                 <Phone size={18} />
                 Позвонить мастеру
               </a>
               
               <div className="flex justify-between items-center gap-3">
-                <a href="tel:+77055535332" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-blue-50 text-[13px] font-bold text-[#1173D4] shadow-sm active:bg-blue-50 transition-colors">
+                <a href="tel:+77055535332" onClick={trackConversion} className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-blue-50 text-[13px] font-bold text-[#1173D4] shadow-sm active:bg-blue-50 transition-colors">
                   <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                   705 553-53-32
                 </a>
-                <a href="tel:+77074791020" className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-blue-50 text-[13px] font-bold text-[#1173D4] shadow-sm active:bg-blue-50 transition-colors">
+                <a href="tel:+77074791020" onClick={trackConversion} className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-blue-50 text-[13px] font-bold text-[#1173D4] shadow-sm active:bg-blue-50 transition-colors">
                   <span className="w-2 h-2 rounded-full bg-[#13B6EC] animate-pulse"></span>
                   707 479-10-20
                 </a>
