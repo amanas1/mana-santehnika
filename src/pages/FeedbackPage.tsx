@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SEO from "../components/SEO";
 import { MessageSquare, Phone, Mail, User, MessageCircle } from "lucide-react";
+import { trackConversion } from "../utils/googleAds";
 
 const subjectOptions = [
   "Вопрос",
@@ -21,6 +22,7 @@ const FeedbackPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackConversion();
     const text = `Обратная связь:\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email || "не указан"}\nТема: ${subject}\nСообщение: ${message}`;
     window.open(`https://wa.me/77055535332?text=${encodeURIComponent(text)}`, "_blank");
     setSubmitted(true);
@@ -165,6 +167,7 @@ const FeedbackPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+77055535332"
+                onClick={trackConversion}
                 className="inline-flex items-center justify-center gap-2 bg-[#0095DA] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#0084c0] transition-colors"
               >
                 <Phone size={18} />
@@ -174,6 +177,7 @@ const FeedbackPage = () => {
                 href="https://wa.me/77055535332"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackConversion}
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#1da851] transition-colors"
               >
                 <MessageCircle size={18} />
