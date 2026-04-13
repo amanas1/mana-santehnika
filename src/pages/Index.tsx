@@ -96,6 +96,7 @@ const Index = () => {
                     alt={service.alt} 
                     title={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    loading="lazy"
                   />
                   {index < 4 && (
                     <div className="absolute top-4 left-4">
@@ -190,6 +191,7 @@ const Index = () => {
                   alt="Мастер Манас - профессиональный сантехник с опытом более 10 лет" 
                   title="Опытный сантехник Манас - стаж более 10 лет"
                   className="w-full h-full object-cover" 
+                  loading="lazy"
                 />
               </div>
               <div className="absolute -bottom-6 -left-8 bg-[#f8f9fc] px-8 py-5 rounded-[1.5rem] shadow-xl border border-white hidden md:block z-10">
