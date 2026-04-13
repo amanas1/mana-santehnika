@@ -62,6 +62,10 @@ const ServiceDistrictPage = () => {
           <p className="text-xl text-white/90 max-w-2xl mb-6">
             {service.description}
           </p>
+          <div className="flex items-center gap-2 mb-6 text-white bg-white/10 w-fit px-4 py-2 rounded-lg border border-white/20 backdrop-blur-sm">
+            <MapPin size={18} className="text-amber-400 shrink-0" />
+            <span className="text-sm font-medium">{district.feature}</span>
+          </div>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
               <Clock size={16} /> {service.time}

@@ -86,7 +86,7 @@ const Footer = () => {
                 { name: "Турксибский", id: "turksibskij" }
               ].map((district) => (
                 <li key={district.id}>
-                  <Link to={`/santehnik-${district.id}-rayon`} className="text-gray-600 text-[13px] hover:text-[#1173D4] transition-colors whitespace-nowrap">
+                  <Link to={`/uslugi/vyzov-santehnika/${district.id}`} className="text-gray-600 text-[13px] hover:text-[#1173D4] transition-colors whitespace-nowrap">
                     {district.name}
                   </Link>
                 </li>

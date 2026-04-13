@@ -84,9 +84,9 @@ seoData.services.forEach(service => {
 // Generate District Landing Pages: /santehnik-:districtId-rayon
 seoData.districts.forEach(district => {
   const service = seoData.services.find(s => s.id === 'vyzov-santehnika'); // Use generic service
-  const title = `Сантехник ${district.name} Алматы | Вызов мастера 24/7`;
-  const description = `Профессиональный сантехник в ${district.nameGenitive} Алматы. Срочный выезд за 30 минут, стаж 15 лет. Цены от 3500 тг. Звоните прямо сейчас!`;
-  const url = `${BASE_URL}/santehnik-${district.id}-rayon`;
+    const title = `Сантехник в ${district.nameGenitive} Алматы | Вызов мастера 24/7`;
+    const description = `Профессиональный сантехник в ${district.nameGenitive} Алматы (${district.feature}). Срочный выезд за 30 минут, стаж 15 лет. Цены от 3500 тг.`;
+    const url = `${BASE_URL}/santehnik-${district.id}-rayon`;
   
   let html = template
     .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
