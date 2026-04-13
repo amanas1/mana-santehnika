@@ -17,6 +17,26 @@ const generateSitemap = () => {
     <priority>1.0</priority>
   </url>\n`;
 
+  // Add static pages
+  const staticPages = [
+    '/services',
+    '/prices',
+    '/about',
+    '/contacts',
+    '/blog',
+    '/portfolio',
+    '/reviews'
+  ];
+
+  staticPages.forEach(page => {
+    xml += `  <url>
+    <loc>${BASE_URL}${page}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>\n`;
+  });
+
   // Add all service + district combinations
   seoData.services.forEach(service => {
     seoData.districts.forEach(district => {
