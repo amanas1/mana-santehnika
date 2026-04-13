@@ -26,8 +26,8 @@ const ServiceDistrictPage = () => {
     );
   }
 
-  const title = `${service.title} в ${district.nameGenitive} Алматы | Мастер Манас`;
-  const description = `${service.title} в ${district.nameGenitive} Алматы — ${service.price}. Выезд мастера 24/7 за 30 минут. Гарантия 12 месяцев. ☎ +7 (705) 553-53-32`;
+  const title = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} | Мастер Манас`;
+  const description = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} — ${service.price}. Выезд мастера 24/7 за 30 минут. Гарантия 12 месяцев. ☎ +7 (705) 553-53-32`;
 
   // Get other services for cross-linking
   const otherServices = seoData.services.filter((s) => s.id !== serviceId).slice(0, 4);
@@ -57,7 +57,7 @@ const ServiceDistrictPage = () => {
           </nav>
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-            {service.title} в {district.nameGenitive} Алматы
+            {service.title} в {district.nameGenitive}{district.id !== "almaty" ? " Алматы" : ""}
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mb-6">
             {service.description}
