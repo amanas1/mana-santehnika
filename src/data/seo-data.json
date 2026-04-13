@@ -1,13 +1,13 @@
 {
   "districts": [
-    {"id": "alatauskij", "name": "Алатауский район", "nameGenitive": "Алатауском районе"},
-    {"id": "almalinskij", "name": "Алмалинский район", "nameGenitive": "Алмалинском районе"},
-    {"id": "auezovskij", "name": "Ауэзовский район", "nameGenitive": "Ауэзовском районе"},
-    {"id": "bostandykskij", "name": "Бостандыкский район", "nameGenitive": "Бостандыкском районе"},
-    {"id": "zhetysuskij", "name": "Жетысуский район", "nameGenitive": "Жетысуском районе"},
-    {"id": "medeuskij", "name": "Медеуский район", "nameGenitive": "Медеуском районе"},
-    {"id": "nauryzbajskij", "name": "Наурызбайский район", "nameGenitive": "Наурызбайском районе"},
-    {"id": "turksibskij", "name": "Турксибский район", "nameGenitive": "Турксибском районе"}
+    {"id": "alatauskij", "name": "Алатауский район", "nameGenitive": "Алатауском районе", "feature": "рядом с Алматы Арена и мкр. Атлетик Вилладж", "landmark": "Алматы Арена"},
+    {"id": "almalinskij", "name": "Алмалинский район", "nameGenitive": "Алмалинском районе", "feature": "в центре города, рядом с Арбатом и ЦУМом", "landmark": "Арбат"},
+    {"id": "auezovskij", "name": "Ауэзовский район", "nameGenitive": "Ауэзовском районе", "feature": "в районе мкр. Аксай, Сары-Арка и Family Park", "landmark": "Family Park"},
+    {"id": "bostandykskij", "name": "Бостандыкский район", "nameGenitive": "Бостандыкском районе", "feature": "в районе ТРЦ MEGA Alma-Ata, Esentai и Атакент", "landmark": "MEGA Alma-Ata"},
+    {"id": "zhetysuskij", "name": "Жетысуский район", "nameGenitive": "Жетысуском районе", "feature": "рядом с Саяхатом, Кулагером и рынком Алатау", "landmark": "Саяхат"},
+    {"id": "medeuskij", "name": "Медеуский район", "nameGenitive": "Медеуском районе", "feature": "в районе Dostyk Plaza, мкр. Самал и Кок-Тобе", "landmark": "Dostyk Plaza"},
+    {"id": "nauryzbajskij", "name": "Наурызбайский район", "nameGenitive": "Наурызбайском районе", "feature": "в районе мкр. Калкаман и акимата Наурызбайского района", "landmark": "акимат Наурызбайского района"},
+    {"id": "turksibskij", "name": "Турксибский район", "nameGenitive": "Турксибском районе", "feature": "рядом с Аэропортом и ж/д вокзалом Алматы-1", "landmark": "Аэропорт"}
   ],
   "services": [
     {

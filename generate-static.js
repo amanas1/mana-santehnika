@@ -28,8 +28,8 @@ seoData.services.forEach(service => {
     // Generate Metadata
     const serviceTitle = service.seoTitle || service.title;
     const title = `${serviceTitle} в ${district.name} районе | Мастер Алматы 24/7`;
-    const description = `Срочный ${service.title.toLowerCase()} в ${district.name} районе Алматы. Выезд за 30 мин! Гарантия на работы до 1 года. Звоните ☎ +7 (705) 553-53-32, +7 (707) 479-10-20`;
-    const keywords = `${service.title.toLowerCase()}, ${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()} ${district.name} район, вызов сантехника, ремонт сантехники, услуги сантехника`;
+    const description = `${serviceTitle} в ${district.nameGenitive} Алматы (${district.feature}). Оперативный выезд за 30 минут! Гарантия до 12 месяцев. Работаем в районе ${district.landmark}. ☎ +7 (705) 553-53-32`;
+    const keywords = `${service.title.toLowerCase()}, ${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()} ${district.name} район, ${service.title.toLowerCase()} ${district.landmark}, услуги сантехника`;
     const url = `${BASE_URL}/uslugi/${service.id}/${district.id}`;
 
     // Generate Structured Data
