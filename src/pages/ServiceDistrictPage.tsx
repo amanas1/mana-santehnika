@@ -158,24 +158,6 @@ const ServiceDistrictPage = () => {
               </div>
             </div>
 
-            {/* Other Districts */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold mb-6">{service.title} в других районах</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {seoData.districts
-                  .filter((d) => d.id !== districtId)
-                  .map((d) => (
-                    <Link
-                      key={d.id}
-                    to={`/uslugi/${effectiveServiceId}/${d.id}`}
-                    className="flex items-center gap-2 p-3 bg-gray-50 rounded-xl hover:bg-[#0095DA] hover:text-white text-sm font-medium transition-all"
-                    >
-                      <MapPin size={16} className="shrink-0" />
-                      {d.name}
-                    </Link>
-                  ))}
-              </div>
-            </div>
           </div>
 
           {/* Right Column — Sidebar */}

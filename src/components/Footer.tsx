@@ -38,10 +38,10 @@ const Footer = () => {
             <h4 className="text-gray-900 font-extrabold mb-6 text-lg tracking-tight">Популярные услуги</h4>
             <ul className="space-y-3">
               {[
-                { name: "Вызов сантехника", path: "/uslugi/vyzov-santehnika/medeuskij" },
-                { name: "Установка смесителя", path: "/uslugi/ustanovka-smesitelya/medeuskij" },
-                { name: "Ремонт унитаза", path: "/uslugi/remont-unitaza/medeuskij" },
-                { name: "Ремонт бойлера", path: "/uslugi/remont-boilera/medeuskij" }
+                { name: "Вызов сантехника", path: "/vyzov-santehnika-almaty" },
+                { name: "Установка смесителя", path: "/ustanovka-smesitelya-almaty" },
+                { name: "Ремонт унитаза", path: "/remont-unitaza-almaty" },
+                { name: "Ремонт бойлера", path: "/remont-boilera-almaty" }
               ].map((link) => (
                 <li key={link.name}>
                   <Link to={link.path} className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
@@ -65,29 +65,6 @@ const Footer = () => {
                   <Link to="/blog" className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
                     <ChevronRight size={14} className="text-gray-400 group-hover:text-[#1173D4] transition-colors" />
                     {title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Districts */}
-          <div>
-            <h4 className="text-gray-900 font-extrabold mb-6 text-lg tracking-tight">Районы обслуживания</h4>
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {[
-                { name: "Алатауский", id: "alatauskij" },
-                { name: "Алмалинский", id: "almalinskij" },
-                { name: "Ауэзовский", id: "auezovskij" },
-                { name: "Бостандыкский", id: "bostandykskij" },
-                { name: "Жетысуский", id: "zhetysuskij" },
-                { name: "Медеуский", id: "medeuskij" },
-                { name: "Наурызбайский", id: "nauryzbajskij" },
-                { name: "Турксибский", id: "turksibskij" }
-              ].map((district) => (
-                <li key={district.id}>
-                  <Link to={`/uslugi/vyzov-santehnika/${district.id}`} className="text-gray-600 text-[13px] hover:text-[#1173D4] transition-colors whitespace-nowrap">
-                    {district.name}
                   </Link>
                 </li>
               ))}
