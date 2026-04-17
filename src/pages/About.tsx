@@ -39,8 +39,8 @@ const About = () => {
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
                   src="/images/services/manas-real.jpg" 
-                  alt="Мастер Манас — профессиональный сантехник в Алматы, основатель компании" 
-                  title="Мастер Манас — надёжный сантехник в Алматы с опытом более 10 лет"
+                  alt="Сантехник Манас в Алматы — профессиональный частный мастер" 
+                  title="Сантехник Манас — опыт более 10 лет, гарантия на работу"
                   className="w-full rounded-2xl shadow-lg border border-gray-100 object-cover"
                 />
 
