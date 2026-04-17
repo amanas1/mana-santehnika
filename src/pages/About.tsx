@@ -10,7 +10,7 @@ const About = () => {
         description="Мастер Манас — профессиональный сантехник в Алматы с опытом более 10 лет. Более 1000 выполненных заказов. Гарантия на все работы. Честные цены без скрытых доплат."
         keywords="сантехник алматы, мастер сантехник алматы, профессиональный сантехник, опытный сантехник алматы, надежный сантехник"
         canonical="https://mana.kz/about"
-        ogImage="/images/services/master-working.jpg"
+        ogImage="/images/services/manas-santehnik.jpg"
       />
       
       {/* Hero Section */}
@@ -38,11 +38,11 @@ const About = () => {
                 </p>
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
-                  src="/images/services/master-working.jpg" 
-                alt="Мастер Манас за работой — профессиональный сантехник в Алматы" 
-                title="Мастер Манас: Профессиональный сантехник с 10-летним опытом"
-                className="w-full rounded-2xl shadow-lg border border-gray-100"
-              />
+                  src="/images/services/manas-santehnik.jpg" 
+                  alt="Сантехник Манас — профессиональный сантехник в Алматы с опытом более 10 лет" 
+                  title="Мастер Манас — надёжный сантехник в Алматы, услуги 24/7"
+                  className="w-full rounded-2xl shadow-lg border border-gray-100 object-cover"
+                />
                 </div>
                 <p>
                   Мы начинали как небольшая бригада мастеров, объединенных общими принципами: делать работу на совесть, не навязывать лишние услуги и всегда приезжать вовремя.

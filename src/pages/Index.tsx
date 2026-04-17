@@ -189,9 +189,9 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg">
                 <img 
-                  src="/images/services/master-working.jpg" 
-                  alt="Мастер Манас - профессиональный сантехник с опытом более 10 лет" 
-                  title="Опытный сантехник Манас - стаж более 10 лет"
+                  src="/images/services/manas-santehnik.jpg" 
+                  alt="Сантехник Манас — профессиональный мастер сантехник в Алматы с опытом более 10 лет" 
+                  title="Мастер Манас — надёжный сантехник в Алматы, выезд за 30 минут"
                   className="w-full h-full object-cover" 
                   loading="lazy"
                 />
