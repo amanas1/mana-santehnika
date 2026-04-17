@@ -34,7 +34,7 @@ const Index = () => {
       <section className="relative min-h-[650px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero/master-working-v2.jpg')" }}
+          style={{ backgroundImage: "url('/images/services/master-working.jpg')" }}
           title="Мастер Манас выполняет сантехнические работы"
         >
           <div className="absolute inset-0 bg-gray-900/40" />
@@ -187,7 +187,7 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg">
                 <img 
-                  src="/images/hero/master-manas-v3.jpg" 
+                  src="/images/services/master-working.jpg" 
                   alt="Мастер Манас - профессиональный сантехник с опытом более 10 лет" 
                   title="Опытный сантехник Манас - стаж более 10 лет"
                   className="w-full h-full object-cover" 

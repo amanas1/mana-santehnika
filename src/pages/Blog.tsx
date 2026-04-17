@@ -14,7 +14,7 @@ const Blog = () => {
       excerpt: "Подробный разбор материалов, типов картриджей и производителей смесителей. На что обратить внимание при покупке, чтобы избежать протечек через полгода.",
       date: "01 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/blog/materials.webp",
+      image: "/images/services/smesitel-install.jpg",
       category: "Сантехприборы",
       link: "/blog/article"
     },
@@ -24,7 +24,7 @@ const Blog = () => {
       excerpt: "Пошаговая инструкция при аварии: где перекрыть воду, как минимизировать ущерб и какие первые шаги предпринять, чтобы спасти ремонт и отношения с соседями.",
       date: "25 Февраля 2024",
       author: "Мастер Манас",
-      image: "/images/services/plumbing-repair.webp",
+      image: "/images/services/protechki.jpg",
       category: "Аварийная служба",
       link: "/blog/leak-repair"
     },
@@ -34,7 +34,7 @@ const Blog = () => {
       excerpt: "Главные враги кухонных труб: жир, остатки пищи и кофе. Разбираем эффективные способы профилактики засоров без использования вредной химии.",
       date: "15 Февраля 2024",
       author: "Мастер Манас",
-      image: "/images/services/toilet-repair.webp",
+      image: "/images/services/unitaz-repair.jpg",
       category: "Канализация",
       link: "/blog/clog-removal"
     },
@@ -44,7 +44,7 @@ const Blog = () => {
       excerpt: "Подробная инструкция по замене картриджа в однорычажном смесителе. Какие инструменты нужны и на что обратить внимание при сборке.",
       date: "12 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/services/ustanovka-smesitelya.webp",
+      image: "/images/services/smesitel-repair.jpg",
       category: "Ремонт",
       link: "/blog/faucet-repair"
     },
@@ -54,7 +54,7 @@ const Blog = () => {
       excerpt: "Что делать, если в квартире началось затопление. Как перекрыть стояк, обесточить приборы и минимизировать ущерб до приезда мастера.",
       date: "14 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/services/shower-repair.webp",
+      image: "/images/services/shower-repair.jpg",
       category: "Экстренно",
       link: "/blog/leak-prevention"
     },
@@ -64,7 +64,7 @@ const Blog = () => {
       excerpt: "Разбираем основные причины неисправности систем отопления: воздушные пробки, засоры и поломка запорных вентилей.",
       date: "10 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/services/radiator-repair.webp",
+      image: "/images/services/batarei-repair.jpg",
       category: "Отопление",
       link: "/blog/heating-maintenance"
     },
@@ -74,7 +74,7 @@ const Blog = () => {
       excerpt: "Почему важна правильная высота слива и лазерное выравнивание по уровню. Главные ошибки самостоятельного монтажа техники.",
       date: "08 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/services/mixer-install.webp",
+      image: "/images/services/washer-install.jpg",
       category: "Установка",
       link: "/blog/appliance-installation"
     },
@@ -84,7 +84,7 @@ const Blog = () => {
       excerpt: "Как проверить радиаторы на наличие свищей, зачем нужен кран Маевского и когда пора менять старые чугунные батареи на современные биметаллические.",
       date: "10 Февраля 2024",
       author: "Мастер Манас",
-      image: "/images/services/boiler-repair-custom.webp",
+      image: "/images/services/boiler-repair.jpg",
       category: "Отопление",
       link: "/blog/heating-repair"
     },
@@ -94,7 +94,7 @@ const Blog = () => {
       excerpt: "Разбираем, почему нельзя забывать про транспортировочные болты, как правильно организовать слив и почему важно использовать качественные запорные краны.",
       date: "05 Февраля 2024",
       author: "Мастер Манас",
-      image: "/images/services/dishwasher-install.webp",
+      image: "/images/services/dishwasher-install.jpg",
       category: "Бытовая техника",
       link: "/blog/appliances-install"
     },
@@ -104,7 +104,7 @@ const Blog = () => {
       excerpt: "Обзор аэраторов, экономных леек для душа и двухрежимных бачков. Практические советы, как платить меньше за коммунальные услуги без потери комфорта.",
       date: "15 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/services/toilet-repair-custom.webp",
+      image: "/images/services/filter-install.jpg",
       category: "Советы",
       link: "/blog/water-saving"
     },
@@ -114,7 +114,7 @@ const Blog = () => {
       excerpt: "Разбираем причины шума в водопроводе: от высокого давления до изношенных прокладок. Инструкция по диагностике и решению проблемы.",
       date: "16 Марта 2024",
       author: "Мастер Манас",
-      image: "/images/services/bathtub-install.webp",
+      image: "/images/services/remont-plastikovyh-trub.jpg",
       category: "Диагностика",
       link: "/blog/noisy-pipes"
     }
