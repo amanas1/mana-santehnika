@@ -74,8 +74,8 @@ const ServiceDistrictPage = () => {
             {service.description}
           </p>
           <div className="flex items-center gap-2 mb-6 text-white bg-white/10 w-fit px-4 py-2 rounded-lg border border-white/20 backdrop-blur-sm">
-            <MapPin size={18} className="text-amber-400 shrink-0" />
-            <span className="text-sm font-medium">{district.feature}</span>
+            <CheckCircle size={18} className="text-[#4ADE80] shrink-0" />
+            <span className="text-sm font-medium">Работаем во всех районах города Алматы 24/7</span>
           </div>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
@@ -85,7 +85,7 @@ const ServiceDistrictPage = () => {
               <Shield size={16} /> Гарантия 12 мес.
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
-              <MapPin size={16} /> {district.name}
+              <CheckCircle size={16} /> Без выходных
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ const ServiceDistrictPage = () => {
               <h3 className="text-xl font-bold mb-4">Наши преимущества в {district.nameGenitive}:</h3>
               <ul className="space-y-3">
                 {[
-                  `Быстрый выезд 24/7 в ${district.name} — приедем за 30 минут`,
+                  "Быстрый выезд 24/7 по всему Алматы — приедем за 30 минут",
                   "Гарантия на работы до 12 месяцев",
                   "Честные цены без накруток и скрытых платежей",
                   "Опытные мастера со стажем более 15 лет",
@@ -180,7 +180,7 @@ const ServiceDistrictPage = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-600">
                   <MapPin size={18} className="text-amber-500 shrink-0" />
-                  <span>Выезд по {district.nameGenitive}</span>
+                  <span>Выезд по всему Алматы</span>
                 </div>
               </div>
 

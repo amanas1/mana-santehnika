@@ -37,27 +37,9 @@ const generateSitemap = () => {
   </url>\n`;
   });
 
-  // Add all service + district combinations
-  seoData.services.forEach(service => {
-    seoData.districts.forEach(district => {
-      xml += `  <url>
-    <loc>${BASE_URL}/uslugi/${service.id}/${district.id}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>\n`;
-    });
-  });
+  // Skip district-specific URLs
 
-  // Add District landing pages
-  seoData.districts.forEach(district => {
-    xml += `  <url>
-    <loc>${BASE_URL}/santehnik-${district.id}-rayon</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>\n`;
-  });
+  // Skip district landing pages
 
   // Add Service landing pages
   seoData.services.forEach(service => {
@@ -75,7 +57,7 @@ const generateSitemap = () => {
   if (fs.existsSync('./dist')) {
     fs.writeFileSync('./dist/sitemap.xml', xml);
   }
-  console.log('✅ Sitemap generated successfully with', seoData.services.length * seoData.districts.length + 1, 'URLs');
+  console.log('✅ Sitemap generated successfully with', seoData.services.length + staticPages.length + 1, 'URLs');
 };
 
 generateSitemap();

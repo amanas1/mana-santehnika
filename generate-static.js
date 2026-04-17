@@ -23,81 +23,10 @@ const ensureDir = (dirPath) => {
 
 let generatedCount = 0;
 
-seoData.services.forEach(service => {
-  seoData.districts.forEach(district => {
-    // Generate Metadata
-    const serviceTitle = service.seoTitle || service.title;
-    const title = `${serviceTitle} в ${district.name} районе | Мастер Алматы 24/7`;
-    const description = `${serviceTitle} в ${district.nameGenitive} Алматы (${district.feature}). Оперативный выезд за 30 минут! Гарантия до 12 месяцев. Работаем в районе ${district.landmark}. ☎ +7 (705) 553-53-32`;
-    const keywords = `${service.title.toLowerCase()}, ${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()} ${district.name} район, ${service.title.toLowerCase()} ${district.landmark}, услуги сантехника`;
-    const url = `${BASE_URL}/uslugi/${service.id}/${district.id}`;
+// Skip district generation since districts array was removed.
+// We now only generate service landing pages.
 
-    // Generate Structured Data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": title,
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Мастер Манас — Сантехник Алматы",
-        "telephone": "+7-705-553-53-32, +7-707-479-10-20"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Алматы",
-        "containedInPlace": {
-          "@type": "AdministrativeArea",
-          "name": `${district.name} район`
-        }
-      },
-      "description": description,
-      "url": url
-    };
-    const schemaScript = `<script type="application/ld+json">\n${JSON.stringify(structuredData, null, 2)}\n</script>`;
-
-    // Replace tags in template
-    let html = template
-      .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
-      .replace(/<meta name="description" content=".*?"\s*\/>/, `<meta name="description" content="${description}" />`)
-      .replace(/<meta name="keywords" content=".*?"\s*\/>/, `<meta name="keywords" content="${keywords}" />`)
-      .replace(/<link rel="canonical" href=".*?"\s*\/>/, `<link rel="canonical" href="${url}" />`)
-      .replace(/<meta property="og:title" content=".*?"\s*\/>/, `<meta property="og:title" content="${title}" />`)
-      .replace(/<meta property="og:description" content=".*?"\s*\/>/, `<meta property="og:description" content="${description}" />`)
-      .replace(/<meta property="og:url" content=".*?"\s*\/>/, `<meta property="og:url" content="${url}" />`)
-      .replace(/<meta name="twitter:title" content=".*?"\s*\/>/, `<meta name="twitter:title" content="${title}" />`)
-      .replace(/<meta name="twitter:description" content=".*?"\s*\/>/, `<meta name="twitter:description" content="${description}" />`);
-
-    // Inject structured data right before closing head
-    html = html.replace('</head>', `  ${schemaScript}\n  </head>`);
-
-    // Define output path
-    const routeDir = path.join(DIST_DIR, 'uslugi', service.id, district.id);
-    ensureDir(routeDir);
-    
-    fs.writeFileSync(path.join(routeDir, 'index.html'), html);
-    generatedCount++;
-    
-    // Also generate specific sub-routes for generic ones if necessary, but this covers what's needed.
-  });
-});
-
-// Generate District Landing Pages: /santehnik-:districtId-rayon
-seoData.districts.forEach(district => {
-  const service = seoData.services.find(s => s.id === 'vyzov-santehnika'); // Use generic service
-    const title = `Сантехник в ${district.nameGenitive} Алматы | Вызов мастера 24/7`;
-    const description = `Профессиональный сантехник в ${district.nameGenitive} Алматы (${district.feature}). Срочный выезд за 30 минут, стаж 15 лет. Цены от 3500 тг.`;
-    const url = `${BASE_URL}/santehnik-${district.id}-rayon`;
-  
-  let html = template
-    .replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
-    .replace(/<meta name="description" content=".*?"\s*\/>/, `<meta name="description" content="${description}" />`)
-    .replace(/<link rel="canonical" href=".*?"\s*\/>/, `<link rel="canonical" href="${url}" />`);
-
-  const routeDir = path.join(DIST_DIR, `santehnik-${district.id}-rayon`);
-  ensureDir(routeDir);
-  fs.writeFileSync(path.join(routeDir, 'index.html'), html);
-  generatedCount++;
-});
+// Skip district landing pages.
 
 // Generate Service Landing Pages: /:serviceId-almaty
 seoData.services.forEach(service => {
