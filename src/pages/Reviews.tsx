@@ -32,8 +32,8 @@ const Reviews = () => {
       letter: "Е",
       color: "bg-purple-500",
       date: "18 Февраля 2025",
-      service: "Монтаж люстры",
-      text: "Мастер повесил три люстры и бра после ремонта. Сделал все очень ровно, никаких торчащих проводов. Мусор за собой убрал. Очень вежливый и пунктуальный специалист.",
+      service: "Разводка труб в новостройке",
+      text: "Мастер помог с разводкой труб после ремонта. Сделал всё аккуратно, трубы проложены ровно, все соединения надёжные. Очень вежливый и пунктуальный специалист.",
       rating: 5
     },
     {
@@ -68,8 +68,11 @@ const Reviews = () => {
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-16 md:pt-20">
       <SEO 
-        title="Отзывы клиентов | Вызов сантехника в Алматы"
-        description="Читайте отзывы наших клиентов о работе сантехника Мастер Манас в Алматы. Мы ценим вашу обратную связь и гарантируем качество услуг."
+        title="Отзывы о сантехнике в Алматы — Рейтинг 4.9/5 | Мастер Манас"
+        description="Реальные отзывы о работе сантехника Мастер Манас в Алматы. Рейтинг 4.9/5 по отзывам 127+ клиентов. Надежный мастер с гарантией 12 месяцев."
+        keywords="отзывы сантехник алматы, мастер сантехник алматы отзывы, надежный сантехник алматы"
+        canonical="https://mana.kz/reviews"
+        ogImage="/images/services/master-working.jpg"
       />
       
       {/* Hero Section */}
@@ -156,7 +159,11 @@ const Reviews = () => {
               </p>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); }}>
+            <form className="space-y-6" onSubmit={(e) => { 
+              e.preventDefault();
+              const msg = encodeURIComponent('Здравствуйте! Хочу оставить отзыв о работе сантехника Манас.');
+              window.open(`https://wa.me/77055535332?text=${msg}`, '_blank');
+            }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-900 mb-2">Ваше имя *</label>

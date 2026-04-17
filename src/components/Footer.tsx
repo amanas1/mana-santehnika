@@ -58,13 +58,15 @@ const Footer = () => {
             <h4 className="text-gray-900 font-extrabold mb-6 text-lg tracking-tight">Полезные статьи</h4>
             <ul className="space-y-3">
               {[
-                "Как выбрать смеситель",
-                "Инструмент сантехника"
-              ].map((title) => (
-                <li key={title}>
-                  <Link to="/blog" className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
+                { name: "Как выбрать смеситель", path: "/blog/article" },
+                { name: "Почему капает кран", path: "/blog/faucet-repair" },
+                { name: "Засор канализации", path: "/blog/clog-removal" },
+                { name: "Ремонт батарей", path: "/blog/heating-maintenance" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
                     <ChevronRight size={14} className="text-gray-400 group-hover:text-[#1173D4] transition-colors" />
-                    {title}
+                    {link.name}
                   </Link>
                 </li>
               ))}

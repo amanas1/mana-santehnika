@@ -19,14 +19,18 @@ const Contacts = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `tel:+77055535332`;
+    const text = encodeURIComponent(`Здравствуйте! Меня зовут ${formData.name}. Хочу записаться на сантехника. Телефон: ${formData.phone}. Адрес: ${formData.address}. Удобное время: ${formData.time}.${formData.message ? ' ' + formData.message : ''}`);
+    window.open(`https://wa.me/77055535332?text=${text}`, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="Контакты | Вызов сантехника в Алматы"
-        description="Свяжитесь с нами для вызова сантехника на дом в Алматы. Телефон: +7 (705) 553 53 32. Работаем круглосуточно во всех районах города."
+        title="Контакты сантехника в Алматы — Позвоните прямо сейчас | Мастер Манас"
+        description="Контакты профессионального сантехника в Алматы. Телефон: +7 (705) 553-53-32. WhatsApp: +7 (707) 479-10-20. Принимаем вызовы круглосуточно, выезд за 30 минут."
+        keywords="контакты сантехника алматы, телефон сантехника алматы, вызвать сантехника алматы номер"
+        canonical="https://mana.kz/contacts"
+        ogImage="/images/services/master-working.jpg"
       />
       
       <div className="container mx-auto px-6 max-w-6xl">
@@ -45,7 +49,7 @@ const Contacts = () => {
           <a href="tel:+77055535332" className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
             <Phone size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-[17px] font-bold text-gray-900 mb-3">Основной номер</h3>
-            <span className="text-xl font-extrabold text-[#1173D4] block mb-1">+77055535332</span>
+            <span className="text-xl font-extrabold text-[#1173D4] block mb-1">+7 (705) 553-53-32</span>
             <span className="text-[13px] text-gray-400 font-medium">Звоните в любое время</span>
           </a>
 

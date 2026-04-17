@@ -37,10 +37,6 @@ const PageLoader = () => (
     <div className="w-10 h-10 border-4 border-[#1173D4] border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import FloatingButtons from "./components/FloatingButtons";
-import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 

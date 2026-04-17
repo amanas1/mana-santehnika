@@ -46,7 +46,13 @@ const ServiceDistrictPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO title={title} description={description} />
+      <SEO 
+        title={title} 
+        description={description}
+        keywords={`${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()}, сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы алматы`}
+        canonical={`https://mana.kz/${service.id}-almaty`}
+        ogImage={service.image}
+      />
 
       {/* Hero Banner with Image */}
       <div className="relative min-h-[350px] overflow-hidden">

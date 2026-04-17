@@ -166,9 +166,9 @@ const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button onClick={trackConversion} className="hidden lg:block bg-gradient-to-r from-[#1173D4] to-[#13B6EC] text-white px-7 py-2.5 rounded-full font-bold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
+            <a href="tel:+77055535332" onClick={trackConversion} className="hidden lg:block bg-gradient-to-r from-[#1173D4] to-[#13B6EC] text-white px-7 py-2.5 rounded-full font-bold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
               Вызвать мастера
-            </button>
+            </a>
             
             <button 
               className="xl:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"

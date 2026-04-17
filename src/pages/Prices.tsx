@@ -99,8 +99,11 @@ const Prices = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col pt-16 md:pt-20">
       <SEO 
-        title="Цены на услуги сантехника в Алматы 2025 — Прайс-лист | От 1500₸"
-        description="Актуальный прайс-лист на все виды сантехнических услуг в Алматы. Прозрачные цены, без скрытых платежей. Выезд и диагностика — бесплатно!"
+        title="Цены на услуги сантехника в Алматы 2026 — Прайс-лист | Мастер Манас"
+        description="Актуальный прайс-лист на все виды сантехнических услуг в Алматы. Прозрачные цены без скрытых платежей. Выезд и диагностика — БЕСПЛАТНО!"
+        keywords="цены сантехника алматы, стоимость услуг сантехника, сколько стоит вызвать сантехника алматы, прайс-лист сантехника"
+        canonical="https://mana.kz/prices"
+        ogImage="/images/services/tools.jpg"
       />
       
       {/* Hero Section */}
@@ -142,7 +145,7 @@ const Prices = () => {
                   <button
                     key={cat.id}
                     onClick={() => setActiveTab(cat.id)}
-                    className={`flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all whitespace-nowrapflex-1 min-w-max ${
+                    className={`flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-sm transition-all whitespace-nowrap flex-1 min-w-max ${
                       isActive
                         ? "bg-gray-50 text-[#1173D4] shadow-sm"
                         : "bg-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-50/50"
