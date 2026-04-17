@@ -36,10 +36,10 @@ const Index = () => {
       <section className="relative min-h-[650px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/services/master-working.jpg')" }}
-          title="Мастер Манас выполняет сантехнические работы"
+          style={{ backgroundImage: "url('/images/services/remont-plastikovyh-trub.jpg')" }}
+          title="Профессиональные сантехнические работы"
         >
-          <div className="absolute inset-0 bg-gray-900/40" />
+          <div className="absolute inset-0 bg-gray-900/60" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
           <div className="max-w-3xl">
@@ -189,9 +189,9 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg">
                 <img 
-                  src="/images/services/manas-santehnik.jpg" 
-                  alt="Сантехник Манас — профессиональный мастер сантехник в Алматы с опытом более 10 лет" 
-                  title="Мастер Манас — надёжный сантехник в Алматы, выезд за 30 минут"
+                  src="/images/services/manas-real.jpg" 
+                  alt="Мастер Манас — профессиональный сантехник в Алматы, основатель компании" 
+                  title="Опытный сантехник Манас — стаж более 10 лет"
                   className="w-full h-full object-cover" 
                   loading="lazy"
                 />

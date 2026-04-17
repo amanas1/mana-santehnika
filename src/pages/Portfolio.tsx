@@ -16,7 +16,7 @@ const Portfolio = () => {
       id: 3,
       title: "Монтаж котельной в частном доме",
       category: "Сантехника",
-      image: "/images/services/boiler-service-v3.jpg",
+      image: "/images/services/kotelnaya-montazh.jpg",
       description: "Комплексная обвязка котельной. Монтаж насосных групп, гидрострелки, бойлера косвенного нагрева. Разводка теплого пола.",
       time: "5 дней",
       price: "400 000 ₸",

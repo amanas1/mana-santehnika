@@ -38,11 +38,12 @@ const About = () => {
                 </p>
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
-                  src="/images/services/manas-santehnik.jpg" 
-                  alt="Сантехник Манас — профессиональный сантехник в Алматы с опытом более 10 лет" 
-                  title="Мастер Манас — надёжный сантехник в Алматы, услуги 24/7"
+                  src="/images/services/manas-real.jpg" 
+                  alt="Мастер Манас — профессиональный сантехник в Алматы, основатель компании" 
+                  title="Мастер Манас — надёжный сантехник в Алматы с опытом более 10 лет"
                   className="w-full rounded-2xl shadow-lg border border-gray-100 object-cover"
                 />
+
                 </div>
                 <p>
                   Мы начинали как небольшая бригада мастеров, объединенных общими принципами: делать работу на совесть, не навязывать лишние услуги и всегда приезжать вовремя.
