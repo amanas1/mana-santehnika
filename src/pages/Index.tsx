@@ -196,17 +196,6 @@ const Index = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-8 bg-[#f8f9fc] px-8 py-5 rounded-[1.5rem] shadow-xl border border-white hidden md:block z-10">
-                <div className="flex items-center gap-5">
-                  <div className="w-[52px] h-[52px] bg-[#ebf4ff] text-[#1173D4] rounded-full flex items-center justify-center shrink-0">
-                    <Award size={26} strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <div className="text-[22px] font-extrabold text-slate-900 leading-none mb-1">№1</div>
-                    <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wide">В рейтинге Алматы</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
