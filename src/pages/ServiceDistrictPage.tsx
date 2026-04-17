@@ -22,10 +22,11 @@ const ServiceDistrictPage = () => {
   const service = seoData.services.find((s) => s.id === effectiveServiceId);
   
   // If districtId is missing, it's an "Almaty overall" page
-  const district = seoData.districts.find((d) => d.id === districtId) || {
+  const district = {
     id: "almaty",
     name: "Алматы",
-    nameGenitive: "Алматы"
+    nameGenitive: "Алматы",
+    feature: "Работаем во всех районах города Алматы 24/7"
   };
 
   if (!service) {
@@ -63,8 +64,7 @@ const ServiceDistrictPage = () => {
             <span>Услуги</span>
             <span>/</span>
             <span>{service.title}</span>
-            <span>/</span>
-            <span>{district.name}</span>
+            
           </nav>
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">

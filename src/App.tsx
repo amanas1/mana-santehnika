@@ -53,8 +53,6 @@ function App() {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/uslugi/:serviceId/:districtId" element={<ServiceDistrictPage />} />
-            <Route path="/santehnik-:districtId-rayon" element={<ServiceDistrictPage />} />
             <Route path="/:serviceId-almaty" element={<ServiceDistrictPage />} />
             <Route path="/services" element={<Services />} />
             <Route path="/prices" element={<Prices />} />
