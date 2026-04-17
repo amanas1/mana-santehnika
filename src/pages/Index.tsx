@@ -328,9 +328,89 @@ const Index = () => {
           title="Карта обслуживания Алматы"
         ></iframe>
       </section>
+
+      {/* SEO Text Article Block */}
+      <section className="py-16 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <article className="prose prose-slate max-w-none">
+            
+            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Сантехник в Алматы — Профессиональные услуги 24/7
+            </h2>
+            
+            <p className="text-slate-600 leading-relaxed mb-6 text-[15px]">
+              Если вам срочно нужен <strong>сантехник в Алматы</strong>, мастер Манас готов выехать в течение 30 минут в любой район города. Мы предоставляем полный спектр <strong>сантехнических услуг в Алматы</strong> — от мелкого ремонта смесителя до капитальной замены труб водоснабжения и канализации в квартире, доме или офисе. Наши специалисты работают <strong>круглосуточно, без выходных</strong>, включая праздничные дни.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="text-lg font-extrabold text-slate-900 mb-3">Когда вызывают сантехника?</h3>
+                <ul className="space-y-2 text-[14px] text-slate-600">
+                  {[
+                    "Капает или течет кран, смеситель",
+                    "Засорилась канализация, стоит вода",
+                    "Не работает или протекает бойлер",
+                    "Прорвало трубу или стояк",
+                    "Нужно установить новый унитаз или раковину",
+                    "Подключить стиральную или посудомоечную машину",
+                    "Заменить радиатор или батарею отопления",
+                    "Протечка в ванной, сырость под раковиной",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-[#1173D4] mt-0.5 shrink-0">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-extrabold text-slate-900 mb-3">Районы обслуживания в Алматы</h3>
+                <ul className="space-y-2 text-[14px] text-slate-600">
+                  {[
+                    "Алмалинский район — Центр, Арбат",
+                    "Бостандыкский район — Горный Гигант, Орбита",
+                    "Ауэзовский район — Аксай, Мамыр",
+                    "Медеуский район — Самал, Коктем",
+                    "Жетысуский район — Шанырак, Айнабулак",
+                    "Наурызбайский район — Нурлыжол, Алтау",
+                    "Алатауский район — Еркебидай, Акбулак",
+                    "Турксибский район — Гагарин, Иман",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-[#1173D4] mt-0.5 shrink-0">📍</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-extrabold text-slate-900 mb-4">Какие работы выполняет сантехник Манас?</h3>
+            <p className="text-slate-600 leading-relaxed mb-4 text-[15px]">
+              <strong>Вызов сантехника на дом в Алматы</strong> — это возможность решить любую проблему с водоснабжением, канализацией или отоплением быстро и профессионально. Мастер Манас выполняет: <strong>прочистку засоров</strong> канализации тросом и гидродинамическим методом, <strong>замену и установку смесителей</strong> любых марок (Grohe, Hansgrohe, IDDIS, Lemark), <strong>ремонт бойлеров</strong> (Thermex, Ariston, Gorenje, Electrolux), <strong>монтаж труб</strong> из полипропилена и металлопластика, <strong>установку счётчиков воды</strong>, <strong>ремонт унитазов</strong> (шуршание, бачок, инсталляция), <strong>установку душевых кабин</strong> и ванн, <strong>монтаж радиаторов</strong> и тёплых полов.
+            </p>
+
+            <h3 className="text-xl font-extrabold text-slate-900 mb-4">Стоимость услуг сантехника в Алматы</h3>
+            <p className="text-slate-600 leading-relaxed mb-4 text-[15px]">
+              Цены на <strong>услуги сантехника в Алматы</strong> у мастера Манаса начинаются от 3 000 тенге. Стоимость зависит от сложности работы и необходимых материалов. <strong>Выезд и диагностика — бесплатно</strong> при заказе ремонта. Все цены озвучиваются заранее — никаких скрытых доплат. Гарантия на все выполненные работы составляет <strong>до 12 месяцев</strong>. Принимаем оплату наличными и переводом.
+            </p>
+
+            <div className="bg-[#EBF4FF] border border-blue-100 rounded-2xl p-6 mt-6">
+              <p className="text-slate-700 font-medium text-[14px] leading-relaxed m-0">
+                <strong className="text-[#1173D4]">Мастер Манас</strong> — профессиональный сантехник в Алматы с опытом более 10 лет и более 1000 выполненных работ. 
+                Позвоните по номеру <a href="tel:+77055535332" className="font-bold text-[#1173D4] hover:underline">+7 (705) 553-53-32</a> или напишите в 
+                <a href="https://wa.me/77074791020" className="font-bold text-[#1173D4] hover:underline ml-1" target="_blank" rel="noopener noreferrer">WhatsApp +7 (707) 479-10-20</a> — 
+                мастер приедет в течение 30 минут в любой район Алматы.
+              </p>
+            </div>
+
+          </article>
+        </div>
+      </section>
       
     </div>
   );
 };
 
 export default Index;
+
