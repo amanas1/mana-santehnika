@@ -190,8 +190,8 @@ const Index = () => {
               <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg">
                 <img 
                   src="/images/services/manas-real.jpg" 
-                  alt="Сантехник Манас в Алматы — вызов мастера на дом 24/7" 
-                  title="Сантехник Манас — надёжные услуги сантехника без посредников"
+                  alt="Сантехник Манас" 
+                  title="Сантехник Манас"
                   className="w-full h-full object-cover" 
                   loading="lazy"
                 />
