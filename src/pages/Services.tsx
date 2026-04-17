@@ -104,7 +104,7 @@ const Services = () => {
                         </div>
                       </div>
                       <Link 
-                        to={`/uslugi/${service.id}/almalinskij`} 
+                        to={`/${service.id}-almaty`} 
                         className="bg-[#0095DA] hover:bg-[#0084c0] text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-colors shadow-md text-center"
                       >
                         Заказать
