@@ -23,8 +23,9 @@ const BlogPost = () => {
             {/* Header / Hero of the post */}
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="/images/blog/luxury.jpg" 
-                alt="Современный хромированный смеситель премиум-класса" 
+                src="/images/services/smesitel-install.jpg" 
+                alt="Современный смеситель для ванной — установка сантехника в Алматы" 
+                title="Профессиональная установка смесителей в Алматы"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -68,9 +69,9 @@ const BlogPost = () => {
 
               <div className="my-12 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 pb-4">
                 <img 
-                  src="/images/blog/materials.jpg" 
+                  src="/images/services/pipes-detail.jpg" 
                   alt="Мастер Манас проверяет латунные фитинги и материалы для монтажа" 
-                  title="Выбор качественных материалов - залог долговечной сантехники"
+                  title="Выбор качественных материалов — залог долговечной сантехники"
                   className="w-full object-cover m-0 h-auto" 
                 />
                 <p className="text-center text-sm text-gray-500 mt-4 px-4 italic m-0">
@@ -95,9 +96,9 @@ const BlogPost = () => {
 
               <div className="my-12 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 pb-4">
                 <img 
-                  src="/images/blog/installation.jpg" 
+                  src="/images/services/smesitel-repair.jpg" 
                   alt="Процесс установки смесителя со скрытой подводкой в ванной комнате" 
-                  title="Профессиональный монтаж смесителя - работа любой сложности"
+                  title="Профессиональный монтаж смесителя — работа любой сложности"
                   className="w-full object-cover m-0 h-auto" 
                 />
                 <p className="text-center text-sm text-gray-500 mt-4 px-4 italic m-0">
@@ -120,9 +121,9 @@ const BlogPost = () => {
 
               <div className="my-12 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 pb-4">
                 <img 
-                  src="/images/blog/tools.jpg" 
-                  alt="Применение ФУМ-ленты для герметизации резьбовых соединений" 
-                  title="Герметичность соединений - важный этап сантехнических работ"
+                  src="/images/services/tools.jpg" 
+                  alt="Инструменты сантехника — ФУМ-лента для герметизации резьбовых соединений" 
+                  title="Герметичность соединений — важный этап сантехнических работ"
                   className="w-full object-cover m-0 h-auto" 
                 />
                 <p className="text-center text-sm text-gray-500 mt-4 px-4 italic m-0">

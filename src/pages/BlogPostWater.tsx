@@ -20,8 +20,9 @@ const BlogPostWater = () => {
           <article className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="/images/services/toilet-repair.webp" 
-                alt="Экономия воды в быту" 
+                src="/images/services/filter-install.jpg" 
+                alt="Установка водяного фильтра и экономия воды в квартире" 
+                title="Экономия воды и установка фильтров в Алматы" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>

@@ -22,8 +22,9 @@ const BlogPostClog = () => {
             {/* Header / Hero of the post */}
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80" 
-                alt="Чистая раковина на кухне" 
+                src="/images/services/sink.jpg" 
+                alt="Чистая раковина на кухне — профилактика засора канализации" 
+                title="Устранение засоров канализации в Алматы"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
@@ -67,7 +68,7 @@ const BlogPostClog = () => {
 
               <div className="my-12 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 pb-4">
                 <img 
-                  src="/images/services/uslugi-santehnika.jpg" 
+                  src="/images/services/protechki.jpg" 
                   alt="Процесс прочистки сифона под кухонной раковиной" 
                   title="Устранение засоров сифона и труб в Алматы"
                   className="w-full object-cover m-0 h-[400px]" 
@@ -129,7 +130,7 @@ const BlogPostClog = () => {
 
               <div className="my-12 rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-gray-50 pb-4">
                 <img 
-                  src="/images/blog/materials.jpg" 
+                  src="/images/services/bathroom-detail.jpg" 
                   alt="Детальный вид качественного сантехнического сифона в разобранном виде" 
                   title="Устройство и компоненты современного сифона"
                   className="w-full object-cover m-0 h-auto" 

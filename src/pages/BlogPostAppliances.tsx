@@ -20,8 +20,9 @@ const BlogPostAppliances = () => {
           <article className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="/images/services/mixer-install.jpg" 
-                alt="Подключение стиральной машины" 
+                src="/images/services/washer-install.jpg" 
+                alt="Подключение стиральной машины — профессиональный монтаж в Алматы" 
+                title="Установка стиральной и посудомоечной машины в Алматы"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>

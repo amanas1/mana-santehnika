@@ -20,8 +20,9 @@ const BlogPostHeating = () => {
           <article className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="/images/services/underfloor-heating.jpg" 
-                alt="Регулировка радиатора и проверка температуры" 
+                src="/images/services/batarei-repair.jpg" 
+                alt="Регулировка радиатора и проверка температуры отопления в Алматы" 
+                title="Ремонт и замена батарей отопления в Алматы" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>

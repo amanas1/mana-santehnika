@@ -20,8 +20,9 @@ const BlogPostLeak = () => {
           <article className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="h-80 md:h-[450px] relative overflow-hidden">
               <img 
-                src="/images/services/plumbing-repair.jpg" 
-                alt="Мастер проводит диагностику протечки труб" 
+                src="/images/services/protechki.jpg" 
+                alt="Мастер проводит диагностику и устранение протечки труб" 
+                title="Устранение протечек труб в Алматы" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
