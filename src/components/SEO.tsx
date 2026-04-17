@@ -5,45 +5,74 @@ interface SEOProps {
   description: string;
   keywords?: string;
   canonical?: string;
+  ogImage?: string;
+  schema?: object;
 }
 
-const SEO = ({ title, description, keywords, canonical }: SEOProps) => {
+const BASE_URL = "https://mana.kz";
+
+const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOProps) => {
   useEffect(() => {
+    // Title
     document.title = title;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", description);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
+
+    // Helper to set/create meta tag
+    const setMeta = (selector: string, attr: string, value: string, content: string) => {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, value);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+
+    // Helper to set/create link tag
+    const setLink = (rel: string, href: string) => {
+      let el = document.querySelector(`link[rel="${rel}"]`);
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+
+    setMeta('meta[name="description"]', "name", "description", description);
 
     if (keywords) {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute("content", keywords);
-      } else {
-        const meta = document.createElement("meta");
-        meta.name = "keywords";
-        meta.content = keywords;
-        document.head.appendChild(meta);
-      }
+      setMeta('meta[name="keywords"]', "name", "keywords", keywords);
     }
 
     if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]');
-      if (link) {
-        link.setAttribute("href", canonical);
-      } else {
-        link = document.createElement("link");
-        link.setAttribute("rel", "canonical");
-        link.setAttribute("href", canonical);
-        document.head.appendChild(link);
-      }
+      setLink("canonical", canonical);
+      setMeta('meta[property="og:url"]', "property", "og:url", canonical);
     }
-  }, [title, description, keywords, canonical]);
+
+    // OG tags
+    setMeta('meta[property="og:title"]', "property", "og:title", title);
+    setMeta('meta[property="og:description"]', "property", "og:description", description);
+
+    if (ogImage) {
+      const imgUrl = ogImage.startsWith("http") ? ogImage : `${BASE_URL}${ogImage}`;
+      setMeta('meta[property="og:image"]', "property", "og:image", imgUrl);
+    }
+
+    // Twitter
+    setMeta('meta[name="twitter:title"]', "name", "twitter:title", title);
+    setMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
+
+    // JSON-LD Schema
+    if (schema) {
+      const existingScript = document.querySelector('script[data-seo-schema]');
+      if (existingScript) existingScript.remove();
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.setAttribute("data-seo-schema", "true");
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    }
+  }, [title, description, keywords, canonical, ogImage, schema]);
 
   return null;
 };

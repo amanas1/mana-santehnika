@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Disallow admin and utility pages
+Disallow: /tools/
+Disallow: /privacy-policy
+
+# Sitemap
 Sitemap: https://mana.kz/sitemap.xml

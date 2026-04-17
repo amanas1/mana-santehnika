@@ -6,8 +6,11 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="О компании | Сантехник в Алматы - Мастер Манас"
-        description="Узнайте больше о нас. Профессиональные услуги сантехника в Алматы. Опыт более 10 лет, гарантия на все виды работ."
+        title="О мастере Манасе — Профессиональный сантехник в Алматы с 10-летним опытом"
+        description="Мастер Манас — профессиональный сантехник в Алматы с опытом более 10 лет. Более 1000 выполненных заказов. Гарантия на все работы. Честные цены без скрытых доплат."
+        keywords="сантехник алматы, мастер сантехник алматы, профессиональный сантехник, опытный сантехник алматы, надежный сантехник"
+        canonical="https://mana.kz/about"
+        ogImage="/images/services/master-working.jpg"
       />
       
       {/* Hero Section */}
@@ -35,7 +38,7 @@ const About = () => {
                 </p>
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
-                src="/images/master-manas-tools.webp" 
+                  src="/images/services/master-working.jpg" 
                 alt="Мастер Манас за работой — профессиональный сантехник в Алматы" 
                 title="Мастер Манас: Профессиональный сантехник с 10-летним опытом"
                 className="w-full rounded-2xl shadow-lg border border-gray-100"
