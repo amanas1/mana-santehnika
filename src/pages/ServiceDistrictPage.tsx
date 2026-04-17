@@ -98,9 +98,10 @@ const ServiceDistrictPage = () => {
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
               <h2 className="text-2xl font-bold mb-4">О услуге</h2>
-              <div className="text-gray-600 leading-relaxed mb-6 whitespace-pre-wrap font-normal">
-                {service.longDescription || service.description}
-              </div>
+              <div 
+                className="text-gray-600 leading-relaxed mb-6 font-normal prose prose-sm max-w-none"
+                dangerouslySetInnerHTML={{ __html: service.longDescription || service.description }}
+              />
 
               <h3 className="text-xl font-bold mb-4">Наши преимущества в {district.nameGenitive}:</h3>
               <ul className="space-y-3">

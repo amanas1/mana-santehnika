@@ -87,7 +87,7 @@ const Index = () => {
             {seoData.services.slice(0, 8).map((service, index) => (
               <Link
                 key={service.id}
-                to={`/uslugi/${service.id}/medeuskij`}
+                to={`/${service.id}-almaty`}
                 className="bg-white rounded-[1.5rem] border border-slate-100 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col group"
               >
                 <div className="h-48 overflow-hidden relative">
