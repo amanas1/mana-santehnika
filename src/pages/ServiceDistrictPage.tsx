@@ -1,10 +1,21 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import seoData from "../data/seo-data.json";
 import SEO from "../components/SEO";
 import { Phone, Clock, Shield, MapPin, CheckCircle, ArrowRight } from "lucide-react";
 
 const ServiceDistrictPage = () => {
-  const { serviceId, districtId } = useParams();
+  let { serviceId, districtId } = useParams();
+  const location = useLocation();
+
+  // If parameters weren't extracted properly due to RRv6 suffix rules (e.g. /:serviceId-almaty)
+  if (!serviceId && !districtId) {
+    const path = location.pathname.substring(1);
+    if (path.endsWith('-almaty')) {
+      serviceId = path.replace('-almaty', '');
+    } else if (path.startsWith('santehnik-') && path.endsWith('-rayon')) {
+      districtId = path.replace('santehnik-', '').replace('-rayon', '');
+    }
+  }
 
   // Handle single-param SEO URLs where service or district might be implied
   const effectiveServiceId = serviceId || "vyzov-santehnika";
