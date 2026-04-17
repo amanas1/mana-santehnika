@@ -98,9 +98,9 @@ const ServiceDistrictPage = () => {
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
               <h2 className="text-2xl font-bold mb-4">О услуге</h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <div className="text-gray-600 leading-relaxed mb-6 whitespace-pre-wrap font-normal">
                 {service.longDescription || service.description}
-              </p>
+              </div>
 
               <h3 className="text-xl font-bold mb-4">Наши преимущества в {district.nameGenitive}:</h3>
               <ul className="space-y-3">
@@ -121,12 +121,12 @@ const ServiceDistrictPage = () => {
             </div>
 
             {/* Service Image */}
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 mb-8 mt-4">
               <img
-                src={service.image}
-                alt={service.alt}
+                src={service.secondaryImage || service.image}
+                alt={service.secondaryImageAlt || service.alt}
                 title={service.title}
-                className="w-full h-64 object-cover"
+                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
             </div>
