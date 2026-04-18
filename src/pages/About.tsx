@@ -34,7 +34,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Наша история</h2>
               <div className="space-y-4 text-lg text-slate-600 leading-relaxed font-medium">
                 <p>
-                  Компания "Мастер Манас" была основана в 2015 году с одной главной целью — предоставлять жителям Алматы качественные и честные услуги в сфере сантехники. 
+                  Компания "Мастер Манас" была основана в 2010 году с одной главной целью — предоставлять жителям Алматы качественные и честные услуги в сфере сантехники. 
                 </p>
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
@@ -82,7 +82,45 @@ const About = () => {
         </div>
       </section>
 
+      {/* Timeline */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">История компании</h2>
+            <p className="text-slate-500 font-medium">Путь из небольшой бригады в надёжную службу сантехники Алматы</p>
+          </div>
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#1173D4] to-[#13B6EC] -translate-x-1/2" />
+            <div className="space-y-10">
+              {[
+                { year: "2010", title: "Начало пути", desc: "Манас начал работать индивидуальным мастером, обслуживая квартиры в Ауэзовском районе. Первые клиенты и первые рекомендации.", side: "right" },
+                { year: "2013", title: "Первые постоянные клиенты", desc: "Более 100 постоянных клиентов. Начало специализации на ремонте бойлеров и замене труб в строящихся домах.", side: "left" },
+                { year: "2016", title: "Расширение на весь Алматы", desc: "Охват всех районов города. Покупка профессионального оборудования — гидродинамическая машина, тепловизор, аппарат для пайки ПП-труб.", side: "right" },
+                { year: "2019", title: "500+ выполненных заказов", desc: "Достижение отметки в 500 выполненных заказов. Начало работы с управляющими компаниями и частными домами.", side: "left" },
+                { year: "2022", title: "Запуск сайта mana.kz", desc: "Открытие собственного ресурса для удобного заказа услуг онлайн. Отзывы на 2GIS и Google Maps.", side: "right" },
+                { year: "2025", title: "1000+ довольных клиентов", desc: "Сегодня Мастер Манас — это опыт 15 лет, более 1000 выполненных заказов и гарантия на каждую работу.", side: "left" },
+              ].map((item, idx) => (
+                <div key={idx} className={`relative flex items-start gap-6 md:gap-0 ${item.side === "left" ? "md:flex-row-reverse" : ""}`}>
+                  {/* Dot */}
+                  <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#1173D4] border-4 border-white shadow-md mt-1 z-10" />
+                  {/* Content */}
+                  <div className={`ml-16 md:ml-0 md:w-[45%] ${item.side === "left" ? "md:mr-[10%]" : "md:ml-[55%]"}`}>
+                    <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 hover:border-[#1173D4]/30 hover:shadow-md transition-all">
+                      <span className="inline-block bg-[#1173D4] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{item.year}</span>
+                      <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
+                      <p className="text-[14px] text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Наши принципы */}
+
       <section className="py-16 md:py-24 bg-slate-100/50">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">

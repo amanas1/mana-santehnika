@@ -1,8 +1,34 @@
 import { Link, useNavigate } from "react-router-dom";
 import seoData from "../data/seo-data.json";
 import SEO from "../components/SEO";
-import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, Star, ArrowRight, CheckCircle2, Calendar, Phone, Award } from "lucide-react";
+import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, Star, ArrowRight, CheckCircle2, Calendar, Phone, Award, ChevronDown } from "lucide-react";
 import { useState } from "react";
+
+// FAQ Accordion component
+const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-slate-100 rounded-2xl overflow-hidden bg-slate-50 hover:border-[#1173D4]/30 transition-colors">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between p-6 text-left gap-4"
+        aria-expanded={open}
+      >
+        <span className="font-bold text-slate-900 text-[15px] leading-snug">{question}</span>
+        <ChevronDown
+          size={20}
+          className={`shrink-0 text-[#1173D4] transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="px-6 pb-6 text-slate-600 text-[14px] leading-relaxed border-t border-slate-100 pt-4">
+          {answer}
+        </div>
+      )}
+    </div>
+  );
+};
+
 
 const Index = () => {
   const navigate = useNavigate();
@@ -25,11 +51,37 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Сантехник Алматы — Вызов сантехника 12/7 с 9:00 до 21:00 — Услуги сантехника в Алматы | Мастер Манас"
+        title="Сантехник Алматы — Вызов сантехника с 9:00 до 21:00 — Услуги сантехника в Алматы | Мастер Манас"
         description="Профессиональный сантехник в Алматы. Срочный вызов мастера на дом за 30 минут. Работаем с 9:00 до 21:00 без выходных и праздников. Ремонт труб, устранение протечек, замена бойлера, установка смесителей. Гарантия до 12 месяцев. ☎ +7 (705) 553-53-32"
-        keywords="сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы, вызов сантехника, сантехник на дом, срочный сантехник алматы, ремонт сантехники алматы, монтаж труб, замена смесителяⰝ ремонт унитаза, замена бойлера алматы, сантехник 24 7"
+        keywords="сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы, вызов сантехника, сантехник на дом, срочный сантехник алматы, ремонт сантехники алматы, монтаж труб, замена смесителя, ремонт унитаза, замена бойлера алматы, цены сантехник алматы"
         canonical="https://mana.kz/"
         ogImage="/images/services/master-working.jpg"
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "LocalBusiness",
+              "name": "Мастер Манас — Сантехник в Алматы",
+              "url": "https://mana.kz",
+              "telephone": "+77055535332",
+              "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" },
+              "openingHours": "Mo-Su 09:00-21:00",
+              "priceRange": "от 3000 ₸",
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "127", "bestRating": "5" },
+              "image": "https://mana.kz/images/services/manas-real.jpg"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                { "@type": "Question", "name": "Сколько стоит вызов сантехника в Алматы?", "acceptedAnswer": { "@type": "Answer", "text": "Выезд и диагностика бесплатно при заказе ремонта. Стоимость работ от 3 000 ₸. Цена фиксируется до начала работ." } },
+                { "@type": "Question", "name": "Как быстро приедет сантехник?", "acceptedAnswer": { "@type": "Answer", "text": "Мастер приезжает в течение 30–45 минут после звонка в любой район Алматы." } },
+                { "@type": "Question", "name": "Есть ли гарантия на работы?", "acceptedAnswer": { "@type": "Answer", "text": "Да, на все выполненные работы предоставляется официальная гарантия до 12 месяцев." } },
+                { "@type": "Question", "name": "В какое время работает сантехник?", "acceptedAnswer": { "@type": "Answer", "text": "Работаем с 9:00 до 21:00 ежедневно, без выходных и праздников по всем районам Алматы." } },
+                { "@type": "Question", "name": "Какие услуги оказывает сантехник Манас?", "acceptedAnswer": { "@type": "Answer", "text": "Устранение протечек, замена труб, ремонт и замена бойлеров, установка смесителей, ремонт унитазов, прочистка канализации, установка стиральных и посудомоечных машин, монтаж радиаторов." } }
+              ]
+            }
+          ]
+        }}
       />
 
       {/* Hero Section */}
@@ -238,6 +290,77 @@ const Index = () => {
             <Link to="/reviews" className="inline-flex items-center justify-center border-2 border-slate-200 text-slate-700 font-bold px-8 py-3 rounded-xl hover:bg-slate-50 transition-colors">
               Все отзывы
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Price Preview Strip */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">Цены на услуги сантехника</h2>
+            <p className="text-slate-400 font-medium">Прозрачное ценообразование — стоимость озвучивается <strong className="text-white">до начала работ</strong></p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            {[
+              { service: "Ремонт смесителя", price: "от 3 000 ₸", emoji: "🔧" },
+              { service: "Устранение протечки", price: "от 3 500 ₸", emoji: "💧" },
+              { service: "Ремонт унитаза", price: "от 4 000 ₸", emoji: "🚽" },
+              { service: "Установка смесителя", price: "от 5 000 ₸", emoji: "🚿" },
+              { service: "Прочистка канализации", price: "от 5 000 ₸", emoji: "🪣" },
+              { service: "Установка стиральной машины", price: "от 4 500 ₸", emoji: "🫧" },
+              { service: "Ремонт бойлера", price: "от 5 000 ₸", emoji: "♨️" },
+              { service: "Замена радиатора", price: "от 8 000 ₸", emoji: "🌡️" },
+            ].map((item) => (
+              <div key={item.service} className="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-center gap-4 hover:bg-white/10 transition-colors">
+                <span className="text-3xl">{item.emoji}</span>
+                <div>
+                  <div className="text-white font-semibold text-sm leading-tight mb-1">{item.service}</div>
+                  <div className="text-[#13B6EC] font-extrabold">{item.price}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link to="/prices" className="inline-flex items-center gap-2 bg-[#1173D4] hover:bg-[#0f67be] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-blue-500/30">
+              Полный прайс-лист <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Часто задаваемые вопросы</h2>
+            <p className="text-slate-500 font-medium">Ответы на самые популярные вопросы о наших услугах</p>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: "Сколько стоит вызов сантехника в Алматы?",
+                a: "Выезд и диагностика — бесплатно при заказе ремонта. Стоимость работ начинается от 3 000 ₸. Точная цена озвучивается мастером после осмотра, до начала работ — никаких сюрпризов."
+              },
+              {
+                q: "Как быстро приедет сантехник?",
+                a: "В среднем мастер прибывает за 30–45 минут после вашего звонка. Мы работаем по всем районам Алматы: Алмалинский, Бостандыкский, Ауэзовский, Медеуский, Жетысуский и другие."
+              },
+              {
+                q: "Есть ли гарантия на выполненные работы?",
+                a: "Да! На все виды работ предоставляется официальная гарантия до 12 месяцев. Если в гарантийный период возникнет проблема по нашей вине — устраним бесплатно."
+              },
+              {
+                q: "В какое время работает сантехник?",
+                a: "Принимаем заявки с 9:00 до 21:00 ежедневно, без выходных и праздников. Мастер Манас обслуживает все районы Алматы."
+              },
+              {
+                q: "Какие материалы используются при ремонте?",
+                a: "Только сертифицированные материалы от проверенных производителей: турецкий полипропилен FIRAT, немецкая арматура Grohe/Hansgrohe, счётчики с поверкой. Качество всех материалов подтверждено документами."
+              },
+            ].map((item, idx) => (
+              <FAQItem key={idx} question={item.q} answer={item.a} />
+            ))}
           </div>
         </div>
       </section>
