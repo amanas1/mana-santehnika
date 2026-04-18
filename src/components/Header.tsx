@@ -77,7 +77,7 @@ const Header = () => {
             </div>
             <div className="hidden md:flex items-center gap-2">
               <Clock size={16} />
-              Работаем 24/7
+              Пн-Вс: 9:00 – 21:00
             </div>
             <div className="hidden lg:flex items-center gap-2">
               <MapPin size={16} />

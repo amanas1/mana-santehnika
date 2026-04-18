@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="О мастере Манасе — Профессиональный сантехник в Алматы с 10-летним опытом"
-        description="Мастер Манас — профессиональный сантехник в Алматы с опытом более 10 лет. Более 1000 выполненных заказов. Гарантия на все работы. Честные цены без скрытых доплат."
+        title="О мастере Манасе — Профессиональный сантехник в Алматы с 15-летним опытом"
+        description="Мастер Манас — профессиональный сантехник в Алматы с опытом более 15 лет. Более 1000 выполненных заказов. Работаем с 9:00 до 21:00 без выходных. Гарантия на все работы. Честные цены без скрытых доплат."
         keywords="сантехник алматы, мастер сантехник алматы, профессиональный сантехник, опытный сантехник алматы, надежный сантехник"
         canonical="https://mana.kz/about"
         ogImage="/images/services/manas-santehnik.jpg"
@@ -39,8 +39,9 @@ const About = () => {
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
                   src="/images/services/manas-real.jpg" 
-                  alt="Сантехник Манас" 
-                  title="Сантехник Манас"
+                  alt="Манас Абдулдаев — профессиональный сантехник в Алматы, 15 лет опыта" 
+                  title="Мастер Манас — сантехник в Алматы"
+                  width="600" height="400"
                   className="w-full rounded-2xl shadow-lg border border-gray-100 object-cover"
                 />
 
@@ -62,7 +63,7 @@ const About = () => {
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Calendar size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-3xl font-extrabold text-slate-900 block mb-1">10 лет</span>
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">15 лет</span>
                 <span className="text-[15px] text-slate-500 font-medium">на рынке</span>
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">

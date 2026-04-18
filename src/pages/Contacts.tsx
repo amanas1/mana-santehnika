@@ -27,7 +27,7 @@ const Contacts = () => {
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
         title="Контакты сантехника в Алматы — Позвоните прямо сейчас | Мастер Манас"
-        description="Контакты профессионального сантехника в Алматы. Телефон: +7 (705) 553-53-32. WhatsApp: +7 (707) 479-10-20. Принимаем вызовы круглосуточно, выезд за 30 минут."
+        description="Контакты профессионального сантехника в Алматы. Телефон: +7 (705) 553-53-32. WhatsApp: +7 (707) 479-10-20. Работаем с 9:00 до 21:00 без выходных и праздников, выезд за 30 минут."
         keywords="контакты сантехника алматы, телефон сантехника алматы, вызвать сантехника алматы номер"
         canonical="https://mana.kz/contacts"
         ogImage="/images/services/master-working.jpg"
@@ -70,8 +70,8 @@ const Contacts = () => {
           <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
             <Clock size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-[17px] font-bold text-gray-900 mb-3">Режим работы</h3>
-            <span className="text-xl font-extrabold text-[#1173D4] block mb-1">24/7</span>
-            <span className="text-[13px] text-gray-400 font-medium">Аварийная служба</span>
+            <span className="text-xl font-extrabold text-[#1173D4] block mb-1">9:00 – 21:00</span>
+            <span className="text-[13px] text-gray-400 font-medium">Без выходных и праздников</span>
           </div>
 
         </div>
