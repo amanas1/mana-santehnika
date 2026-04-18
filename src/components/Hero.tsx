@@ -49,7 +49,7 @@ const Hero = () => {
             { value: "1000+", label: "Довольных клиентов" },
             { value: "10+", label: "Лет опыта" },
             { value: "24/7", label: "Срочный выезд" },
-            { value: "4.9", label: "Средний рейтинг" },
+            { value: "1 год", label: "Официальная гарантия" },
           ].map((stat) => (
             <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center shadow-xl hover:-translate-y-1 transition-transform duration-300">
               <div className="text-3xl md:text-4xl font-extrabold text-white mb-1 group-hover:scale-110 transition-transform">

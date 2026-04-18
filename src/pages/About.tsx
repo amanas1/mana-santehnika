@@ -72,8 +72,8 @@ const About = () => {
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Star size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Рейтинг 4.9/5</span>
-                <span className="text-[15px] text-slate-500 font-medium">по отзывам</span>
+                <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Официальная гарантия</span>
+                <span className="text-[15px] text-slate-500 font-medium">на все работы</span>
               </div>
             </div>
 

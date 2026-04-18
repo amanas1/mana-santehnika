@@ -68,8 +68,8 @@ const Reviews = () => {
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-16 md:pt-20">
       <SEO 
-        title="Отзывы о сантехнике в Алматы — Рейтинг 4.9/5 | Мастер Манас"
-        description="Реальные отзывы о работе сантехника Мастер Манас в Алматы. Рейтинг 4.9/5 по отзывам 127+ клиентов. Надежный мастер с гарантией 12 месяцев."
+        title="Отзывы о сантехнике в Алматы | Мастер Манас"
+        description="Реальные отзывы о работе сантехника Мастер Манас в Алматы. Надежный мастер с гарантией качества до 12 месяцев."
         keywords="отзывы сантехник алматы, мастер сантехник алматы отзывы, надежный сантехник алматы"
         canonical="https://mana.kz/reviews"
         ogImage="/images/services/master-working.jpg"
@@ -90,7 +90,7 @@ const Reviews = () => {
                   <Star key={i} size={24} className="fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="font-extrabold text-2xl">4.9 / 5</span>
+              <span className="font-extrabold text-2xl">Отличный сервис</span>
             </div>
           </div>
           <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">

@@ -68,7 +68,7 @@ const Index = () => {
               { value: "1000+", label: "клиентов" },
               { value: "10 лет", label: "на рынке" },
               { value: "24/7", label: "работаем" },
-              { value: "4.9/5", label: "рейтинг" },
+              { value: "1 год", label: "гарантии" },
             ].map((stat) => (
               <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-white">
                 <div className="text-3xl font-extrabold mb-1">{stat.value}</div>

@@ -147,8 +147,8 @@ const Contacts = () => {
           </div>
           <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <Star size={28} strokeWidth={1.5} className="text-amber-500 mb-3" />
-            <span className="font-extrabold text-gray-900 text-[15px] mb-1">Рейтинг 4.9/5</span>
-            <span className="text-[13px] text-gray-500 font-medium">По отзывам клиентов</span>
+            <span className="font-extrabold text-gray-900 text-[15px] mb-1">Официальная гарантия</span>
+            <span className="text-[13px] text-gray-500 font-medium text-center leading-tight">На все работы</span>
           </div>
           <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <PhoneCall size={28} strokeWidth={1.5} className="text-[#1173D4] mb-3" />
