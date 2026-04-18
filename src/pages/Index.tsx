@@ -143,7 +143,7 @@ const Index = () => {
                     {service.description}
                   </p>
                   <div className="mt-auto pt-4 flex items-center justify-between border-t border-slate-50">
-                    <span className="text-[#1173D4] font-extrabold">от {service.price}</span>
+                    <span className="text-[#1173D4] font-extrabold">{service.price}</span>
                     <span className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-[#1173D4] group-hover:text-white transition-colors">
                       <ArrowRight size={16} />
                     </span>
@@ -359,7 +359,7 @@ const Index = () => {
                     <Phone size={24} className="text-[#13B6EC]" />
                   </div>
                   <div>
-                    <div className="text-[13px] text-slate-400 font-medium mb-1">Звоните круглосуточно</div>
+                    <div className="text-[13px] text-slate-400 font-medium mb-1">Работаем с 9:00 до 21:00</div>
                     <a href="tel:+77055535332" className="text-xl font-extrabold block hover:text-[#13B6EC] transition-colors">+7 705 553 53 32</a>
                   </div>
                 </div>

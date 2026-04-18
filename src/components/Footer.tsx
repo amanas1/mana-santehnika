@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Клиентов</div>
               </div>
               <div className="bg-green-50 px-3 py-2 rounded-lg text-center">
-                <div className="font-extrabold text-green-600 text-lg leading-tight">10</div>
+                <div className="font-extrabold text-green-600 text-lg leading-tight">15</div>
                 <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">Лет опыта</div>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Footer = () => {
                       <div className="text-sm font-bold text-gray-900 group-hover:text-[#1173D4] transition-colors">+7 (707) 479-10-20</div>
                     </div>
                   </a>
-                  <div className="text-xs text-gray-500 ml-11 mt-1">Круглосуточно, без выходных</div>
+                  <div className="text-xs text-gray-500 ml-11 mt-1">Пн-Вс: 9:00–21:00, без выходных</div>
                 </div>
               </li>
               <li>
