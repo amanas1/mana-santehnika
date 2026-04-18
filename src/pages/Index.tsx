@@ -56,32 +56,6 @@ const Index = () => {
         keywords="сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы, вызов сантехника, сантехник на дом, срочный сантехник алматы, ремонт сантехники алматы, монтаж труб, замена смесителя, ремонт унитаза, замена бойлера алматы, цены сантехник алматы"
         canonical="https://mana.kz/"
         ogImage="/images/services/master-working.jpg"
-        schema={{
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "LocalBusiness",
-              "name": "Мастер Манас — Сантехник в Алматы",
-              "url": "https://mana.kz",
-              "telephone": "+77055535332",
-              "address": { "@type": "PostalAddress", "addressLocality": "Алматы", "addressCountry": "KZ" },
-              "openingHours": "Mo-Su 09:00-21:00",
-              "priceRange": "от 3000 ₸",
-              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "127", "bestRating": "5" },
-              "image": "https://mana.kz/images/services/manas-real.jpg"
-            },
-            {
-              "@type": "FAQPage",
-              "mainEntity": [
-                { "@type": "Question", "name": "Сколько стоит вызов сантехника в Алматы?", "acceptedAnswer": { "@type": "Answer", "text": "Выезд и диагностика бесплатно при заказе ремонта. Стоимость работ от 3 000 ₸. Цена фиксируется до начала работ." } },
-                { "@type": "Question", "name": "Как быстро приедет сантехник?", "acceptedAnswer": { "@type": "Answer", "text": "Мастер приезжает в течение 30–45 минут после звонка в любой район Алматы." } },
-                { "@type": "Question", "name": "Есть ли гарантия на работы?", "acceptedAnswer": { "@type": "Answer", "text": "Да, на все выполненные работы предоставляется официальная гарантия до 12 месяцев." } },
-                { "@type": "Question", "name": "В какое время работает сантехник?", "acceptedAnswer": { "@type": "Answer", "text": "Работаем с 9:00 до 21:00 ежедневно, без выходных и праздников по всем районам Алматы." } },
-                { "@type": "Question", "name": "Какие услуги оказывает сантехник Манас?", "acceptedAnswer": { "@type": "Answer", "text": "Устранение протечек, замена труб, ремонт и замена бойлеров, установка смесителей, ремонт унитазов, прочистка канализации, установка стиральных и посудомоечных машин, монтаж радиаторов." } }
-              ]
-            }
-          ]
-        }}
       />
 
       {/* Hero Section */}
