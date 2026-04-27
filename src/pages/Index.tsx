@@ -232,6 +232,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Отзывы клиентов</h2>
+            <p className="mt-4 text-lg text-slate-500 font-medium flex items-center justify-center gap-2">
+              <Star size={20} className="fill-amber-400 text-amber-400" />
+              <span>Рейтинг <strong className="text-slate-900">4.9</strong> из 5 на основе <strong>27</strong> отзывов</span>
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
