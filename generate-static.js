@@ -46,7 +46,7 @@ let generatedCount = 0;
 
 // ─── Service Landing Pages: /:serviceId-almaty ────────────────────────────────
 seoData.services.forEach(service => {
-  const title = `${service.title} в Алматы — цена от ${service.price} | Мастер Манас`;
+  const title = `${service.title} в Алматы — цена ${service.price} | Мастер Манас`;
   const description = `${service.title} в Алматы — выезд мастера за 30 минут, с 9:00 до 21:00, без выходных. ${service.description} Гарантия до 12 месяцев. Телефон: +7 (705) 553-53-32`;
   const keywords = `${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()}, сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы`;
   const url = `${BASE_URL}/${service.id}-almaty`;

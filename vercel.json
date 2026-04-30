@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "https://www.mana.kz/(.*)",
-      "destination": "https://mana.kz/$1",
-      "permanent": true
-    }
-  ],
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 200, "dest": "/index.html" }
