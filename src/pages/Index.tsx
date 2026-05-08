@@ -593,13 +593,13 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="w-full lg:w-auto shrink-0 flex gap-4">
+            <div className="w-full lg:w-auto shrink-0 flex gap-4 justify-center mt-8 lg:mt-0">
               <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
-                <div className="text-3xl font-black text-[#1173D4] mb-2">15</div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Лет опыта</div>
+                <div className="text-4xl font-black text-[#1173D4] mb-2">15</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Лет<br/>опыта</div>
               </div>
-              <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36 translate-y-6">
-                <div className="text-3xl font-black text-[#1173D4] mb-2">12</div>
+              <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
+                <div className="text-4xl font-black text-[#1173D4] mb-2">12</div>
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Месяцев<br/>гарантии</div>
               </div>
             </div>
