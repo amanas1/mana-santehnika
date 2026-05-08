@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import seoData from "../data/seo-data.json";
 import SEO from "../components/SEO";
-import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, Star, ArrowRight, CheckCircle2, Calendar, Phone, Award, ChevronDown } from "lucide-react";
+import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, Star, ArrowRight, CheckCircle2, Calendar, Phone, Award, ChevronDown, Droplet, AlertTriangle, Zap, CheckCircle, XCircle } from "lucide-react";
 import { useState } from "react";
 
 // FAQ Accordion component
@@ -419,92 +419,191 @@ const Index = () => {
         ></iframe>
       </section>
 
-      {/* SEO Text Article Block - Fully Optimized for Key Search Terms */}
-      <section className="py-16 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <article className="prose prose-slate max-w-none">
-            
-            {/* KEYWORD TARGET: "сантехник", "сантехник алматы" */}
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Сантехник в Алматы: быстрый выезд и гарантия качества
-            </h2>
-            <p className="text-slate-600 leading-relaxed mb-8 text-[15px]">
-              Вам срочно потребовался квалифицированный <strong>сантехник</strong>? Мастер Манас — это опытный специалист, предоставляющий надежные сантехнические решения для жителей и бизнеса. Если вы ищете надежного исполнителя по запросу <strong>«сантехник Алматы»</strong>, вы обратились по адресу. Мы ценим ваше время, поэтому обеспечиваем оперативный выезд в любой район города в течение 30-45 минут. Мы работаем с 9:00 до 21:00 без выходных, чтобы вы могли рассчитывать на нас даже в самых экстренных ситуациях, таких как прорыв трубы или сильный засор канализации.
-            </p>
-
-            {/* KEYWORD TARGET: "услуги сантехника" */}
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight mt-10">
-              Профессиональные услуги сантехника
-            </h2>
-            <p className="text-slate-600 leading-relaxed mb-6 text-[15px]">
-              Наши <strong>услуги сантехника</strong> охватывают полный цикл работ — от мелкого бытового ремонта до сложных инженерных проектов. Забудьте о некомпетентных мастерах: мы используем только профессиональный инструмент и качественные расходные материалы.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-              <div>
-                <ul className="space-y-3 text-[14px] text-slate-600 m-0 p-0 list-none">
-                  {[
-                    "Устранение протечек труб и радиаторов",
-                    "Прочистка засоров канализации любой сложности",
-                    "Ремонт и замена смесителей, кранов, вентилей",
-                    "Ремонт сливных бачков и инсталляций унитазов",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="text-[#1173D4] mt-0.5 shrink-0 font-bold">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <ul className="space-y-3 text-[14px] text-slate-600 m-0 p-0 list-none">
-                  {[
-                    "Установка душевых кабин и стальных ванн",
-                    "Подключение стиральных и посудомоечных машин",
-                    "Ремонт и обслуживание водонагревателей (бойлеров)",
-                    "Монтаж счетчиков воды и фильтров очистки",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="text-[#1173D4] mt-0.5 shrink-0 font-bold">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      {/* SEO BLOCK 1: САНТЕХНИК В АЛМАТЫ (Проблема-Решение) */}
+      <section className="py-20 bg-white border-t border-slate-100 overflow-hidden relative">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#1173D4] text-sm font-bold mb-6">
+              <Zap size={16} className="fill-current" />
+              Экстренная помощь
             </div>
-
-            {/* KEYWORD TARGET: "сантехнические работы" */}
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Сантехнические работы любой сложности
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Сантехник в Алматы: от катастрофы к комфорту за 30 минут
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-8 text-[15px]">
-              Помимо устранения аварий, мы выполняем капитальные <strong>сантехнические работы</strong> под ключ. Планируете ремонт в ванной комнате или на кухне? Мы выполним разводку труб водоснабжения (полипропилен, металлопластик, сшитый полиэтилен) и канализации с учетом всех строительных норм. Грамотно проведенные сантехнические работы на этапе чернового ремонта — это залог отсутствия проблем со слабым напором воды, неприятными запахами или затоплением соседей в будущем.
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Авария никогда не случается вовремя. Когда счет идет на минуты, вам нужен не просто мастер, а проверенный <strong>сантехник</strong>. Посмотрите, как мы решаем самые частые проблемы:
             </p>
+          </div>
 
-            {/* KEYWORD TARGET: "вызвать сантехника" */}
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Как вызвать сантехника на дом и не переплатить?
-            </h2>
-            <p className="text-slate-600 leading-relaxed mb-6 text-[15px]">
-              Процесс максимально прост. Чтобы <strong>вызвать сантехника</strong>, достаточно позвонить нам или написать в мессенджер. Мы сразу проконсультируем вас по проблеме и сориентируем по примерной стоимости. Точная смета составляется после осмотра на месте, и <strong>вызов мастера для диагностики абсолютно бесплатен</strong> при условии заказа ремонта. Мы работаем честно и прозрачно: цены озвучиваются до начала работ и не меняются в процессе.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                problem: "Затопление соседей",
+                solution: "Мгновенное перекрытие стояков и герметизация муфтами GEBO без разрушения стен.",
+                icon: <Droplet size={28} className="text-red-500" />,
+                bg: "bg-red-50"
+              },
+              {
+                problem: "Глухой засор канализации",
+                solution: "Применяем гидродинамику: вода под давлением 200 бар срезает жир со стенок труб как бритвой.",
+                icon: <AlertTriangle size={28} className="text-amber-500" />,
+                bg: "bg-amber-50"
+              },
+              {
+                problem: "Нет горячей воды (поломка бойлера)",
+                solution: "Чистка от накипи, замена сгоревшего ТЭНа и анода прямо на месте за 40 минут.",
+                icon: <Wrench size={28} className="text-slate-500" />,
+                bg: "bg-slate-100"
+              }
+            ].map((card, i) => (
+              <div key={i} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div className={`w-16 h-16 rounded-2xl ${card.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {card.icon}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{card.problem}</h3>
+                <p className="text-[15px] text-slate-600 leading-relaxed">
+                  <span className="font-bold text-[#1173D4]">Наше решение:</span> {card.solution}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-[#EBF4FF] border border-blue-100 rounded-2xl p-6 mt-10">
-              <p className="text-slate-700 font-medium text-[15px] leading-relaxed m-0 flex flex-col md:flex-row md:items-center gap-4">
-                <span className="flex-1">
-                  <strong className="text-[#1173D4]">Мастер Манас</strong> — ваш личный надежный сантехник. Более 15 лет опыта. Оставьте заявку прямо сейчас и мы решим вашу проблему!
-                </span>
-                <span className="flex flex-col gap-2 shrink-0">
-                  <a href="tel:+77055535332" className="inline-flex items-center justify-center gap-2 bg-[#1173D4] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#0f67be] transition-colors">
-                    Позвонить мастеру
-                  </a>
-                  <a href="https://wa.me/77074791020" className="inline-flex items-center justify-center gap-2 bg-white border border-[#1173D4] text-[#1173D4] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors" target="_blank" rel="noopener noreferrer">
-                    Написать в WhatsApp
-                  </a>
-                </span>
+      {/* SEO BLOCK 2: УСЛУГИ САНТЕХНИКА (Инфографика-Сетка) */}
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#1173D4]/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="mb-16 md:flex justify-between items-end gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight text-white">
+                Профессиональные услуги сантехника под микроскопом
+              </h2>
+              <p className="text-lg text-slate-300 leading-relaxed font-medium">
+                Мы не просто «крутим гайки». Качественные <strong>услуги сантехника</strong> — это строгий алгоритм, современные материалы и ювелирная точность.
               </p>
             </div>
+            <div className="mt-8 md:mt-0">
+              <Link to="/services" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl font-bold transition-colors border border-white/10">
+                Все услуги <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
 
-          </article>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { title: "Диагностика", desc: "Эндоскопия труб для поиска скрытых течей и засоров.", icon: <Star /> },
+              { title: "Герметизация", desc: "Анаэробные гели вместо устаревшего льна и краски.", icon: <ShieldCheck /> },
+              { title: "Разводка труб", desc: "Полипропилен и сшитый полиэтилен с пайкой без сужений.", icon: <MapPin /> },
+              { title: "Пусконаладка", desc: "Опрессовка системы давлением в 10 атмосфер перед сдачей.", icon: <CheckCircle2 /> }
+            ].map((item, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors cursor-default">
+                <div className="text-[#13B6EC] mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-[14px] text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO BLOCK 3: САНТЕХНИЧЕСКИЕ РАБОТЫ (Сравнение) */}
+      <section className="py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Сантехнические работы: анатомия правильного ремонта
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Капитальные <strong>сантехнические работы</strong> не терпят дилетантства. Посмотрите, чем отличается подход "Мастер Манас" от типичных ошибок дешевых подрядчиков:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-2xl border border-red-100 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+                <div className="flex items-center gap-3 mb-3">
+                  <XCircle size={24} className="text-red-500" />
+                  <h3 className="text-lg font-bold text-slate-900">Как делают халтурщики</h3>
+                </div>
+                <ul className="space-y-3 text-[14px] text-slate-600">
+                  <li>— Экономят на диаметре труб (слабый напор воды)</li>
+                  <li>— Замуровывают резьбовые соединения в стену (риск потопа)</li>
+                  <li>— Не соблюдают уклон канализации (постоянные засоры)</li>
+                  <li>— Исчезают после получения денег без гарантий</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl border border-green-100 shadow-md relative overflow-hidden ring-1 ring-green-500/20">
+                <div className="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle size={24} className="text-green-500" />
+                  <h3 className="text-lg font-bold text-slate-900">Как делаем мы (по ГОСТу)</h3>
+                </div>
+                <ul className="space-y-3 text-[14px] text-slate-600">
+                  <li><strong className="text-green-700">✓</strong> Точный расчет гидравлики для стабильного напора</li>
+                  <li><strong className="text-green-700">✓</strong> В стену прячется только цельная труба без стыков</li>
+                  <li><strong className="text-green-700">✓</strong> Идеальный уклон 2-3 см на метр для самоочистки</li>
+                  <li><strong className="text-green-700">✓</strong> Выдаем официальную гарантию до 12 месяцев</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src="/images/services/remont-plastikovyh-trub.jpg" 
+                alt="Профессиональные сантехнические работы" 
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end p-8">
+                <div className="text-white">
+                  <div className="text-2xl font-bold mb-2">Работаем на совесть</div>
+                  <p className="opacity-90">Используем только сертифицированные материалы европейского качества.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO BLOCK 4: ВЫЗВАТЬ САНТЕХНИКА (CTA) */}
+      <section className="py-16 bg-[#1173D4]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-white/10 backdrop-blur-md rounded-[2.5rem] border border-white/20 p-8 md:p-12 flex flex-col lg:flex-row items-center gap-10">
+            <div className="flex-1 text-white">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight">
+                Как вызвать сантехника и спать спокойно?
+              </h2>
+              <p className="text-lg text-blue-100 mb-8 max-w-2xl leading-relaxed">
+                Не ждите, пока маленькая течь превратится в капитальный ремонт. Чтобы <strong>вызвать сантехника</strong>, вам не нужно никуда ехать. Просто позвоните: мы проведем бесплатную диагностику (при заказе работ) и назовем честную цену до начала ремонта.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+77055535332" className="bg-white text-[#1173D4] px-8 py-4 rounded-xl font-bold text-[16px] hover:bg-slate-50 transition-all flex items-center justify-center gap-3 shadow-xl">
+                  <Phone size={20} className="fill-current" />
+                  Позвонить сейчас
+                </a>
+                <a href="https://wa.me/77074791020" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-[16px] hover:bg-[#20bd5a] transition-all flex items-center justify-center gap-3 shadow-xl">
+                  Написать в WhatsApp
+                </a>
+              </div>
+            </div>
+            
+            <div className="w-full lg:w-auto shrink-0 flex gap-4">
+              <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
+                <div className="text-3xl font-black text-[#1173D4] mb-2">15</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Лет опыта</div>
+              </div>
+              <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36 translate-y-6">
+                <div className="text-3xl font-black text-[#1173D4] mb-2">12</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Месяцев<br/>гарантии</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       
