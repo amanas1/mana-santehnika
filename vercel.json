@@ -1,5 +1,20 @@
 {
   "routes": [
+    {
+      "src": "/blog/winter-drain-cleaning",
+      "status": 308,
+      "headers": { "Location": "/prochistka-kanalizacii-almaty" }
+    },
+    {
+      "src": "/services/heating/radiator-installation",
+      "status": 308,
+      "headers": { "Location": "/zamena-radiatorov-almaty" }
+    },
+    {
+      "src": "/services/drainage/drain-cleaning",
+      "status": 308,
+      "headers": { "Location": "/prochistka-kanalizacii-almaty" }
+    },
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 200, "dest": "/index.html" }
   ]
