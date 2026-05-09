@@ -39,6 +39,11 @@ const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOPr
     };
 
     setMeta('meta[name="description"]', "name", "description", description);
+    setMeta('meta[name="robots"]', "name", "robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    setMeta('meta[name="author"]', "name", "author", "Мастер Манас");
+    setMeta('meta[name="geo.region"]', "name", "geo.region", "KZ-75");
+    setMeta('meta[name="geo.placename"]', "name", "geo.placename", "Алматы");
+    setMeta('meta[name="format-detection"]', "name", "format-detection", "telephone=yes");
 
     if (keywords) {
       setMeta('meta[name="keywords"]', "name", "keywords", keywords);
@@ -50,15 +55,20 @@ const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOPr
     }
 
     // OG tags
+    setMeta('meta[property="og:type"]', "property", "og:type", "website");
+    setMeta('meta[property="og:locale"]', "property", "og:locale", "ru_RU");
+    setMeta('meta[property="og:site_name"]', "property", "og:site_name", "Мастер Манас — Сантехник Алматы");
     setMeta('meta[property="og:title"]', "property", "og:title", title);
     setMeta('meta[property="og:description"]', "property", "og:description", description);
 
     if (ogImage) {
       const imgUrl = ogImage.startsWith("http") ? ogImage : `${BASE_URL}${ogImage}`;
       setMeta('meta[property="og:image"]', "property", "og:image", imgUrl);
+      setMeta('meta[name="twitter:image"]', "name", "twitter:image", imgUrl);
     }
 
     // Twitter
+    setMeta('meta[name="twitter:card"]', "name", "twitter:card", "summary_large_image");
     setMeta('meta[name="twitter:title"]', "name", "twitter:title", title);
     setMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
 
