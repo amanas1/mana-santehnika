@@ -62,7 +62,7 @@ const Index = () => {
       <section className="relative min-h-[650px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/services/remont-plastikovyh-trub.jpg')" }}
+          style={{ backgroundImage: "url('/images/services/hero-plumber.jpg')" }}
           title="Профессиональные сантехнические работы"
         >
           <div className="absolute inset-0 bg-gray-900/60" />
