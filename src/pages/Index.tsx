@@ -122,7 +122,7 @@ const Index = () => {
       <section className="relative min-h-[650px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/services/remont-plastikovyh-trub.jpg')" }}
+          style={{ backgroundImage: "url('/images/services/hero-plumber.jpg')" }}
           title="Профессиональные сантехнические работы"
         >
           <div className="absolute inset-0 bg-gray-900/60" />
@@ -130,10 +130,10 @@ const Index = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-              Профессиональные услуги <br /> сантехника в Алматы
+              Сантехник в Алматы
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl leading-relaxed font-medium">
-              Профессиональные сантехнические услуги с гарантией до 12 месяцев. Выезд во все районы Алматы: Алмалинский, Бостандыкский, Ауэзовский, Медеуский и другие.
+              Профессиональные сантехнические услуги с гарантией до 12 месяцев. Выезд во все районы Алматы.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
