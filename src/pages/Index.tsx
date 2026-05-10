@@ -51,7 +51,7 @@ const Index = () => {
     },
     {
       q: "Как быстро приедет сантехник?",
-      a: "В среднем мастер прибывает за 30–45 минут после вашего звонка. Мы работаем по всем районам Алматы: Алмалинский, Бостандыкский, Ауэзовский, Медеуский, Жетысуский и другие."
+      a: "Время приезда зависит от вашего района и текущей загрузки. Обслуживаю все районы Алматы: Алмалинский, Бостандыкский, Ауэзовский, Медеуский, Жетысуский и другие."
     },
     {
       q: "Есть ли гарантия на выполненные работы?",
@@ -302,7 +302,7 @@ const Index = () => {
             {[
               { bg: "bg-[#1173D4]", letter: "А", name: "Айгуль С.", date: "", text: "Вызывала сантехника для замены смесителя. Мастер приехал вовремя, всё сделал аккуратно и чисто. Рекомендую!", rating: 5 },
               { bg: "bg-green-500", letter: "К", name: "Кайрат М.", date: "", text: "Хороший мастер. Установил бойлер и подключил фильтры для воды. Работает аккуратно, всё объяснил.", rating: 5 },
-              { bg: "bg-purple-500", letter: "Н", name: "Наталья П.", date: "", text: "Нужен был ремонт унитаза в выходной. Манас приехал, починил качественно. Оплата по факту, без накруток.", rating: 5 },
+              { bg: "bg-purple-500", letter: "Н", name: "Наталья П.", date: "", text: "Нужен был ремонт унитаза в выходной. Манас приехал, починил качественно. Оплата по факту, всё прозрачно.", rating: 5 },
             ].map((review) => (
               <div key={review.name} className="bg-slate-50 rounded-[1.5rem] p-8 border border-slate-100">
                 <div className="flex items-center justify-between mb-5">
@@ -559,6 +559,7 @@ const Index = () => {
             <p className="text-lg text-slate-600 leading-relaxed font-medium">
               Когда случается авария, важно вызвать опытного <strong>сантехника</strong>. Вот как я решаю самые частые проблемы:
             </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -695,10 +696,10 @@ const Index = () => {
 
             <div className="bg-[#EBF4FF] border border-blue-100 rounded-2xl p-6 mt-6">
               <p className="text-slate-700 font-medium text-[14px] leading-relaxed m-0">
-                <strong className="text-[#1173D4]">Мастер Манас</strong> — профессиональный сантехник в Алматы с опытом более 15 лет и более 1000 выполненных работ. 
+                <strong className="text-[#1173D4]">Мастер Манас</strong> — профессиональный сантехник в Алматы. 
                 Позвоните по номеру <a href="tel:+77055535332" className="font-bold text-[#1173D4] hover:underline">+7 (705) 553-53-32</a> или напишите в 
                 <a href="https://wa.me/77074791020" className="font-bold text-[#1173D4] hover:underline ml-1" target="_blank" rel="noopener noreferrer">WhatsApp +7 (707) 479-10-20</a> — 
-                мастер приедет в течение 30 минут в любой район Алматы.
+                мастер ответит вам и договорится о времени визита.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
