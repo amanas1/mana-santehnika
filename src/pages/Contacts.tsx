@@ -152,8 +152,8 @@ const Contacts = () => {
           </div>
           <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <PhoneCall size={28} strokeWidth={1.5} className="text-[#1173D4] mb-3" />
-            <span className="font-extrabold text-gray-900 text-[15px] mb-1">Выезд бесплатно</span>
-            <span className="text-[13px] text-gray-500 font-medium">При заказе работ</span>
+            <span className="font-extrabold text-gray-900 text-[15px] mb-1">Выезд мастера</span>
+            <span className="text-[13px] text-gray-500 font-medium">Входит в стоимость работ</span>
           </div>
         </div>
 

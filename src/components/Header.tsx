@@ -79,7 +79,7 @@ const Header = () => {
             </div>
           </div>
           <div className="hidden sm:block font-bold tracking-wide">
-            Выезд бесплатно при заказе работ
+            Выезд входит в стоимость при заказе
           </div>
         </div>
       </div>

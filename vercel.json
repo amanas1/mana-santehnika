@@ -15,6 +15,11 @@
       "status": 308,
       "headers": { "Location": "/prochistka-kanalizacii-almaty" }
     },
+    {
+      "src": "/ustanovka-rozetok-almaty",
+      "status": 308,
+      "headers": { "Location": "/" }
+    },
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 200, "dest": "/index.html" }
   ]
