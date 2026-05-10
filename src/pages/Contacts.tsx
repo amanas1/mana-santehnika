@@ -137,7 +137,7 @@ const Contacts = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <ShieldCheck size={28} strokeWidth={1.5} className="text-green-600 mb-3" />
-            <span className="font-extrabold text-gray-900 text-[15px] mb-1">Гарантия 1 год</span>
+            <span className="font-extrabold text-gray-900 text-[15px] mb-1">Гарантия 1 месяц</span>
             <span className="text-[13px] text-gray-500 font-medium">На все выполненные работы</span>
           </div>
           <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col items-center text-center">

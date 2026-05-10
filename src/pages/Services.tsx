@@ -116,7 +116,7 @@ const Services = () => {
 
                     <div className="flex items-center gap-2 text-xs font-medium text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg w-fit">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 22-8-4.5v-9L12 4l8 4.5v9Z"/><path d="m9 12 2 2 4-4"/></svg>
-                      Гарантия 1 год
+                      Гарантия 1 месяц
                     </div>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ const About = () => {
     <div className="min-h-screen bg-white flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
         title="О мастере Манасе — Сантехник в Алматы | Мастер Манас"
-        description="Мастер Манас — выездной сантехник в Алматы. Работаю ежедневно с 9:00 до 21:00. Гарантия на все работы до 12 месяцев. Честные цены без скрытых доплат."
+        description="Мастер Манас — выездной сантехник в Алматы. Работаю ежедневно с 9:00 до 21:00. Гарантия на все работы до 1 месяца. Честные цены без скрытых доплат."
         keywords="сантехник алматы, мастер сантехник алматы, профессиональный сантехник, опытный сантехник алматы, надежный сантехник"
         canonical="https://mana.kz/about"
         ogImage="/images/services/manas-santehnik.jpg"
@@ -68,7 +68,7 @@ const About = () => {
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <ShieldCheck size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Гарантия 1 год</span>
+                <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Гарантия 1 месяц</span>
                 <span className="text-[15px] text-slate-500 font-medium">на работы</span>
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">

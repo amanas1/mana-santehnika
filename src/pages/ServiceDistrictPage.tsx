@@ -39,7 +39,7 @@ const ServiceDistrictPage = () => {
   }
 
   const title = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} | Мастер Манас`;
-  const description = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} — ${service.price}. Выезд мастера ежедневно с 9:00 до 21:00. Гарантия 12 месяцев. ☎ +7 (705) 553-53-32`;
+  const description = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} — ${service.price}. Выезд мастера ежедневно с 9:00 до 21:00. Гарантия 1 месяц. ☎ +7 (705) 553-53-32`;
 
   // Get other services for cross-linking
   const otherServices = seoData.services.filter((s) => s.id !== serviceId).slice(0, 4);
@@ -88,7 +88,7 @@ const ServiceDistrictPage = () => {
               <Clock size={16} /> {service.time}
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
-              <Shield size={16} /> Гарантия 12 мес.
+              <Shield size={16} /> Гарантия 1 мес.
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
               <CheckCircle size={16} /> Без выходных
@@ -113,7 +113,7 @@ const ServiceDistrictPage = () => {
               <ul className="space-y-3">
                 {[
                   "Выезд ежедневно с 9:00 до 21:00 по всему Алматы",
-                  "Гарантия на работы до 12 месяцев",
+                  "Гарантия на работы до 1 месяца",
                   "Прозрачные цены и понятная стоимость работ",
                   "Опытный мастер со стажем",
                   "Бесплатная диагностика при заказе работ",
@@ -182,7 +182,7 @@ const ServiceDistrictPage = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-600">
                   <Shield size={18} className="text-[#4ADE80] shrink-0" />
-                  <span>Гарантия до 12 месяцев</span>
+                  <span>Гарантия до 1 месяца</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-gray-600">
                   <MapPin size={18} className="text-amber-500 shrink-0" />

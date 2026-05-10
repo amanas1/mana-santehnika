@@ -55,7 +55,7 @@ const Index = () => {
     },
     {
       q: "Есть ли гарантия на выполненные работы?",
-      a: "Да! На все виды работ предоставляется официальная гарантия до 12 месяцев. Если в гарантийный период возникнет проблема по нашей вине — устраним бесплатно."
+      a: "Да! На все виды работ предоставляется официальная гарантия до 1 месяцаа. Если в гарантийный период возникнет проблема по нашей вине — устраним бесплатно."
     },
     {
       q: "В какое время работает сантехник?",
@@ -133,7 +133,7 @@ const Index = () => {
               Сантехник в Алматы
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-xl leading-relaxed font-medium">
-              Профессиональные сантехнические услуги с гарантией до 12 месяцев. Выезд во все районы Алматы.
+              Профессиональные сантехнические услуги с гарантией 1 месяц. Выезд во все районы Алматы.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -156,7 +156,7 @@ const Index = () => {
             {[
               { value: "9–21", label: "ежедневно" },
               { value: "12/7", label: "без выходных" },
-              { value: "12 мес", label: "гарантия" },
+              { value: "1 мес", label: "гарантия" },
             ].map((stat) => (
               <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-white">
                 <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
@@ -233,7 +233,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Clock, title: "Удобный график", desc: "Работаю ежедневно с 9:00 до 21:00, без выходных." },
-              { icon: ShieldCheck, title: "Гарантия качества", desc: "Предоставляю гарантию до 12 месяцев на все работы." },
+              { icon: ShieldCheck, title: "Гарантия качества", desc: "Предоставляю гарантию 1 месяц на все работы." },
               { icon: ThumbsUp, title: "Опытный мастер", desc: "Профессиональный подход к каждому заказу." },
               { icon: CheckCircle2, title: "Честные цены", desc: "Озвучиваем стоимость до начала работ, никаких скрытых доплат." },
             ].map((item, idx) => (
@@ -450,7 +450,7 @@ const Index = () => {
               },
               {
                 q: "Есть ли гарантия на выполненные работы?",
-                a: "Да, на все виды работ предоставляю гарантию до 12 месяцев. Если в гарантийный период возникнет проблема по моей вине — исправлю бесплатно."
+                a: "Да, на все виды работ предоставляю гарантию 1 месяц. Если в гарантийный период возникнет проблема по моей вине — исправлю бесплатно."
               },
               {
                 q: "В какое время работает сантехник?",
@@ -690,7 +690,7 @@ const Index = () => {
 
             <h3 className="text-xl font-extrabold text-slate-900 mb-4">Стоимость услуг сантехника в Алматы</h3>
             <p className="text-slate-600 leading-relaxed mb-4 text-[15px]">
-              Цены на <strong>услуги сантехника в Алматы</strong> у мастера Манаса начинаются от 3 000 тенге. Стоимость зависит от сложности работы и необходимых материалов. <strong>Выезд и диагностика — бесплатно</strong> при заказе ремонта. Все цены озвучиваются заранее — никаких скрытых доплат. Гарантия на все выполненные работы составляет <strong>до 12 месяцев</strong>. Принимаем оплату наличными и переводом.
+              Цены на <strong>услуги сантехника в Алматы</strong> у мастера Манаса начинаются от 3 000 тенге. Стоимость зависит от сложности работы и необходимых материалов. <strong>Выезд и диагностика — бесплатно</strong> при заказе ремонта. Все цены озвучиваются заранее — никаких скрытых доплат. Гарантия на все выполненные работы составляет <strong>1 месяц</strong>. Принимаем оплату наличными и переводом.
             </p>
 
             <div className="bg-[#EBF4FF] border border-blue-100 rounded-2xl p-6 mt-6">
@@ -718,8 +718,8 @@ const Index = () => {
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Часов<br/>в день</div>
               </div>
               <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
-                <div className="text-4xl font-black text-[#1173D4] mb-2">12</div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Месяцев<br/>гарантии</div>
+                <div className="text-4xl font-black text-[#1173D4] mb-2">1</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Месяц<br/>гарантии</div>
               </div>
             </div>
           </div>

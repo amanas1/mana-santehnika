@@ -69,7 +69,7 @@ const Reviews = () => {
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-16 md:pt-20">
       <SEO 
         title="Отзывы о сантехнике в Алматы | Мастер Манас"
-        description="Реальные отзывы о работе сантехника Мастер Манас в Алматы. Надежный мастер с гарантией качества до 12 месяцев."
+        description="Реальные отзывы о работе сантехника Мастер Манас в Алматы. Надежный мастер с гарантией качества до 1 месяца."
         keywords="отзывы сантехник алматы, мастер сантехник алматы отзывы, надежный сантехник алматы"
         canonical="https://mana.kz/reviews"
         ogImage="/images/services/master-working.jpg"
