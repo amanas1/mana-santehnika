@@ -83,16 +83,7 @@ const Reviews = () => {
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">Отзывы клиентов</h1>
-          <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20">
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={24} className="fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="font-extrabold text-2xl">Отличный сервис</span>
-            </div>
-          </div>
+
           <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
             Дорожу своей репутацией. Каждый отзыв — это реальный клиент.
           </p>

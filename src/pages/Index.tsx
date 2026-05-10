@@ -715,8 +715,8 @@ const Index = () => {
             
             <div className="w-full lg:w-auto shrink-0 flex gap-4 justify-center mt-8 lg:mt-0">
               <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
-                <div className="text-4xl font-black text-[#1173D4] mb-2">7/7</div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Без<br/>выходных</div>
+                <div className="text-4xl font-black text-[#1173D4] mb-2">12</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Часов<br/>в день</div>
               </div>
               <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
                 <div className="text-4xl font-black text-[#1173D4] mb-2">12</div>
