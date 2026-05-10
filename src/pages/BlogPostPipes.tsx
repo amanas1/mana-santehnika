@@ -67,7 +67,7 @@ const BlogPostPipes = () => {
 
             <div className="bg-orange-50 border-t border-orange-100 p-8 md:p-12 text-center">
               <h3 className="text-2xl font-bold text-orange-700 mb-6">Устраним гул в трубах сегодня!</h3>
-              <a href="tel:+77074791020" className="inline-flex items-center justify-center px-10 py-5 bg-[#0095DA] text-white font-bold rounded-2xl shadow-xl hover:bg-[#0084c0] transition-all text-xl">
+              <a href="tel:+77055535332" className="inline-flex items-center justify-center px-10 py-5 bg-[#0095DA] text-white font-bold rounded-2xl shadow-xl hover:bg-[#0084c0] transition-all text-xl">
                 Вызвать Мастера
               </a>
             </div>

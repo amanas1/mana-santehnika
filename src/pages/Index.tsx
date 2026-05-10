@@ -110,9 +110,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Сантехник в Алматы — вызов мастера на дом с 9:00 до 21:00 | Мастер Манас"
-        description="Профессиональный сантехник в Алматы. Выезд мастера на дом в день обращения. Работаем с 9:00 до 21:00 без выходных. Ремонт труб, устранение протечек, установка смесителей, ремонт бойлера и унитаза. Гарантия до 12 месяцев. ☎ +7 (705) 553-53-32"
-        keywords="сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы, вызов сантехника, сантехник на дом, срочный сантехник алматы, ремонт сантехники алматы, монтаж труб, замена смесителя, ремонт унитаза, замена бойлера алматы, цены сантехник алматы"
+        title="Сантехник в Алматы — Мастер Манас, выезд на дом"
+        description="Сантехнические услуги в Алматы: ремонт протечек, замена смесителей, установка унитазов, подключение бытовой техники. Выездной мастер, ежедневно с 9:00 до 21:00. ☎ +7 (705) 553-53-32"
+        keywords="сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы, сантехник на дом, устранение протечек, установка смесителя"
         canonical="https://mana.kz/"
         ogImage="/images/services/master-working.jpg"
         schema={homeSchema}
@@ -145,7 +145,7 @@ const Index = () => {
               </a>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold px-6 py-4 rounded-xl flex items-center gap-3">
                 <span className="flex h-2.5 w-2.5 rounded-full bg-green-400 animate-pulse"></span>
-                Выезд и диагностика БЕСПЛАТНО!
+                Выезд бесплатно при заказе работ
               </div>
             </div>
             <p className="mt-6 text-sm md:text-[15px] text-gray-200/90 max-w-2xl leading-relaxed">
@@ -153,12 +153,12 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl">
-              {[
-                { value: "1000+", label: "клиентов" },
-                { value: "15 лет", label: "на рынке" },
-                { value: "ежедневно", label: "работаем" },
-                { value: "12 мес.", label: "гарантии" },
-              ].map((stat) => (
+            {[
+              { value: "9–21", label: "ежедневно" },
+              { value: "7/7", label: "без выходных" },
+              { value: "12 мес", label: "гарантия" },
+              { value: "1 №", label: "телефон" },
+            ].map((stat) => (
               <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-white">
                 <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
                 <div className="text-[13px] font-medium opacity-80 uppercase tracking-wider">{stat.label}</div>
@@ -229,13 +229,13 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Почему выбирают нас</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Почему выбирают мастера Манаса</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Clock, title: "Быстрый приезд", desc: "Мастер будет у вас в течение 30-45 минут после звонка." },
-              { icon: ShieldCheck, title: "Гарантия качества", desc: "Даем официальную гарантию до 12 месяцев на все работы." },
-              { icon: ThumbsUp, title: "Опытные мастера", desc: "Стаж работы наших специалистов не менее 7 лет." },
+              { icon: Clock, title: "Удобный график", desc: "Работаю ежедневно с 9:00 до 21:00, без выходных." },
+              { icon: ShieldCheck, title: "Гарантия качества", desc: "Предоставляю гарантию до 12 месяцев на все работы." },
+              { icon: ThumbsUp, title: "Опытный мастер", desc: "Профессиональный подход к каждому заказу." },
               { icon: CheckCircle2, title: "Честные цены", desc: "Озвучиваем стоимость до начала работ, никаких скрытых доплат." },
             ].map((item, idx) => (
               <div key={idx} className="bg-slate-50 p-8 rounded-[1.5rem] border border-slate-100 flex flex-col items-center text-center">
@@ -255,10 +255,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">О компании "Мастер Манас"</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">О мастере Манасе</h2>
               <div className="space-y-4 text-[16px] text-slate-600 font-medium leading-relaxed mb-8">
-                <p>Мы работаем на рынке Алматы более 15 лет. За это время мы сформировали команду профессионалов, которые обожают свое дело и ценят доверие клиентов.</p>
-                <p>Наша цель — качественный сервис по разумной цене, где вы получаете надежность и безопасность для своего дома.</p>
+                <p>Меня зовут Манас, я — выездной сантехник в Алматы. Выполняю все виды сантехнических работ: от замены смесителя до капитального ремонта водопровода.</p>
+                <p>Моя цель — качественный сервис по разумной цене, где вы получаете надежность и безопасность для своего дома.</p>
               </div>
               <ul className="space-y-4 mb-8">
                 {[
@@ -297,13 +297,12 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Отзывы клиентов</h2>
-            <p className="text-slate-500 font-medium mt-3">Без накруток и фальшивых звезд — только то, что люди отмечают после выполненной работы.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { bg: "bg-[#1173D4]", letter: "А", name: "Айгуль С.", date: "15 янв 2025", text: "Вызывала мастера для замены смесителя. Приехал быстро, сам подобрал расходники, сделал аккуратно и оставил после себя порядок.", note: "Замена смесителя" },
-              { bg: "bg-green-500", letter: "К", name: "Кайрат М.", date: "10 фев 2025", text: "Нужна была установка бойлера и подключение фильтров. Все объяснил простыми словами, показал как пользоваться и что проверять.", note: "Установка бойлера" },
-              { bg: "bg-purple-500", letter: "Н", name: "Наталья П.", date: "28 фев 2025", text: "Срочно понадобился ремонт унитаза в выходной. Приехал в тот же день, устранил проблему без лишних разговоров.", note: "Ремонт унитаза" },
+              { bg: "bg-[#1173D4]", letter: "А", name: "Айгуль С.", date: "", text: "Вызывала сантехника для замены смесителя. Мастер приехал вовремя, всё сделал аккуратно и чисто. Рекомендую!", rating: 5 },
+              { bg: "bg-green-500", letter: "К", name: "Кайрат М.", date: "", text: "Хороший мастер. Установил бойлер и подключил фильтры для воды. Работает аккуратно, всё объяснил.", rating: 5 },
+              { bg: "bg-purple-500", letter: "Н", name: "Наталья П.", date: "", text: "Нужен был ремонт унитаза в выходной. Манас приехал, починил качественно. Оплата по факту, без накруток.", rating: 5 },
             ].map((review) => (
               <div key={review.name} className="bg-slate-50 rounded-[1.5rem] p-8 border border-slate-100">
                 <div className="flex items-center justify-between mb-5">
@@ -441,7 +440,28 @@ const Index = () => {
             <p className="text-slate-500 font-medium">Ответы на самые популярные вопросы о наших услугах</p>
           </div>
           <div className="space-y-4">
-            {faqItems.map((item, idx) => (
+            {[
+              {
+                q: "Сколько стоит вызов сантехника в Алматы?",
+                a: "Выезд и диагностика — бесплатно при заказе ремонта. Стоимость работ начинается от 3 000 ₸. Точная цена озвучивается мастером после осмотра, до начала работ — никаких сюрпризов."
+              },
+              {
+                q: "Как быстро приедет сантехник?",
+                a: "Время приезда зависит от района и загруженности. Обслуживаю все районы Алматы: Алмалинский, Бостандыкский, Ауэзовский, Медеуский, Жетысуский и другие."
+              },
+              {
+                q: "Есть ли гарантия на выполненные работы?",
+                a: "Да, на все виды работ предоставляю гарантию до 12 месяцев. Если в гарантийный период возникнет проблема по моей вине — исправлю бесплатно."
+              },
+              {
+                q: "В какое время работает сантехник?",
+                a: "Принимаю заявки с 9:00 до 21:00 ежедневно, без выходных. Обслуживаю все районы Алматы и пригород."
+              },
+              {
+                q: "Какие материалы используются при ремонте?",
+                a: "Только сертифицированные материалы от проверенных производителей: турецкий полипропилен FIRAT, немецкая арматура Grohe/Hansgrohe, счётчики с поверкой. Качество всех материалов подтверждено документами."
+              },
+            ].map((item, idx) => (
               <FAQItem key={idx} question={item.q} answer={item.a} />
             ))}
           </div>
@@ -460,7 +480,7 @@ const Index = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Нужен грамотный специалист?</h2>
               <p className="text-lg text-slate-300 font-medium mb-10 leading-relaxed">
-                Оставьте заявку, и наш менеджер свяжется с вами в течение 5 минут для уточнения деталей. 
+                Позвоните или оставьте заявку — отвечу в рабочее время.
               </p>
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-4">
@@ -477,8 +497,8 @@ const Index = () => {
                     <MapPin size={24} className="text-[#13B6EC]" />
                   </div>
                   <div>
-                    <div className="text-[13px] text-slate-400 font-medium mb-1">Наш адрес</div>
-                    <div className="text-[15px] font-bold">г. Алматы, мкр. Аксай 4-11</div>
+                    <div className="text-[13px] text-slate-400 font-medium mb-1">Зона обслуживания</div>
+                    <div className="text-[15px] font-bold">Алматы и пригород</div>
                   </div>
                 </div>
               </div>
@@ -524,38 +544,121 @@ const Index = () => {
         ></iframe>
       </section>
 
-      {/* SEO Text Article Block */}
-      <section className="py-16 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <article className="prose prose-slate max-w-none">
-            
-            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Сантехник в Алматы — профессиональные услуги с 9:00 до 21:00
+      {/* SEO BLOCK 1: САНТЕХНИК В АЛМАТЫ (Проблема-Решение) */}
+      <section className="py-20 bg-white border-t border-slate-100 overflow-hidden relative">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#1173D4] text-sm font-bold mb-6">
+              <Zap size={16} className="fill-current" />
+              Экстренная помощь
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Сантехник в Алматы: решение любых проблем с водопроводом
             </h2>
-            
-            <p className="text-slate-600 leading-relaxed mb-6 text-[15px]">
-              Если вам срочно нужен <strong>сантехник в Алматы</strong>, мастер Манас готов выехать в течение 30 минут в любой район города. Мы предоставляем полный спектр <strong>сантехнических услуг в Алматы</strong> — от мелкого ремонта смесителя до капитальной замены труб водоснабжения и канализации в квартире, доме или офисе. Наши специалисты работают <strong>с 9:00 до 21:00, без выходных и праздников</strong>.
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Когда случается авария, важно вызвать опытного <strong>сантехника</strong>. Вот как я решаю самые частые проблемы:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 className="text-lg font-extrabold text-slate-900 mb-3">Когда вызывают сантехника?</h3>
-                <ul className="space-y-2 text-[14px] text-slate-600">
-                  {[
-                    "Капает или течет кран, смеситель",
-                    "Засорилась канализация, стоит вода",
-                    "Не работает или протекает бойлер",
-                    "Прорвало трубу или стояк",
-                    "Нужно установить новый унитаз или раковину",
-                    "Подключить стиральную или посудомоечную машину",
-                    "Заменить радиатор или батарею отопления",
-                    "Протечка в ванной, сырость под раковиной",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="text-[#1173D4] mt-0.5 shrink-0">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                problem: "Затопление соседей",
+                solution: "Мгновенное перекрытие стояков и герметизация муфтами GEBO без разрушения стен.",
+                icon: <Droplet size={28} className="text-red-500" />,
+                bg: "bg-red-50"
+              },
+              {
+                problem: "Глухой засор канализации",
+                solution: "Применяем гидродинамику: вода под давлением 200 бар срезает жир со стенок труб как бритвой.",
+                icon: <AlertTriangle size={28} className="text-amber-500" />,
+                bg: "bg-amber-50"
+              },
+              {
+                problem: "Нет горячей воды (поломка бойлера)",
+                solution: "Чистка от накипи, замена сгоревшего ТЭНа и анода прямо на месте за 40 минут.",
+                icon: <Wrench size={28} className="text-slate-500" />,
+                bg: "bg-slate-100"
+              }
+            ].map((card, i) => (
+              <div key={i} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div className={`w-16 h-16 rounded-2xl ${card.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {card.icon}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{card.problem}</h3>
+                <p className="text-[15px] text-slate-600 leading-relaxed">
+                  <span className="font-bold text-[#1173D4]">Наше решение:</span> {card.solution}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO BLOCK 2: УСЛУГИ САНТЕХНИКА (Инфографика-Сетка) */}
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#1173D4]/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="mb-16 md:flex justify-between items-end gap-8">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight text-white">
+                Профессиональные услуги сантехника под микроскопом
+              </h2>
+              <p className="text-lg text-slate-300 leading-relaxed font-medium">
+                Качественные <strong>услуги сантехника</strong> — это строгий алгоритм, современные материалы и ювелирная точность.
+              </p>
+            </div>
+            <div className="mt-8 md:mt-0">
+              <Link to="/services" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl font-bold transition-colors border border-white/10">
+                Все услуги <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { title: "Диагностика", desc: "Эндоскопия труб для поиска скрытых течей и засоров.", icon: <Star /> },
+              { title: "Герметизация", desc: "Анаэробные гели вместо устаревшего льна и краски.", icon: <ShieldCheck /> },
+              { title: "Разводка труб", desc: "Полипропилен и сшитый полиэтилен с пайкой без сужений.", icon: <MapPin /> },
+              { title: "Пусконаладка", desc: "Опрессовка системы давлением в 10 атмосфер перед сдачей.", icon: <CheckCircle2 /> }
+            ].map((item, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors cursor-default">
+                <div className="text-[#13B6EC] mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-[14px] text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO BLOCK 3: САНТЕХНИЧЕСКИЕ РАБОТЫ (Сравнение) */}
+      <section className="py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Сантехнические работы: анатомия правильного ремонта
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              Капитальные <strong>сантехнические работы</strong> не терпят дилетантства. Посмотрите, чем отличается подход "Мастер Манас" от типичных ошибок дешевых подрядчиков:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-2xl border border-red-100 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+                <div className="flex items-center gap-3 mb-3">
+                  <XCircle size={24} className="text-red-500" />
+                  <h3 className="text-lg font-bold text-slate-900">Как делают халтурщики</h3>
+                </div>
+                <ul className="space-y-3 text-[14px] text-slate-600">
+                  <li>— Экономят на диаметре труб (слабый напор воды)</li>
+                  <li>— Замуровывают резьбовые соединения в стену (риск потопа)</li>
+                  <li>— Не соблюдают уклон канализации (постоянные засоры)</li>
+                  <li>— Исчезают после получения денег без гарантий</li>
                 </ul>
               </div>
               <div>
@@ -597,9 +700,29 @@ const Index = () => {
                 <a href="https://wa.me/77074791020" className="font-bold text-[#1173D4] hover:underline ml-1" target="_blank" rel="noopener noreferrer">WhatsApp +7 (707) 479-10-20</a> — 
                 мастер приедет в течение 30 минут в любой район Алматы.
               </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+77055535332" className="bg-white text-[#1173D4] px-8 py-4 rounded-xl font-bold text-[16px] hover:bg-slate-50 transition-all flex items-center justify-center gap-3 shadow-xl">
+                  <Phone size={20} className="fill-current" />
+                  Позвонить сейчас
+                </a>
+                <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-[16px] hover:bg-[#20bd5a] transition-all flex items-center justify-center gap-3 shadow-xl">
+                  Написать в WhatsApp
+                </a>
+              </div>
             </div>
-
-          </article>
+            
+            <div className="w-full lg:w-auto shrink-0 flex gap-4 justify-center mt-8 lg:mt-0">
+              <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
+                <div className="text-4xl font-black text-[#1173D4] mb-2">7/7</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Без<br/>выходных</div>
+              </div>
+              <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
+                <div className="text-4xl font-black text-[#1173D4] mb-2">12</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Месяцев<br/>гарантии</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       

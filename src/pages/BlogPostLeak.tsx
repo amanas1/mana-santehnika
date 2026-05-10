@@ -66,7 +66,7 @@ const BlogPostLeak = () => {
               </p>
 
               <div className="bg-blue-50 border-l-4 border-[#0095DA] p-6 rounded-r-2xl my-8">
-                <p className="m-0 font-medium">Помните: в Алматы я работаю 24/7. Даже ночью я готов приехать к вам со всеми запчастями и сварочным аппаратом, чтобы полностью восстановить целостность системы.</p>
+                <p className="m-0 font-medium">Помните: я работаю в Алматы ежедневно с 9:00 до 21:00. Приеду к вам со всеми запчастями и инструментом, чтобы полностью восстановить целостность системы.</p>
               </div>
 
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Почему нельзя оставлять микропротечки?</h2>
@@ -78,7 +78,7 @@ const BlogPostLeak = () => {
             <div className="bg-red-50 border-t border-red-100 p-8 md:p-12 text-center">
               <h3 className="text-2xl font-bold text-red-700 mb-6">Нужна экстренная помощь прямо сейчас?</h3>
               <a href="tel:+77055535332" className="inline-flex items-center justify-center px-10 py-5 bg-red-600 text-white font-bold rounded-2xl shadow-xl hover:bg-red-700 transition-all text-xl">
-                Вызвать Манаса (24/7)
+                Вызвать Манаса
               </a>
             </div>
           </article>

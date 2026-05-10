@@ -15,18 +15,10 @@ const FloatingButtons = () => {
         <MessageCircle size={28} className="fill-current" />
       </a>
       <a
-        href="tel:+77074791020"
-        onClick={trackConversion}
-        className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgba(239,68,68,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(239,68,68,0.5)]"
-        title="Позвонить Манасу"
-      >
-        <Phone size={24} className="fill-white" />
-      </a>
-      <a
         href="tel:+77055535332"
         onClick={trackConversion}
         className="w-14 h-14 bg-gradient-to-br from-[#1173D4] to-[#13B6EC] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgba(17,115,212,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(17,115,212,0.5)]"
-        title="Позвонить (основной)"
+        title="Позвонить Манасу"
       >
         <Phone size={24} className="fill-white" />
       </a>

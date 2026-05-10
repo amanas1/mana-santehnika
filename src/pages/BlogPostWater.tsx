@@ -67,7 +67,7 @@ const BlogPostWater = () => {
 
             <div className="bg-green-50 border-t border-green-100 p-8 md:p-12 text-center">
               <h3 className="text-2xl font-bold text-green-700 mb-6">Нужна консультация по выбору сантехники?</h3>
-              <a href="tel:+77074791020" className="inline-flex items-center justify-center px-10 py-5 bg-[#0095DA] text-white font-bold rounded-2xl shadow-xl hover:bg-[#0084c0] transition-all text-xl">
+              <a href="tel:+77055535332" className="inline-flex items-center justify-center px-10 py-5 bg-[#0095DA] text-white font-bold rounded-2xl shadow-xl hover:bg-[#0084c0] transition-all text-xl">
                 Связаться с Мастером
               </a>
             </div>

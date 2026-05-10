@@ -24,7 +24,7 @@ const Hero = () => {
             Сантехник в Алматы
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#13B6EC] to-[#4ADE80]">
-              за 30 минут
+              на дом
             </span>
           </h1>
 

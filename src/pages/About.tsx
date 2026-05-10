@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="О мастере Манасе — Профессиональный сантехник в Алматы с 15-летним опытом"
-        description="Мастер Манас — профессиональный сантехник в Алматы с опытом более 15 лет. Более 1000 выполненных заказов. Работаем с 9:00 до 21:00 без выходных. Гарантия на все работы. Честные цены без скрытых доплат."
+        title="О мастере Манасе — Сантехник в Алматы | Мастер Манас"
+        description="Мастер Манас — выездной сантехник в Алматы. Работаю ежедневно с 9:00 до 21:00. Гарантия на все работы до 12 месяцев. Честные цены без скрытых доплат."
         keywords="сантехник алматы, мастер сантехник алматы, профессиональный сантехник, опытный сантехник алматы, надежный сантехник"
         canonical="https://mana.kz/about"
         ogImage="/images/services/manas-santehnik.jpg"
@@ -19,9 +19,9 @@ const About = () => {
           <div className="flex gap-2 text-sm text-slate-500 font-medium mb-6">
             <Link to="/" className="hover:text-[#1173D4] transition-colors">Главная</Link>
             <span>/</span>
-            <span className="text-slate-900">О компании</span>
+            <span className="text-slate-900">О мастере</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">О компании Мастер Манас</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">О мастере Манасе</h1>
         </div>
       </section>
 
@@ -31,15 +31,15 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Наша история</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Обо мне</h2>
               <div className="space-y-4 text-lg text-slate-600 leading-relaxed font-medium">
                 <p>
-                  Компания "Мастер Манас" была основана в 2010 году с одной главной целью — предоставлять жителям Алматы качественные и честные услуги в сфере сантехники. 
+                  Меня зовут Манас, я — выездной сантехник в Алматы. Выполняю все виды сантехнических работ: от замены смесителя до капитального ремонта водопровода.
                 </p>
                 <div className="my-8 rounded-[2rem] overflow-hidden shadow-lg aspect-video md:aspect-[16/9]">
                   <img 
                   src="/images/services/manas-real.jpg" 
-                  alt="Манас Абдулдаев — профессиональный сантехник в Алматы, 15 лет опыта" 
+                  alt="Манас — сантехник в Алматы" 
                   title="Мастер Манас — сантехник в Алматы"
                   width="600" height="400"
                   className="w-full rounded-2xl shadow-lg border border-gray-100 object-cover"
@@ -47,10 +47,10 @@ const About = () => {
 
                 </div>
                 <p>
-                  Мы начинали как небольшая бригада мастеров, объединенных общими принципами: делать работу на совесть, не навязывать лишние услуги и всегда приезжать вовремя.
+                  Мой главный принцип — делать работу на совесть, не навязывать лишние услуги и приезжать вовремя.
                 </p>
                 <p>
-                  Сегодня мы гордимся тем, что стали надежным партнером для тысяч семей и компаний. Наша команда разрослась, но принципы остались неизменными: профессионализм, ответственность и уважение к каждому клиенту.
+                  Ценю доверие каждого клиента. Работаю ежедневно с 9:00 до 21:00, обслуживаю все районы Алматы и пригород.
                 </p>
               </div>
             </div>
@@ -58,13 +58,13 @@ const About = () => {
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Users size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-3xl font-extrabold text-slate-900 block mb-1">1000+</span>
-                <span className="text-[15px] text-slate-500 font-medium">клиентов</span>
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">9–21</span>
+                <span className="text-[15px] text-slate-500 font-medium">ежедневно</span>
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Calendar size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-3xl font-extrabold text-slate-900 block mb-1">15 лет</span>
-                <span className="text-[15px] text-slate-500 font-medium">на рынке</span>
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">7/7</span>
+                <span className="text-[15px] text-slate-500 font-medium">без выходных</span>
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <ShieldCheck size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
@@ -86,20 +86,18 @@ const About = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">История компании</h2>
-            <p className="text-slate-500 font-medium">Путь из небольшой бригады в надёжную службу сантехники Алматы</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Мой путь</h2>
+            <p className="text-slate-500 font-medium">От первого заказа до надёжного мастера в Алматы</p>
           </div>
           <div className="relative">
             {/* Vertical line */}
             <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#1173D4] to-[#13B6EC] -translate-x-1/2" />
             <div className="space-y-10">
               {[
-                { year: "2010", title: "Начало пути", desc: "Манас начал работать индивидуальным мастером, обслуживая квартиры в Ауэзовском районе. Первые клиенты и первые рекомендации.", side: "right" },
-                { year: "2013", title: "Первые постоянные клиенты", desc: "Более 100 постоянных клиентов. Начало специализации на ремонте бойлеров и замене труб в строящихся домах.", side: "left" },
-                { year: "2016", title: "Расширение на весь Алматы", desc: "Охват всех районов города. Покупка профессионального оборудования — гидродинамическая машина, тепловизор, аппарат для пайки ПП-труб.", side: "right" },
-                { year: "2019", title: "500+ выполненных заказов", desc: "Достижение отметки в 500 выполненных заказов. Начало работы с управляющими компаниями и частными домами.", side: "left" },
-                { year: "2022", title: "Запуск сайта mana.kz", desc: "Открытие собственного ресурса для удобного заказа услуг онлайн. Отзывы на 2GIS и Google Maps.", side: "right" },
-                { year: "2025", title: "1000+ довольных клиентов", desc: "Сегодня Мастер Манас — это опыт 15 лет, более 1000 выполненных заказов и гарантия на каждую работу.", side: "left" },
+                { year: "Начало", title: "Первые шаги", desc: "Начал работать сантехником, обслуживая квартиры в Ауэзовском районе. Первые клиенты и первые рекомендации.", side: "right" },
+                { year: "Рост", title: "Постоянные клиенты", desc: "Появились постоянные клиенты. Специализация на ремонте бойлеров и замене труб.", side: "left" },
+                { year: "Развитие", title: "Весь Алматы", desc: "Охват всех районов города. Приобретение профессионального оборудования для диагностики и ремонта.", side: "right" },
+                { year: "Сайт", title: "Запуск mana.kz", desc: "Открытие собственного сайта для удобного заказа услуг онлайн.", side: "left" },
               ].map((item, idx) => (
                 <div key={idx} className={`relative flex items-start gap-6 md:gap-0 ${item.side === "left" ? "md:flex-row-reverse" : ""}`}>
                   {/* Dot */}
@@ -150,15 +148,15 @@ const About = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Сертификаты и лицензии</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Подход к работе</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "ГОСТ Стандарты", desc: "Строгое соблюдение всех санитарных и строительных норм." },
-              { title: "Техника безопасности", desc: "Соблюдение правил ТБ при проведении работ." },
-              { title: "Пожарная безопасность", desc: "Сертификат прохождения обучения ПТМ." },
-              { title: "Сварные соединения", desc: "Лицензия на проведение сварочных работ." },
+              { title: "Нормы и стандарты", desc: "Соблюдаю санитарные и строительные нормы при выполнении работ." },
+              { title: "Безопасность", desc: "Соблюдаю правила техники безопасности на объекте." },
+              { title: "Качественные материалы", desc: "Использую сертифицированные материалы от проверенных поставщиков." },
+              { title: "Чистота", desc: "Убираю за собой после завершения работ." },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 text-center flex flex-col items-center">
                 <div className="w-16 h-16 bg-blue-50 text-[#1173D4] rounded-full flex items-center justify-center mb-6">
@@ -166,9 +164,6 @@ const About = () => {
                 </div>
                 <h3 className="text-[17px] font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-[14px] text-slate-500 font-medium leading-loose">{item.desc}</p>
-                <div className="mt-4 inline-block px-3 py-1 bg-green-50 text-green-600 text-[11px] font-bold uppercase tracking-wider rounded-md border border-green-100">
-                  Сертифицировано
-                </div>
               </div>
             ))}
           </div>

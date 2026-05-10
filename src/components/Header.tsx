@@ -65,27 +65,21 @@ const Header = () => {
       <div className="bg-[#1173D4] text-white py-2 px-4 flex flex-wrap justify-between items-center text-sm font-medium">
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4">
               <a href="tel:+77055535332" onClick={trackConversion} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <Phone size={16} />
                 +7 (705) 553-53-32
               </a>
-              <span className="opacity-50 text-white/50">|</span>
-              <a href="tel:+77074791020" onClick={trackConversion} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                +7 (707) 479-10-20
-              </a>
-            </div>
             <div className="hidden md:flex items-center gap-2">
               <Clock size={16} />
               Пн-Вс: 9:00 – 21:00
             </div>
             <div className="hidden lg:flex items-center gap-2">
               <MapPin size={16} />
-              г. Алматы, мкр. Аксай 4-11
+              Алматы и пригород
             </div>
           </div>
           <div className="hidden sm:block font-bold tracking-wide">
-            Вызов мастера БЕСПЛАТНО!
+            Выезд бесплатно при заказе работ
           </div>
         </div>
       </div>
@@ -263,7 +257,7 @@ const Header = () => {
           {/* Bottom Action Area */}
           <div className="p-5 border-t border-slate-100 bg-slate-50/80 backdrop-blur-sm relative mt-auto">
             {/* WhatsApp Floating Overlay */}
-            <a href="https://wa.me/77074791020" target="_blank" rel="noopener noreferrer" 
+            <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" 
                onClick={trackConversion}
                className="absolute -top-7 right-8 w-14 h-14 bg-[#22c55e] border-4 border-white text-white rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition-transform z-10"
                title="WhatsApp">
@@ -281,9 +275,9 @@ const Header = () => {
                   <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                   705 553-53-32
                 </a>
-                <a href="tel:+77074791020" onClick={trackConversion} className="flex-1 flex items-center justify-center gap-2 py-3 bg-white rounded-xl border border-blue-50 text-[13px] font-bold text-[#1173D4] shadow-sm active:bg-blue-50 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-[#13B6EC] animate-pulse"></span>
-                  707 479-10-20
+                <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" onClick={trackConversion} className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#22c55e]/10 rounded-xl border border-[#22c55e]/20 text-[13px] font-bold text-[#22c55e] shadow-sm active:bg-[#22c55e]/20 transition-colors">
+                  <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse"></span>
+                  WhatsApp
                 </a>
               </div>
             </div>

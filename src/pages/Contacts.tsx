@@ -26,8 +26,8 @@ const Contacts = () => {
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="Контакты сантехника в Алматы — Позвоните прямо сейчас | Мастер Манас"
-        description="Контакты профессионального сантехника в Алматы. Телефон: +7 (705) 553-53-32. WhatsApp: +7 (707) 479-10-20. Работаем с 9:00 до 21:00 без выходных и праздников, выезд за 30 минут."
+        title="Контакты сантехника в Алматы | Мастер Манас"
+        description="Контакты сантехника в Алматы. Телефон: +7 (705) 553-53-32. Работаю ежедневно с 9:00 до 21:00. Выезд на дом по всему Алматы и пригороду."
         keywords="контакты сантехника алматы, телефон сантехника алматы, вызвать сантехника алматы номер"
         canonical="https://mana.kz/contacts"
         ogImage="/images/services/master-working.jpg"
@@ -50,13 +50,13 @@ const Contacts = () => {
             <Phone size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-[17px] font-bold text-gray-900 mb-3">Основной номер</h3>
             <span className="text-xl font-extrabold text-[#1173D4] block mb-1">+7 (705) 553-53-32</span>
-            <span className="text-[13px] text-gray-400 font-medium">Звоните в любое время</span>
+            <span className="text-[13px] text-gray-400 font-medium">Ежедневно с 9:00 до 21:00</span>
           </a>
 
-          <a href="https://wa.me/77074791020" target="_blank" rel="noopener noreferrer" className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
+          <a href="https://wa.me/77055535332" target="_blank" rel="noopener noreferrer" className="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-md transition-all text-center group flex flex-col items-center">
             <MessageCircle size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-[17px] font-bold text-gray-900 mb-3">WhatsApp / Telegram</h3>
-            <span className="text-xl font-extrabold text-[#1173D4] block mb-1">+77074791020</span>
+            <h3 className="text-[17px] font-bold text-gray-900 mb-3">WhatsApp</h3>
+            <span className="text-xl font-extrabold text-[#1173D4] block mb-1">+7 (705) 553-53-32</span>
             <span className="text-[13px] text-gray-400 font-medium">Быстрые сообщения</span>
           </a>
 
@@ -83,12 +83,12 @@ const Contacts = () => {
           <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-gray-100 h-full">
             <div className="flex items-center gap-3 mb-6">
               <MapPin size={24} strokeWidth={2} className="text-[#1173D4]" />
-              <h2 className="text-2xl font-extrabold text-gray-900">Адрес офиса</h2>
+              <h2 className="text-2xl font-extrabold text-gray-900">Зона обслуживания</h2>
             </div>
             
             <div className="mb-8">
-              <h3 className="text-lg font-extrabold text-gray-900 mb-1">г. Алматы, микрорайон Аксай 4-11</h3>
-              <p className="text-gray-500 font-medium text-[15px]">Офис мастера Манаса</p>
+              <h3 className="text-lg font-extrabold text-gray-900 mb-1">Алматы и пригород</h3>
+              <p className="text-gray-500 font-medium text-[15px]">Выездной мастер — приеду к вам на дом</p>
             </div>
 
             <h4 className="text-[15px] font-bold text-gray-900 mb-4">Районы обслуживания:</h4>
@@ -122,7 +122,7 @@ const Contacts = () => {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-6 h-6 rounded-full bg-[#1173D4] text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">3</div>
-                <p className="text-[15px] text-gray-700 font-medium leading-relaxed">Мастер приедет в течение 30-60 минут</p>
+                <p className="text-[15px] text-gray-700 font-medium leading-relaxed">Мастер приедет в согласованное время</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-6 h-6 rounded-full bg-[#1173D4] text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-sm">4</div>
@@ -254,7 +254,7 @@ const Contacts = () => {
                   <option value="" disabled>Выберите время</option>
                   <option value="morning">Утром (09:00 - 13:00)</option>
                   <option value="afternoon">Днем (13:00 - 18:00)</option>
-                  <option value="evening">Вечером (18:00 - 22:00)</option>
+                  <option value="evening">Вечером (18:00 - 21:00)</option>
                   <option value="urgent">Срочно (в течение часа)</option>
                 </select>
               </div>

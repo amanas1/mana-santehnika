@@ -53,7 +53,7 @@ const NotFound = () => {
         
         <div className="mt-16 pt-8 border-t border-gray-100">
           <p className="text-gray-400 font-medium">Нужна срочная помощь сантехника?</p>
-          <a href="tel:+77074791020" className="text-[#0095DA] text-2xl font-black hover:underline mt-2 block">
+          <a href="tel:+77055535332" className="text-[#0095DA] text-2xl font-black hover:underline mt-2 block">
             +7 (707) 479-10-20
           </a>
         </div>
