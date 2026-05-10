@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import seoData from "../data/seo-data.json";
 import SEO from "../components/SEO";
-import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, ArrowRight, CheckCircle2, Calendar, Phone, Award, ChevronDown } from "lucide-react";
+import { Clock, ShieldCheck, ThumbsUp, Wrench, MapPin, ArrowRight, CheckCircle2, Calendar, Phone, Award, ChevronDown, Zap, Droplet, AlertTriangle, Star, XCircle } from "lucide-react";
 import { useState } from "react";
 import { cleanServiceCopy } from "../utils/seoText";
 
