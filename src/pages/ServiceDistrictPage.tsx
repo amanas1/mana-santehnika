@@ -1,4 +1,4 @@
-import { useParams, Link, useLocation } from "react-router-dom";
+import { useParams, Link, useLocation, Navigate } from "react-router-dom";
 import seoData from "../data/seo-data.json";
 import SEO from "../components/SEO";
 import { Phone, Clock, Shield, MapPin, CheckCircle, ArrowRight } from "lucide-react";
@@ -30,12 +30,7 @@ const ServiceDistrictPage = () => {
   };
 
   if (!service) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-4">
-        <h1 className="text-3xl font-bold mb-4">Страница не найдена</h1>
-        <Link to="/" className="text-[#0095DA] hover:underline font-medium">← Вернуться на главную</Link>
-      </div>
-    );
+    return <Navigate to="/" replace />;
   }
 
   const title = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} | Мастер Манас`;

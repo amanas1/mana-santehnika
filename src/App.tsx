@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -49,6 +49,7 @@ function App() {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/ustanovka-rozetok-almaty" element={<Navigate to="/" replace />} />
             <Route path="/:serviceId-almaty" element={<ServiceDistrictPage />} />
             <Route path="/services" element={<Services />} />
             <Route path="/prices" element={<Prices />} />
