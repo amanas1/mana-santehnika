@@ -155,9 +155,8 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl">
             {[
               { value: "9–21", label: "ежедневно" },
-              { value: "7/7", label: "без выходных" },
+              { value: "12/7", label: "без выходных" },
               { value: "12 мес", label: "гарантия" },
-              { value: "1 №", label: "телефон" },
             ].map((stat) => (
               <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-white">
                 <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
@@ -715,7 +714,7 @@ const Index = () => {
             
             <div className="w-full lg:w-auto shrink-0 flex gap-4 justify-center mt-8 lg:mt-0">
               <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
-                <div className="text-4xl font-black text-[#1173D4] mb-2">12</div>
+                <div className="text-4xl font-black text-[#1173D4] mb-2">12/7</div>
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Часов<br/>в день</div>
               </div>
               <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col items-center justify-center text-center w-36 h-36">
