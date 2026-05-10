@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <div className="bg-blue-50 px-3 py-2 rounded-lg text-center">
-                <div className="font-extrabold text-[#1173D4] text-lg leading-tight">12</div>
+                <div className="font-extrabold text-[#1173D4] text-lg leading-tight">1</div>
                 <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">мес. гарантия</div>
               </div>
               <div className="bg-green-50 px-3 py-2 rounded-lg text-center">

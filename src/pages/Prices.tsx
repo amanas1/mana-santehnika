@@ -81,7 +81,7 @@ const priceCategories: PriceCategory[] = [
     name: "Аварийные",
     icon: AlertTriangle,
     items: [
-      { name: "Аварийный выезд (ночь/выходные)", unit: "за выезд", price: "от 5 000 ₸", popular: true },
+      { name: "Аварийный выезд", unit: "за выезд", price: "от 5 000 ₸", popular: true },
       { name: "Устранение прорыва трубы", unit: "за услугу", price: "от 6 000 ₸", popular: true },
       { name: "Аварийная прочистка канализации", unit: "за услугу", price: "от 7 000 ₸" },
       { name: "Устранение потопа", unit: "за услугу", price: "от 8 000 ₸" },
