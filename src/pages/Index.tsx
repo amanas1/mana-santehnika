@@ -518,7 +518,7 @@ const Index = () => {
                   <label htmlFor="service" className="block text-sm font-bold text-slate-700 mb-1.5">Услуга</label>
                   <select id="service" value={formData.service} onChange={handleChange} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-[#1173D4] font-medium text-sm transition-all" required>
                     <option value="" disabled>Что нужно сделать?</option>
-                    <option value="plumb">Сантехника</option>
+                    <option value="plumb">Все услуги по сантехнике</option>
                     <option value="other">Другое</option>
                   </select>
                 </div>
