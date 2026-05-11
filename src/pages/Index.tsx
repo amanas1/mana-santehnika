@@ -156,7 +156,7 @@ const Index = () => {
             {[
               { value: "9–21", label: "ежедневно" },
               { value: "12/7", label: "без выходных" },
-              { value: "1 мес", label: "гарантия" },
+              { value: "1 мес", label: "на протечку воды" },
             ].map((stat) => (
               <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center text-white">
                 <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
