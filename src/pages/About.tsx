@@ -63,8 +63,8 @@ const About = () => {
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Calendar size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-3xl font-extrabold text-slate-900 block mb-1">7/7</span>
-                <span className="text-[15px] text-slate-500 font-medium">без выходных</span>
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">12/7</span>
+                <span className="text-[15px] text-slate-500 font-medium">ежедневно</span>
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <ShieldCheck size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />

@@ -550,10 +550,10 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#1173D4] text-sm font-bold mb-6">
               <Zap size={16} className="fill-current" />
-              Экстренная помощь
+              Сантехнические работы
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Сантехник в Алматы: решение любых проблем с водопроводом
+              Сантехник в Алматы: решение сантехнических проблем в вашем доме
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium">
               Когда случается авария, важно вызвать опытного <strong>сантехника</strong>. Вот как я решаю самые частые проблемы:
@@ -602,7 +602,7 @@ const Index = () => {
           <div className="mb-16 md:flex justify-between items-end gap-8">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight text-white">
-                Профессиональные услуги сантехника под микроскопом
+                Профессиональные услуги сантехника в Алматы
               </h2>
               <p className="text-lg text-slate-300 leading-relaxed font-medium">
                 Качественные <strong>услуги сантехника</strong> — это строгий алгоритм, современные материалы и ювелирная точность.
@@ -639,10 +639,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              Сантехнические работы: анатомия правильного ремонта
+              Сантехнические работы: как отличить качественный ремонт
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium">
-              Капитальные <strong>сантехнические работы</strong> не терпят дилетантства. Посмотрите, чем отличается подход "Мастер Манас" от типичных ошибок дешевых подрядчиков:
+              Капитальные <strong>сантехнические работы</strong> требуют опыта и соблюдения технологии. Посмотрите, чем отличается подход "Мастер Манас" от типичных ошибок при монтаже:
             </p>
           </div>
 
@@ -652,7 +652,7 @@ const Index = () => {
                 <div className="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
                 <div className="flex items-center gap-3 mb-3">
                   <XCircle size={24} className="text-red-500" />
-                  <h3 className="text-lg font-bold text-slate-900">Как делают халтурщики</h3>
+                  <h3 className="text-lg font-bold text-slate-900">Как работают новички</h3>
                 </div>
                 <ul className="space-y-3 text-[14px] text-slate-600">
                   <li>— Экономят на диаметре труб (слабый напор воды)</li>

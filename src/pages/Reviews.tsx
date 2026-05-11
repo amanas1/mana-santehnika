@@ -84,9 +84,6 @@ const Reviews = () => {
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">Отзывы клиентов</h1>
 
-          <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
-            Дорожу своей репутацией. Каждый отзыв — это реальный клиент.
-          </p>
         </div>
       </section>
 
@@ -116,12 +113,7 @@ const Reviews = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
+
                 
                 <div className="flex-1">
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">"{review.text}"</p>
@@ -199,28 +191,17 @@ const Reviews = () => {
 
               <div>
                 <label className="block text-sm font-bold text-gray-900 mb-2">Оценка работы *</label>
-                <div className="flex items-center gap-3">
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <button 
-                        type="button" 
-                        key={star} 
-                        onClick={() => setRating(star)}
-                        onMouseEnter={() => setHoverRating(star)}
-                        onMouseLeave={() => setHoverRating(0)}
-                        className={`transition-all duration-200 hover:scale-110 ${
-                          star <= (hoverRating || rating) ? 'text-amber-400' : 'text-gray-300'
-                        }`}
-                      >
-                        <Star size={24} strokeWidth={1.5} className={star <= (hoverRating || rating) ? 'fill-current' : ''} />
-                      </button>
-                    ))}
+                <div className="relative">
+                  <select className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
+                    <option value="">Выберите оценку</option>
+                    <option value="5">Отлично — всё понравилось</option>
+                    <option value="4">Хорошо — буду рекомендовать</option>
+                    <option value="3">Нормально — есть замечания</option>
+                    <option value="2">Плохо — есть проблемы</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center px-5 pointer-events-none">
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   </div>
-                  {(hoverRating > 0 || rating > 0) && (
-                    <span className="text-sm font-semibold text-gray-700 animate-in fade-in zoom-in duration-300">
-                      {ratingTexts[hoverRating || rating]}
-                    </span>
-                  )}
                 </div>
               </div>
 
