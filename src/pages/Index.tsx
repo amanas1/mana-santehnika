@@ -145,7 +145,7 @@ const Index = () => {
               </a>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold px-6 py-4 rounded-xl flex items-center gap-3">
                 <span className="flex h-2.5 w-2.5 rounded-full bg-green-400 animate-pulse"></span>
-                Выезд входит в стоимость при заказе работ
+                Выезд входит в стоимость заказа
               </div>
             </div>
             <p className="mt-6 text-sm md:text-[15px] text-gray-200/90 max-w-2xl leading-relaxed">
@@ -338,7 +338,7 @@ const Index = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Работаем по всему Алматы</h2>
               <p className="text-slate-600 text-[16px] leading-relaxed mb-6">
-                Приезжаем в квартиры, частные дома, новостройки, офисы и коммерческие помещения. Чаще всего нас вызывают на срочный ремонт труб, устранение протечек, прочистку канализации, замену смесителя и установку сантехники после ремонта.
+                Приезжаем в квартиры, частные дома, новостройки, офисы и коммерческие помещения. Чаще всего нас вызывают на срочный ремонт труб, устранение протечек, прочистку кухни от засора, замену смесителя и установку сантехники после ремонта.
               </p>
               <div className="flex flex-wrap gap-3">
                 {districtBadges.map((district) => (
@@ -382,7 +382,7 @@ const Index = () => {
               { service: "Устранение протечки", price: "от 3 500 ₸", emoji: "💧" },
               { service: "Ремонт унитаза", price: "от 4 000 ₸", emoji: "🚽" },
               { service: "Установка смесителя", price: "от 5 000 ₸", emoji: "🚿" },
-              { service: "Прочистка канализации", price: "от 5 000 ₸", emoji: "🪣" },
+              { service: "Прочистка кухни", price: "от 5 000 ₸", emoji: "🪣" },
               { service: "Установка стиральной машины", price: "от 4 500 ₸", emoji: "🫧" },
               { service: "Ремонт бойлера", price: "от 5 000 ₸", emoji: "♨️" },
               { service: "Замена радиатора", price: "от 8 000 ₸", emoji: "🌡️" },
@@ -569,8 +569,8 @@ const Index = () => {
                 bg: "bg-red-50"
               },
               {
-                problem: "Глухой засор канализации",
-                solution: "Применяем гидродинамику: вода под давлением 200 бар срезает жир со стенок труб как бритвой.",
+                problem: "Засор на кухне",
+                solution: "Чистим кухонную мойку, сифон и слив под раковиной от жира и налета.",
                 icon: <AlertTriangle size={28} className="text-amber-500" />,
                 bg: "bg-amber-50"
               },
@@ -657,7 +657,7 @@ const Index = () => {
                 <ul className="space-y-3 text-[14px] text-slate-600">
                   <li>— Экономят на диаметре труб (слабый напор воды)</li>
                   <li>— Замуровывают резьбовые соединения в стену (риск потопа)</li>
-                  <li>— Не соблюдают уклон канализации (постоянные засоры)</li>
+                  <li>— Не соблюдают уклон слива (постоянные засоры)</li>
                   <li>— Исчезают после получения денег без гарантий</li>
                 </ul>
               </div>
@@ -685,7 +685,7 @@ const Index = () => {
 
             <h3 className="text-xl font-extrabold text-slate-900 mb-4">Какие работы выполняет сантехник Манас?</h3>
             <p className="text-slate-600 leading-relaxed mb-4 text-[15px]">
-              <strong>Вызов сантехника на дом в Алматы</strong> — это возможность решить любую проблему с водоснабжением, канализацией или отоплением быстро и профессионально. Мастер Манас выполняет: <strong>прочистку засоров</strong> канализации тросом и гидродинамическим методом, <strong>замену и установку смесителей</strong> любых марок (Grohe, Hansgrohe, IDDIS, Lemark), <strong>ремонт бойлеров</strong> (Thermex, Ariston, Gorenje, Electrolux), <strong>монтаж труб</strong> из полипропилена и металлопластика, <strong>установку счётчиков воды</strong>, <strong>ремонт унитазов</strong> (шуршание, бачок, инсталляция), <strong>установку душевых кабин</strong> и ванн, <strong>монтаж радиаторов</strong> и тёплых полов.
+              <strong>Вызов сантехника на дом в Алматы</strong> — это возможность решить проблему с водоснабжением, кухонным сливом или отоплением быстро и профессионально. Мастер Манас выполняет: <strong>прочистку кухни от засора</strong>, <strong>замену и установку смесителей</strong> любых марок (Grohe, Hansgrohe, IDDIS, Lemark), <strong>ремонт бойлеров</strong> (Thermex, Ariston, Gorenje, Electrolux), <strong>монтаж труб</strong> из полипропилена и металлопластика, <strong>установку счётчиков воды</strong>, <strong>ремонт унитазов</strong> (шуршание, бачок, инсталляция), <strong>установку душевых кабин</strong> и ванн, <strong>монтаж радиаторов</strong> и тёплых полов.
             </p>
 
             <h3 className="text-xl font-extrabold text-slate-900 mb-4">Стоимость услуг сантехника в Алматы</h3>

@@ -4,14 +4,14 @@ import { Calculator as CalcIcon, Clock, Shield, BadgeCheck } from "lucide-react"
 
 const serviceData: Record<string, { name: string; services: { name: string; basePrice: number }[] }> = {
   drainage: {
-    name: "Канализация",
+    name: "Засоры кухни",
     services: [
-      { name: "Прочистка канализации (трос)", basePrice: 5000 },
-      { name: "Прочистка канализации (гидродинамика)", basePrice: 12000 },
-      { name: "Устранение засора раковины", basePrice: 3500 },
-      { name: "Устранение засора унитаза", basePrice: 4000 },
-      { name: "Замена канализационных труб", basePrice: 8000 },
-      { name: "Установка ревизии", basePrice: 3000 },
+      { name: "Прочистка кухни от засора", basePrice: 5000 },
+      { name: "Прочистка кухонной мойки", basePrice: 5000 },
+      { name: "Чистка сифона на кухне", basePrice: 4000 },
+      { name: "Устранение засора под раковиной", basePrice: 5000 },
+      { name: "Замена сифона на кухне", basePrice: 4000 },
+      { name: "Проверка слива кухонной мойки", basePrice: 3500 },
     ],
   },
   plumbing: {

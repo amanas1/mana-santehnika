@@ -1,13 +1,7 @@
 import SEO from "../components/SEO";
-import { Star, MessageCircle, CheckCircle2, Calendar } from "lucide-react";
-import { useState } from "react";
+import { CheckCircle2, Calendar } from "lucide-react";
 
 const Reviews = () => {
-  const [rating, setRating] = useState(0);
-  const [hoverRating, setHoverRating] = useState(0);
-  
-  const ratingTexts = ["", "Ужасно 😠", "Плохо 😞", "Нормально 🙂", "Хорошо! 😁", "Отлично! 🤩"];
-
   const reviews = [
     {
       name: "Айгерим",
@@ -135,7 +129,7 @@ const Reviews = () => {
                 🙂
               </div>
               <h3 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                Поделитесь своим опытом! 📝✨
+                Поделитесь своим мнением! 📝✨
               </h3>
               <p className="text-gray-500 text-lg max-w-lg mx-auto leading-relaxed">
                 Ваш отзыв поможет другим клиентам сделать правильный выбор
@@ -173,7 +167,7 @@ const Reviews = () => {
                 <div className="relative">
                   <select className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
                     <option value="">Выберите услугу</option>
-                    <option value="Прочистка канализации">Прочистка канализации</option>
+                    <option value="Прочистка кухни от засора">Прочистка кухни от засора</option>
                     <option value="Замена смесителя">Замена смесителя</option>
                     <option value="Установка унитаза">Установка унитаза</option>
                     <option value="Ремонт труб">Ремонт труб</option>
@@ -190,14 +184,14 @@ const Reviews = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-gray-900 mb-2">Оценка работы *</label>
+                <label className="block text-sm font-bold text-gray-900 mb-2">Ваше впечатление *</label>
                 <div className="relative">
                   <select className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
-                    <option value="">Выберите оценку</option>
-                    <option value="5">Отлично — всё понравилось</option>
-                    <option value="4">Хорошо — буду рекомендовать</option>
-                    <option value="3">Нормально — есть замечания</option>
-                    <option value="2">Плохо — есть проблемы</option>
+                    <option value="">Выберите настроение</option>
+                    <option value="5">🤩 Отлично — всё понравилось</option>
+                    <option value="4">😊 Хорошо — буду рекомендовать</option>
+                    <option value="3">🙂 Нормально — есть замечания</option>
+                    <option value="2">😕 Плохо — есть проблемы</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-5 pointer-events-none">
                     <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>

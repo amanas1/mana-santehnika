@@ -79,7 +79,7 @@ const Header = () => {
             </div>
           </div>
           <div className="hidden sm:block font-bold tracking-wide">
-            Выезд входит в стоимость при заказе
+            Выезд входит в стоимость заказа
           </div>
         </div>
       </div>
@@ -289,4 +289,3 @@ const Header = () => {
 };
 
 export default Header;
-

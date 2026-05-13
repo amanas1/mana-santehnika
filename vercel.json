@@ -3,7 +3,12 @@
     {
       "src": "/blog/winter-drain-cleaning",
       "status": 308,
-      "headers": { "Location": "/prochistka-kanalizacii-almaty" }
+      "headers": { "Location": "/prochistka-kuhni-almaty" }
+    },
+    {
+      "src": "/prochistka-kanalizacii-almaty",
+      "status": 308,
+      "headers": { "Location": "/prochistka-kuhni-almaty" }
     },
     {
       "src": "/services/heating/radiator-installation",
@@ -13,7 +18,7 @@
     {
       "src": "/services/drainage/drain-cleaning",
       "status": 308,
-      "headers": { "Location": "/prochistka-kanalizacii-almaty" }
+      "headers": { "Location": "/prochistka-kuhni-almaty" }
     },
     {
       "src": "/ustanovka-rozetok-almaty",

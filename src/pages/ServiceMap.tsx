@@ -98,7 +98,7 @@ const ServiceMapPage = () => {
                       <MapPin size={24} />
                     </div>
                     <div>
-                      <h4 className="text-3xl font-extrabold mb-1">100%</h4>
+                      <h4 className="text-3xl font-extrabold mb-1">Все</h4>
                       <p className="text-sm font-medium text-blue-50">Покрытие всех районов Алматы</p>
                     </div>
                   </div>

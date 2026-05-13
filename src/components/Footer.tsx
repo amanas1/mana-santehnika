@@ -60,7 +60,7 @@ const Footer = () => {
               {[
                 { name: "Как выбрать смеситель", path: "/blog/article" },
                 { name: "Почему капает кран", path: "/blog/faucet-repair" },
-                { name: "Засор канализации", path: "/blog/clog-removal" },
+                { name: "Засор кухни", path: "/blog/clog-removal" },
                 { name: "Ремонт батарей", path: "/blog/heating-maintenance" },
               ].map((link) => (
                 <li key={link.name}>

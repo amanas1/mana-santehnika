@@ -1,23 +1,9 @@
 import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import seoData from "../data/seo-data.json";
 import { ArrowRight, Wrench } from "lucide-react";
 
 const Services = () => {
-  const [activeCategory, setActiveCategory] = useState("Все услуги");
-
-  const categories = [
-    { id: "all", name: "Все услуги" },
-    { id: "plumbing", name: "Сантехника" }
-  ];
-
-  const filteredServices = activeCategory === "Все услуги" 
-    ? seoData.services 
-    : seoData.services.filter(s => {
-        if (activeCategory === "Сантехника" && s.category === "plumbing") return true;
-        return false;
-      });
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
@@ -52,26 +38,8 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="mb-8 overflow-x-auto pb-4 scrollbar-hide">
-            <div className="flex gap-2 min-w-max justify-center md:justify-start lg:justify-center border-b border-gray-100 pb-4">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.name)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-                    activeCategory === cat.name
-                      ? "bg-[#0095DA] text-white shadow-md shadow-[#0095DA]/20"
-                      : "bg-gray-50 text-gray-600 hover:bg-gray-100"
-                  }`}
-                >
-                  {cat.name}
-                </button>
-              ))}
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredServices.map((service, index) => (
+            {seoData.services.map((service, index) => (
               <div key={service.id} className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all group flex flex-col">
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-[#0095DA]/10 group-hover:bg-[#0095DA]/0 transition-colors z-10"></div>
