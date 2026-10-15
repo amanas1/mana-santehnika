@@ -1,26 +1,42 @@
 import SEO from "../components/SEO";
 import { Phone, MapPin, Mail, Clock, MessageCircle, Calendar, ShieldCheck, Star, PhoneCall } from "lucide-react";
-import { useState } from "react";
+import { trackConversion } from "../utils/googleAds";
+
+const serviceLabels: Record<string, string> = {
+  plumbing: "Сантехнические работы",
+  complex: "Комплексный ремонт",
+  other: "Другое / нужна консультация",
+};
+
+const timeLabels: Record<string, string> = {
+  morning: "Утром (09:00–13:00)",
+  afternoon: "Днём (13:00–18:00)",
+  evening: "Вечером (18:00–21:00)",
+  urgent: "Срочно (в течение часа)",
+};
+
+const todayLocal = () => {
+  const now = new Date();
+  const offset = now.getTimezoneOffset() * 60_000;
+  return new Date(now.getTime() - offset).toISOString().split("T")[0];
+};
 
 const Contacts = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    address: "",
-    service: "",
-    date: "",
-    time: "",
-    message: ""
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const text = encodeURIComponent(`Здравствуйте! Меня зовут ${formData.name}. Хочу записаться на сантехника. Телефон: ${formData.phone}. Адрес: ${formData.address}. Удобное время: ${formData.time}.${formData.message ? ' ' + formData.message : ''}`);
-    window.open(`https://wa.me/77055535332?text=${text}`, '_blank');
+    trackConversion();
+    const values = new FormData(e.currentTarget);
+    const name = String(values.get("name") || "");
+    const phone = String(values.get("phone") || "");
+    const address = String(values.get("address") || "");
+    const service = String(values.get("service") || "");
+    const date = String(values.get("date") || "");
+    const time = String(values.get("time") || "");
+    const message = String(values.get("message") || "");
+    const text = encodeURIComponent(
+      `Заявка с сайта mana.kz:\nИмя: ${name}\nТелефон: ${phone}\nАдрес: ${address}\nУслуга: ${serviceLabels[service] || service}\nДата: ${date}\nВремя: ${timeLabels[time] || time}\nОписание: ${message || "не указано"}`,
+    );
+    window.open(`https://wa.me/77055535332?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -175,8 +191,7 @@ const Contacts = () => {
                 <input 
                   type="text" 
                   id="name" 
-                  value={formData.name}
-                  onChange={handleChange}
+                  name="name"
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all placeholder-gray-400 font-medium text-sm"
                   placeholder="Ваше имя"
                   required
@@ -186,10 +201,15 @@ const Contacts = () => {
               <div>
                 <label htmlFor="phone" className="block text-sm font-bold text-gray-900 mb-2">Телефон *</label>
                 <input 
-                  type="tel" 
-                  id="phone" 
-                  value={formData.phone}
-                  onChange={handleChange}
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  minLength={10}
+                  maxLength={20}
+                  pattern="(?:[+]?[7]|8)?[ ()-]*[0-9]{3}[ ()-]*[0-9]{3}[ ()-]*[0-9]{2}[ ()-]*[0-9]{2}"
+                  title="Введите номер в формате +7 705 123-45-67"
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all placeholder-gray-400 font-medium text-sm"
                   placeholder="+7 (___) ___-__-__"
                   required
@@ -203,10 +223,9 @@ const Contacts = () => {
                     <MapPin size={18} className="text-gray-400" />
                   </div>
                   <input 
-                    type="text" 
-                    id="address" 
-                    value={formData.address}
-                    onChange={handleChange}
+                    type="text"
+                    id="address"
+                    name="address"
                     className="w-full pl-11 pr-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all placeholder-gray-400 font-medium text-sm"
                     placeholder="Укажите ваш адрес в Алматы"
                     required
@@ -218,8 +237,8 @@ const Contacts = () => {
                 <label htmlFor="service" className="block text-sm font-bold text-gray-900 mb-2">Необходимая услуга *</label>
                 <select 
                   id="service" 
-                  value={formData.service}
-                  onChange={handleChange}
+                  name="service"
+                  defaultValue=""
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-gray-600 font-medium text-sm appearance-none cursor-pointer"
                   required
                 >
@@ -235,8 +254,8 @@ const Contacts = () => {
                 <input 
                   type="date" 
                   id="date" 
-                  value={formData.date}
-                  onChange={handleChange}
+                  name="date"
+                  min={todayLocal()}
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-gray-600 font-medium text-sm"
                   required
                 />
@@ -246,8 +265,8 @@ const Contacts = () => {
                 <label htmlFor="time" className="block text-sm font-bold text-gray-900 mb-2">Время *</label>
                 <select 
                   id="time" 
-                  value={formData.time}
-                  onChange={handleChange}
+                  name="time"
+                  defaultValue=""
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-gray-600 font-medium text-sm appearance-none cursor-pointer"
                   required
                 >
@@ -263,9 +282,8 @@ const Contacts = () => {
                 <label htmlFor="message" className="block text-sm font-bold text-gray-900 mb-2">Описание проблемы (необязательно)</label>
                 <textarea 
                   id="message" 
+                  name="message"
                   rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all placeholder-gray-400 font-medium text-sm resize-none"
                   placeholder="Опишите детали проблемы для более точной оценки..."
                 ></textarea>
@@ -288,4 +306,3 @@ const Contacts = () => {
 };
 
 export default Contacts;
-

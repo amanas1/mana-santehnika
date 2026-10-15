@@ -39,7 +39,11 @@ const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOPr
     };
 
     setMeta('meta[name="description"]', "name", "description", description);
-    setMeta('meta[name="robots"]', "name", "robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    const pagePath = window.location.pathname;
+    const noindex = pagePath.startsWith("/tools/") || pagePath === "/privacy-policy" || title.includes("404");
+    setMeta('meta[name="robots"]', "name", "robots", noindex
+      ? "noindex, follow"
+      : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     setMeta('meta[name="author"]', "name", "author", "Мастер Манас");
     setMeta('meta[name="geo.region"]', "name", "geo.region", "KZ-75");
     setMeta('meta[name="geo.placename"]', "name", "geo.placename", "Алматы");
@@ -49,10 +53,9 @@ const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOPr
       setMeta('meta[name="keywords"]', "name", "keywords", keywords);
     }
 
-    if (canonical) {
-      setLink("canonical", canonical);
-      setMeta('meta[property="og:url"]', "property", "og:url", canonical);
-    }
+    const pageCanonical = canonical || `${BASE_URL}${pagePath}`;
+    setLink("canonical", pageCanonical);
+    setMeta('meta[property="og:url"]', "property", "og:url", pageCanonical);
 
     // OG tags
     setMeta('meta[property="og:type"]', "property", "og:type", "website");
@@ -73,9 +76,9 @@ const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOPr
     setMeta('meta[name="twitter:description"]', "name", "twitter:description", description);
 
     // JSON-LD Schema
+    const existingScript = document.querySelector('script[data-seo-schema]');
+    if (existingScript) existingScript.remove();
     if (schema) {
-      const existingScript = document.querySelector('script[data-seo-schema]');
-      if (existingScript) existingScript.remove();
       const script = document.createElement("script");
       script.type = "application/ld+json";
       script.setAttribute("data-seo-schema", "true");

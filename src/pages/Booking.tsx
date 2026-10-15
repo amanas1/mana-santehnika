@@ -38,7 +38,7 @@ const BookingPage = () => {
     e.preventDefault();
     trackConversion();
     const message = `Онлайн бронирование:\nИмя: ${name}\nТелефон: ${phone}\nАдрес: ${address}\nУслуга: ${service}\nДата: ${date}\nВремя: ${timeSlot}\nОписание: ${description}`;
-    window.open(`https://wa.me/77055535332?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/77055535332?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 
@@ -76,8 +76,8 @@ const BookingPage = () => {
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-4xl">✅</span>
                 </div>
-                <h2 className="text-2xl font-extrabold text-gray-900 mb-3">Заявка отправлена!</h2>
-                <p className="text-gray-500 mb-6">Мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
+                <h2 className="text-2xl font-extrabold text-gray-900 mb-3">WhatsApp открыт</h2>
+                <p className="text-gray-500 mb-6">Проверьте подготовленное сообщение и нажмите «Отправить» в WhatsApp.</p>
                 <button
                   onClick={() => setSubmitted(false)}
                   className="bg-[#0095DA] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#0084c0] transition-colors"
@@ -112,6 +112,11 @@ const BookingPage = () => {
                     <Phone size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                     <input
                       type="tel"
+                      inputMode="tel"
+                      minLength={10}
+                      maxLength={20}
+                      pattern="(?:[+]?[7]|8)?[ ()-]*[0-9]{3}[ ()-]*[0-9]{3}[ ()-]*[0-9]{2}[ ()-]*[0-9]{2}"
+                      title="Введите номер в формате +7 705 123-45-67"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required

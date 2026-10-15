@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import { Calendar, User, ArrowLeft, Tag, Share2, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
 const BlogPost = () => {
   return (
@@ -42,7 +43,7 @@ const BlogPost = () => {
                   Как выбрать надежный смеситель для ванной: Советы от Гуру
                 </h1>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium">
-                  <span className="flex items-center gap-2"><Calendar size={18} /> 01 Марта 2024</span>
+                  <span className="flex items-center gap-2"><Calendar size={18} /> Обновлено 28 сентября 2026</span>
                   <span className="flex items-center gap-2"><User size={18} /> Мастер Манас</span>
                   <span className="flex items-center gap-2"><Eye size={18} /> 8 492 просмотра</span>
                 </div>
@@ -156,6 +157,7 @@ const BlogPost = () => {
               <p>
                 Выбор смесителя — это инвестиция в спокойствие и уют вашего дома. Подходите к этому осознанно. А если возникают сложности с выбором в магазине или необходим профессиональный монтаж с понятной гарантией — вы всегда знаете, к кому обратиться. Доверяйте работу профессионалам, потому что вода не прощает ошибок.
               </p>
+              <ArticleServiceGuide guide="mixer-selection" />
             </div>
 
             {/* Post Footer CTA */}

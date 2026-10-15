@@ -6,8 +6,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col pt-24 md:pt-32 pb-20">
       <SEO 
-        title="О мастере Манасе — Сантехник в Алматы | Мастер Манас"
-        description="Мастер Манас — выездной сантехник в Алматы. Работаю ежедневно с 9:00 до 21:00. Гарантия на все работы до 1 месяца. Честные цены без скрытых доплат."
+        title="Мастер Манас — сантехник в Алматы"
+        description="Мастер Манас — выездной сантехник в Алматы. Работаю ежедневно с 9:00 до 21:00. Диагностика, согласование цены и гарантия до 1 месяца."
         keywords="сантехник алматы, мастер сантехник алматы, профессиональный сантехник, опытный сантехник алматы, надежный сантехник"
         canonical="https://mana.kz/about"
         ogImage="/images/services/manas-santehnik.jpg"
@@ -21,7 +21,7 @@ const About = () => {
             <span>/</span>
             <span className="text-slate-900">О мастере</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">О мастере Манасе</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Мастер Манас — сантехник в Алматы</h1>
         </div>
       </section>
 
@@ -63,8 +63,8 @@ const About = () => {
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Calendar size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
-                <span className="text-3xl font-extrabold text-slate-900 block mb-1">12/7</span>
-                <span className="text-[15px] text-slate-500 font-medium">ежедневно</span>
+                <span className="text-3xl font-extrabold text-slate-900 block mb-1">8</span>
+                <span className="text-[15px] text-slate-500 font-medium">районов Алматы</span>
               </div>
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <ShieldCheck size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
@@ -74,7 +74,7 @@ const About = () => {
               <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex flex-col items-center justify-center text-center">
                 <Star size={32} strokeWidth={1.5} className="text-[#1173D4] mb-4" />
                 <span className="text-[17px] font-extrabold text-slate-900 block mb-1">Официальная гарантия</span>
-                <span className="text-[15px] text-slate-500 font-medium">на все работы</span>
+                <span className="text-[15px] text-slate-500 font-medium">до 1 месяца</span>
               </div>
             </div>
 
@@ -122,17 +122,17 @@ const About = () => {
       <section className="py-16 md:py-24 bg-slate-100/50">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Наши принципы</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Мои принципы работы</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Честность", desc: "Открытые цены без скрытых доплат." },
-              { title: "Качество", desc: "Используем только проверенные материалы." },
-              { title: "Скорость", desc: "Выезжаем в течение часа." },
-              { title: "Ответственность", desc: "Даем гарантию на все работы." },
-              { title: "Профессионализм", desc: "Постоянно повышаем квалификацию." },
-              { title: "Клиентоориентированность", desc: "Каждый клиент важен для нас." },
+              { title: "Качество", desc: "Использую подходящие материалы и проверяю результат." },
+              { title: "Пунктуальность", desc: "Согласовываю время и предупреждаю, если задерживаюсь." },
+              { title: "Ответственность", desc: "Предоставляю гарантию с учётом вида выполненной работы." },
+              { title: "Диагностика", desc: "Сначала нахожу причину, затем предлагаю решение." },
+              { title: "Понятное общение", desc: "Объясняю заказчику, что именно нужно сделать и почему." },
             ].map((item, idx) => (
               <div key={idx} className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
                 <CheckCircle2 size={28} strokeWidth={2} className="text-green-500 mb-4" />

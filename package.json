@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node generate-static.js && node generate-sitemap.js",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-server && node generate-static.js && node generate-sitemap.js",
+    "typecheck": "tsc --noEmit",
     "build:dev": "vite build --mode development",
     "preview": "vite preview"
   },

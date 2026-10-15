@@ -1,7 +1,31 @@
 import SEO from "../components/SEO";
 import { CheckCircle2, Calendar } from "lucide-react";
+import { useState } from "react";
+import { trackConversion } from "../utils/googleAds";
 
 const Reviews = () => {
+  const [reviewForm, setReviewForm] = useState({
+    name: "",
+    phone: "",
+    service: "",
+    rating: "",
+    review: "",
+  });
+
+  const submitReview = (event: React.FormEvent) => {
+    event.preventDefault();
+    trackConversion();
+    const message = [
+      "Отзыв с сайта mana.kz:",
+      `Имя: ${reviewForm.name}`,
+      `Телефон: ${reviewForm.phone}`,
+      `Услуга: ${reviewForm.service || "не указана"}`,
+      `Оценка: ${reviewForm.rating} из 5`,
+      `Отзыв: ${reviewForm.review}`,
+    ].join("\n");
+    window.open(`https://wa.me/77055535332?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+  };
+
   const reviews = [
     {
       name: "Айгерим",
@@ -136,16 +160,14 @@ const Reviews = () => {
               </p>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => { 
-              e.preventDefault();
-              const msg = encodeURIComponent('Здравствуйте! Хочу оставить отзыв о работе сантехника Манас.');
-              window.open(`https://wa.me/77055535332?text=${msg}`, '_blank');
-            }}>
+            <form className="space-y-6" onSubmit={submitReview}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-900 mb-2">Ваше имя *</label>
                   <input 
                     type="text" 
+                    value={reviewForm.name}
+                    onChange={(event) => setReviewForm((current) => ({ ...current, name: event.target.value }))}
                     className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm"
                     placeholder="Как к вам обращаться?"
                     required
@@ -155,6 +177,13 @@ const Reviews = () => {
                   <label className="block text-sm font-bold text-gray-900 mb-2">Телефон *</label>
                   <input 
                     type="tel" 
+                    inputMode="tel"
+                    minLength={10}
+                    maxLength={20}
+                    pattern="(?:[+]?[7]|8)?[ ()-]*[0-9]{3}[ ()-]*[0-9]{3}[ ()-]*[0-9]{2}[ ()-]*[0-9]{2}"
+                    title="Введите номер в формате +7 705 123-45-67"
+                    value={reviewForm.phone}
+                    onChange={(event) => setReviewForm((current) => ({ ...current, phone: event.target.value }))}
                     className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm"
                     placeholder="+7 (___) ___-__-__"
                     required
@@ -165,7 +194,7 @@ const Reviews = () => {
               <div>
                 <label className="block text-sm font-bold text-gray-900 mb-2">Какую услугу оказывали? (необязательно)</label>
                 <div className="relative">
-                  <select className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
+                  <select value={reviewForm.service} onChange={(event) => setReviewForm((current) => ({ ...current, service: event.target.value }))} className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
                     <option value="">Выберите услугу</option>
                     <option value="Прочистка кухни от засора">Прочистка кухни от засора</option>
                     <option value="Замена смесителя">Замена смесителя</option>
@@ -186,7 +215,7 @@ const Reviews = () => {
               <div>
                 <label className="block text-sm font-bold text-gray-900 mb-2">Ваше впечатление *</label>
                 <div className="relative">
-                  <select className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
+                  <select required value={reviewForm.rating} onChange={(event) => setReviewForm((current) => ({ ...current, rating: event.target.value }))} className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm appearance-none">
                     <option value="">Выберите настроение</option>
                     <option value="5">🤩 Отлично — всё понравилось</option>
                     <option value="4">😊 Хорошо — буду рекомендовать</option>
@@ -203,6 +232,8 @@ const Reviews = () => {
                 <label className="block text-sm font-bold text-gray-900 mb-2">Ваш отзыв *</label>
                 <textarea 
                   rows={4}
+                  value={reviewForm.review}
+                  onChange={(event) => setReviewForm((current) => ({ ...current, review: event.target.value }))}
                   className="w-full px-5 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#1173D4] outline-none transition-all text-sm resize-none"
                   placeholder="Поделитесь впечатлениями о работе нашего мастера..."
                   required

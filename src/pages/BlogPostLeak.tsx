@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
 const BlogPostLeak = () => {
   return (
@@ -39,7 +40,7 @@ const BlogPostLeak = () => {
                   Прорвало трубу? Что сделать до приезда сантехника
                 </h1>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium">
-                  <span className="flex items-center gap-2"><Calendar size={18} /> 14 Марта 2024</span>
+                  <span className="flex items-center gap-2"><Calendar size={18} /> Обновлено 28 сентября 2026</span>
                   <span className="flex items-center gap-2"><User size={18} /> Мастер Манас</span>
                 </div>
               </div>
@@ -73,6 +74,7 @@ const BlogPostLeak = () => {
               <p>
                 Даже маленькая капля со временем превращается в сырость, плесень и разрушение отделки. Кроме того, слабая течь часто быстро становится сильной, особенно если давление в сети скачет.
               </p>
+              <ArticleServiceGuide guide="leak" />
             </div>
 
             <div className="bg-red-50 border-t border-red-100 p-8 md:p-12 text-center">

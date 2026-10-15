@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and utility pages
-Disallow: /tools/
-Disallow: /privacy-policy
-
-# Sitemap
+# Utility pages use noindex so Google can read the directive.
 Sitemap: https://mana.kz/sitemap.xml

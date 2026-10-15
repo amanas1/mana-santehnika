@@ -1,7 +1,9 @@
 import { useParams, Link, useLocation, Navigate } from "react-router-dom";
 import seoData from "../data/seo-data.json";
+import serviceIntentData from "../data/service-intent.json";
 import SEO from "../components/SEO";
-import { Phone, Clock, Shield, MapPin, CheckCircle, ArrowRight } from "lucide-react";
+import { Phone, Clock, Shield, MapPin, CheckCircle, MessageCircle } from "lucide-react";
+import { cleanServiceCopy } from "../utils/seoText";
 
 const ServiceDistrictPage = () => {
   let { serviceId, districtId } = useParams();
@@ -19,7 +21,7 @@ const ServiceDistrictPage = () => {
 
   // Handle single-param SEO URLs where service or district might be implied
   const effectiveServiceId = serviceId || "vyzov-santehnika";
-  const service = seoData.services.find((s) => s.id === effectiveServiceId);
+  const rawService = seoData.services.find((s) => s.id === effectiveServiceId);
   
   // If districtId is missing, it's an "Almaty overall" page
   const district = {
@@ -29,24 +31,68 @@ const ServiceDistrictPage = () => {
     feature: "Обслуживаем все районы города Алматы, ежедневно с 9:00 до 21:00"
   };
 
-  if (!service) {
+  if (!rawService) {
     return <Navigate to="/" replace />;
   }
+  const service = cleanServiceCopy(rawService);
+  const intent = serviceIntentData[effectiveServiceId as keyof typeof serviceIntentData];
 
-  const title = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} | Мастер Манас`;
-  const description = `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} — ${service.price}. Выезд мастера ежедневно с 9:00 до 21:00. Гарантия 1 месяц. ☎ +7 (705) 553-53-32`;
+  const title = service.seoTitle || `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} | Мастер Манас`;
+  const rawDescription = service.searchDescription || `${service.title} в ${district.nameGenitive}${district.id !== "almaty" ? " Алматы" : ""} — ${service.price}. ${intent?.intro || service.description} Манас: +7 (705) 553-53-32.`;
+  const description = rawDescription.length > 170
+    ? `${rawDescription.slice(0, 169).replace(/\s+\S*$/, "")}…`
+    : rawDescription;
 
-  // Get other services for cross-linking
-  const otherServices = seoData.services.filter((s) => s.id !== serviceId).slice(0, 4);
+  // Rotate related services so every service page receives useful internal links,
+  // instead of repeatedly linking only to the first items in the catalog.
+  const currentServiceIndex = seoData.services.findIndex((item) => item.id === effectiveServiceId);
+  const rotatedServices = [
+    ...seoData.services.slice(currentServiceIndex + 1),
+    ...seoData.services.slice(0, currentServiceIndex),
+  ];
+  const otherServices = rotatedServices.slice(0, 4).map(cleanServiceCopy);
 
   return (
     <div className="min-h-screen bg-white">
       <SEO 
         title={title} 
         description={description}
-        keywords={`${service.title.toLowerCase()} алматы, ${service.title.toLowerCase()}, сантехник алматы, вызвать сантехника, услуги сантехника, сантехнические работы алматы`}
+        keywords={`${service.title.toLowerCase()} алматы, ${intent?.aliases?.map((alias) => `${alias} алматы`).join(", ") || ""}, сантехник алматы, услуги сантехника`}
         canonical={`https://mana.kz/${service.id}-almaty`}
         ogImage={service.image}
+        schema={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Plumber",
+              "@id": "https://mana.kz/#business",
+              name: "Мастер Манас — сантехник в Алматы",
+              url: "https://mana.kz/",
+              telephone: "+77055535332",
+              areaServed: { "@type": "City", name: "Алматы" },
+            },
+            {
+              "@type": "Service",
+              name: `${service.title} в Алматы`,
+              url: `https://mana.kz/${service.id}-almaty`,
+              description: service.description,
+              provider: { "@id": "https://mana.kz/#business" },
+              offers: {
+                "@type": "Offer",
+                priceCurrency: "KZT",
+                price: service.price.replace(/[^0-9]/g, ""),
+                url: `https://mana.kz/${service.id}-almaty`,
+              },
+            },
+            ...(intent ? [{
+              "@type": "FAQPage",
+              mainEntity: intent.faq.map((item) => ({
+                "@type": "Question", name: item.q,
+                acceptedAnswer: { "@type": "Answer", text: item.a },
+              })),
+            }] : []),
+          ],
+        }}
       />
 
       {/* Hero Banner with Image */}
@@ -62,7 +108,7 @@ const ServiceDistrictPage = () => {
           <nav className="mb-6 text-sm text-white/80 flex items-center gap-2 flex-wrap">
             <Link to="/" className="hover:text-white transition-colors">Главная</Link>
             <span>/</span>
-            <span>Услуги</span>
+            <Link to="/services" className="hover:text-white transition-colors">Услуги</Link>
             <span>/</span>
             <span>{service.title}</span>
             
@@ -98,21 +144,59 @@ const ServiceDistrictPage = () => {
           {/* Left Column — Description */}
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-              <h2 className="text-2xl font-bold mb-4">О услуге</h2>
-              <div 
-                className="text-gray-600 leading-relaxed mb-6 font-normal prose prose-sm max-w-none"
-                dangerouslySetInnerHTML={{ __html: service.longDescription || service.description }}
-              />
+              <h2 className="text-2xl font-bold mb-4">Об услуге</h2>
+              <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+                {service.description}
+              </p>
 
-              <h3 className="text-xl font-bold mb-4">Наши преимущества в {district.nameGenitive}:</h3>
+              {intent && (
+                <div className="space-y-8 border-t border-gray-100 pt-8">
+                  <section>
+                    <h2 className="text-2xl font-bold text-[#0095DA] mb-4">Что входит в услугу</h2>
+                    <p className="text-gray-600 leading-relaxed mb-5">{intent.intro}</p>
+                    <ul className="grid gap-3 sm:grid-cols-2">
+                      {intent.included.map((item) => (
+                        <li key={item} className="flex items-start gap-3 rounded-xl bg-gray-50 p-4">
+                          <CheckCircle size={20} className="text-[#4ADE80] shrink-0 mt-0.5" />
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-2xl font-bold text-[#0095DA] mb-4">От чего зависит стоимость</h2>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      Цена начинается {service.price.replace(/^от\s*/i, "от ")}. Точную стоимость называю после осмотра и согласовываю до начала основной работы.
+                    </p>
+                    <ul className="list-disc pl-6 text-gray-600 space-y-2">
+                      {intent.priceFactors.map((item) => <li key={item}>{item}</li>)}
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-2xl font-bold text-[#0095DA] mb-4">Частые вопросы</h2>
+                    <div className="space-y-4">
+                      {intent.faq.map((item) => (
+                        <div key={item.q} className="rounded-xl border border-gray-100 p-5">
+                          <h3 className="font-bold text-gray-900 mb-2">{item.q}</h3>
+                          <p className="text-gray-600 leading-relaxed">{item.a}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                </div>
+              )}
+
+              <h2 className="text-2xl font-bold text-[#0095DA] mt-10 mb-4">Как я выполняю работу</h2>
               <ul className="space-y-3">
                 {[
-                  "Выезд ежедневно с 9:00 до 21:00 по всему Алматы",
-                  "Гарантия на работы до 1 месяца",
-                  "Прозрачные цены и понятная стоимость работ",
-                  "Опытный мастер со стажем",
-                  "Бесплатная диагностика при заказе работ",
-                  "Чистота после работы — убираем за собой",
+                  "Выезжаю ежедневно с 9:00 до 21:00 по всему Алматы",
+                  "Объясняю причину неисправности до начала ремонта",
+                  "Согласовываю стоимость и необходимые материалы",
+                  "Предоставляю гарантию до одного месяца",
+                  "Проверяю соединения и работу оборудования после монтажа",
+                  "Оставляю рабочее место в аккуратном состоянии",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle size={20} className="text-[#4ADE80] shrink-0 mt-0.5" />
@@ -190,7 +274,10 @@ const ServiceDistrictPage = () => {
                 className="w-full flex items-center justify-center gap-2 bg-[#4ADE80] hover:bg-[#3dca72] text-gray-900 py-4 rounded-xl font-bold text-lg transition-colors shadow-md"
               >
                 <Phone size={20} />
-                Заказать
+                Позвонить
+              </a>
+              <a href="tel:+77055535332" className="block text-center mt-3 font-bold text-[#0095DA]">
+                +7 (705) 553-53-32
               </a>
               
               <a
@@ -199,10 +286,10 @@ const ServiceDistrictPage = () => {
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-[#0095DA] hover:bg-[#0084c0] text-white py-3 rounded-xl font-bold text-sm transition-colors mt-3"
               >
-                💬 WhatsApp
+                <MessageCircle size={18} /> Написать в WhatsApp
               </a>
 
-              <p className="text-xs text-gray-400 text-center mt-3">Бесплатная консультация</p>
+              <p className="text-xs text-gray-400 text-center mt-3">Можно заранее прислать фотографию задачи</p>
             </div>
           </div>
         </div>

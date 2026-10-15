@@ -27,8 +27,8 @@ const Footer = () => {
                 <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">мес. гарантия</div>
               </div>
               <div className="bg-green-50 px-3 py-2 rounded-lg text-center">
-                <div className="font-extrabold text-green-600 text-lg leading-tight">12/7</div>
-                <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">ежедневно</div>
+                <div className="font-extrabold text-green-600 text-lg leading-tight">9–21</div>
+                <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">каждый день</div>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                 { name: "Как выбрать смеситель", path: "/blog/article" },
                 { name: "Почему капает кран", path: "/blog/faucet-repair" },
                 { name: "Засор кухни", path: "/blog/clog-removal" },
-                { name: "Ремонт батарей", path: "/blog/heating-maintenance" },
+                { name: "Ремонт батарей", path: "/blog/heating-repair" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link to={link.path} className="text-gray-600 text-sm hover:text-[#1173D4] transition-colors flex items-center gap-2 group">
@@ -122,7 +122,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Мастер Манас. Все права защищены.
           </div>
           <div className="flex items-center gap-6 text-sm text-gray-500">
-            <Link to="/about" className="hover:text-[#1173D4] transition-colors">О нас</Link>
+            <Link to="/about" className="hover:text-[#1173D4] transition-colors">О мастере</Link>
             <Link to="/privacy-policy" className="hover:text-[#1173D4] transition-colors">Политика конфиденциальности</Link>
           </div>
         </div>

@@ -39,9 +39,9 @@ const priceCategories: PriceCategory[] = [
       { name: "Установка счётчика воды", unit: "за шт.", price: "от 4 000 ₸", popular: true },
       { name: "Установка фильтра воды", unit: "за услугу", price: "от 4 000 ₸" },
       { name: "Замена стояков водоснабжения", unit: "за стояк", price: "от 12 000 ₸" },
-      { name: "Устранение протечки", unit: "за услугу", price: "от 3 500 ₸", popular: true },
-      { name: "Подключение стиральной машины", unit: "за услугу", price: "от 4 500 ₸" },
-      { name: "Подключение посудомоечной машины", unit: "за услугу", price: "от 5 000 ₸" },
+      { name: "Устранение протечки", unit: "за услугу", price: "от 5 000 ₸", popular: true },
+      { name: "Подключение стиральной машины", unit: "за услугу", price: "от 7 000 ₸" },
+      { name: "Подключение посудомоечной машины", unit: "за услугу", price: "от 8 000 ₸" },
       { name: "Установка обратного осмоса", unit: "за услугу", price: "от 6 000 ₸" },
     ],
   },
@@ -51,11 +51,11 @@ const priceCategories: PriceCategory[] = [
     icon: Wrench,
     items: [
       { name: "Установка смесителя", unit: "за шт.", price: "от 5 000 ₸", popular: true },
-      { name: "Ремонт смесителя", unit: "за услугу", price: "от 3 000 ₸" },
+      { name: "Ремонт смесителя", unit: "за услугу", price: "от 4 000 ₸" },
       { name: "Замена сифона", unit: "за шт.", price: "от 3 000 ₸" },
-      { name: "Установка раковины", unit: "за шт.", price: "от 5 000 ₸" },
+      { name: "Установка раковины", unit: "за шт.", price: "от 8 000 ₸" },
       { name: "Ремонт унитаза", unit: "за услугу", price: "от 4 000 ₸", popular: true },
-      { name: "Установка унитаза", unit: "за шт.", price: "от 6 000 ₸" },
+      { name: "Установка унитаза", unit: "за шт.", price: "от 10 000 ₸" },
       { name: "Установка ванны", unit: "за шт.", price: "от 8 000 ₸" },
       { name: "Ремонт душевой кабины", unit: "за услугу", price: "от 6 000 ₸" },
       { name: "Установка инсталляции", unit: "за шт.", price: "от 10 000 ₸" },
@@ -66,8 +66,8 @@ const priceCategories: PriceCategory[] = [
     name: "Отопление",
     icon: Flame,
     items: [
-      { name: "Установка радиатора", unit: "за шт.", price: "от 8 000 ₸", popular: true },
-      { name: "Замена радиатора", unit: "за шт.", price: "от 8 000 ₸" },
+      { name: "Установка радиатора", unit: "за шт.", price: "от 15 000 ₸", popular: true },
+      { name: "Замена радиатора", unit: "за шт.", price: "от 15 000 ₸" },
       { name: "Промывка системы отопления", unit: "за услугу", price: "от 15 000 ₸" },
       { name: "Ремонт бойлера", unit: "за услугу", price: "от 5 000 ₸" },
       { name: "Установка полотенцесушителя", unit: "за шт.", price: "от 6 000 ₸" },
@@ -111,7 +111,7 @@ const Prices = () => {
           <div className="absolute w-64 h-64 rounded-full bg-white -bottom-10 -left-10 blur-2xl mix-blend-overlay" />
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">Наши цены</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight">Цены на услуги сантехника</h1>
           <p className="text-xl opacity-90 leading-relaxed max-w-2xl mx-auto">
             Прозрачное ценообразование без скрытых платежей. Точная стоимость озвучивается до начала работ после диагностики.
           </p>
@@ -195,7 +195,7 @@ const Prices = () => {
               <div className="relative z-10">
                 <h3 className="text-3xl font-extrabold mb-4 tracking-tight">Не нашли нужную услугу?</h3>
                 <p className="mb-8 opacity-90 max-w-2xl mx-auto text-lg leading-relaxed">
-                  Мы выполняем более 100 видов работ. Позвоните нам прямо сейчас, опишите вашу проблему, и мастер назовет ориентировочную стоимость.
+                  Позвоните мне или напишите в WhatsApp, опишите задачу и пришлите фотографию. Я назову ориентировочную стоимость и уточню, что потребуется для ремонта.
                 </p>
                 <a 
                   href="tel:+77055535332"

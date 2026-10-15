@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import { Calendar, User, ArrowLeft, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
 const BlogPostAppliances = () => {
   return (
@@ -36,10 +37,10 @@ const BlogPostAppliances = () => {
                   </span>
                 </div>
                 <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
-                  Ставим стиралку и посудомойку: Главные ошибки монтажа
+                  Установка и подключение стиральной и посудомоечной машины
                 </h1>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium">
-                  <span className="flex items-center gap-2"><Calendar size={18} /> 08 Марта 2024</span>
+                  <span className="flex items-center gap-2"><Calendar size={18} /> Обновлено 28 сентября 2026</span>
                   <span className="flex items-center gap-2"><User size={18} /> Мастер Манас</span>
                 </div>
               </div>
@@ -76,6 +77,7 @@ const BlogPostAppliances = () => {
               <p>
                 Берегите свою технику и свои нервы. Доверьте установку профессионалу, который отвечает за каждое соединение головой.
               </p>
+              <ArticleServiceGuide guide="appliances" />
             </div>
 
             <div className="bg-slate-900 text-white p-8 md:p-12 text-center rounded-b-3xl">

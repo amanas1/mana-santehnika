@@ -30,7 +30,7 @@ const NotFound = () => {
         </h1>
         
         <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg mx-auto">
-          Страница, которую вы ищете, утекла в неизвестном направлении. Но не волнуйтесь, наш мастер уже в пути!
+          Такой страницы нет. Перейдите на главную или позвоните мне, если вам нужна помощь сантехника.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -54,7 +54,7 @@ const NotFound = () => {
         <div className="mt-16 pt-8 border-t border-gray-100">
           <p className="text-gray-400 font-medium">Нужна срочная помощь сантехника?</p>
           <a href="tel:+77055535332" className="text-[#0095DA] text-2xl font-black hover:underline mt-2 block">
-            +7 (707) 479-10-20
+            +7 (705) 553-53-32
           </a>
         </div>
       </div>

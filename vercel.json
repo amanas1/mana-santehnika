@@ -1,31 +1,222 @@
 {
   "routes": [
     {
+      "src": "/santehnik-(almalinskij|almalinskiy|bostandykskij|bostandykskiy|auezovskij|auezovskiy|auezovskii|medeuskij|medeuskiy|zhetysuskij|zhetysuskiy|turksibskij|turksibskiy|alatauskij|alatauskiy|nauryzbajskij|nauryzbayskiy)-rayon/?",
+      "status": 308,
+      "headers": {
+        "Location": "/vyzov-santehnika-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/vyzov-santehnika/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/vyzov-santehnika-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/ustranenie-protechek/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustranenie-protechek-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/ustanovka-smesitelya/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustanovka-smesitelya-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-smesitelya/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-smesitelya-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-unitaza/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-unitaza-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-batarei/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-batarei-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-boilera/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-boilera-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-dushevih-kabin/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-dushevih-kabin-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/ustanovka-vanny/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustanovka-vanny-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/ustanovka-filtra-vody/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustanovka-filtra-vody-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-plastikovyh-trub/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-plastikovyh-trub-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/remont-dzhakuzi/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-dzhakuzi-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/prochistka-kuhni/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/prochistka-kuhni-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/zamena-trub/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/zamena-trub-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/ustanovka-unitaza/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustanovka-unitaza-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/ustanovka-rakoviny/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustanovka-rakoviny-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/podklyuchenie-stiralnoj-mashiny/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/podklyuchenie-stiralnoj-mashiny-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/podklyuchenie-posudomoechnoj-mashiny/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/podklyuchenie-posudomoechnoj-mashiny-almaty"
+      }
+    },
+    {
+      "src": "/uslugi/zamena-radiatorov/[^/]+/?",
+      "status": 308,
+      "headers": {
+        "Location": "/zamena-radiatorov-almaty"
+      }
+    },
+    {
+      "src": "/blog/remont-unitaza/?",
+      "status": 308,
+      "headers": {
+        "Location": "/remont-unitaza-almaty"
+      }
+    },
+    {
+      "src": "/blog/kak-ustanovit-smesitel/?",
+      "status": 308,
+      "headers": {
+        "Location": "/ustanovka-smesitelya-almaty"
+      }
+    },
+    {
+      "src": "/blog/leak-prevention",
+      "status": 308,
+      "headers": {
+        "Location": "/blog/leak-repair"
+      }
+    },
+    {
+      "src": "/blog/heating-maintenance",
+      "status": 308,
+      "headers": {
+        "Location": "/blog/heating-repair"
+      }
+    },
+    {
+      "src": "/blog/appliance-installation",
+      "status": 308,
+      "headers": {
+        "Location": "/blog/appliances-install"
+      }
+    },
+    {
       "src": "/blog/winter-drain-cleaning",
       "status": 308,
-      "headers": { "Location": "/prochistka-kuhni-almaty" }
+      "headers": {
+        "Location": "/prochistka-kuhni-almaty"
+      }
     },
     {
       "src": "/prochistka-kanalizacii-almaty",
       "status": 308,
-      "headers": { "Location": "/prochistka-kuhni-almaty" }
+      "headers": {
+        "Location": "/prochistka-kuhni-almaty"
+      }
     },
     {
       "src": "/services/heating/radiator-installation",
       "status": 308,
-      "headers": { "Location": "/zamena-radiatorov-almaty" }
+      "headers": {
+        "Location": "/zamena-radiatorov-almaty"
+      }
     },
     {
       "src": "/services/drainage/drain-cleaning",
       "status": 308,
-      "headers": { "Location": "/prochistka-kuhni-almaty" }
+      "headers": {
+        "Location": "/prochistka-kuhni-almaty"
+      }
     },
     {
       "src": "/ustanovka-rozetok-almaty",
       "status": 308,
-      "headers": { "Location": "/" }
+      "headers": {
+        "Location": "/"
+      }
     },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 200, "dest": "/index.html" }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    }
   ]
 }

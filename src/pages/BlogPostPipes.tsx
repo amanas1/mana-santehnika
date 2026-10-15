@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import { Calendar, User, ArrowLeft, Volume2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
 const BlogPostPipes = () => {
   return (
@@ -39,7 +40,7 @@ const BlogPostPipes = () => {
                   Почему гудят трубы и как вернуть тишину в дом
                 </h1>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium">
-                  <span className="flex items-center gap-2"><Calendar size={18} /> 16 Марта 2024</span>
+                  <span className="flex items-center gap-2"><Calendar size={18} /> Обновлено 28 сентября 2026</span>
                   <span className="flex items-center gap-2"><User size={18} /> Мастер Манас</span>
                 </div>
               </div>
@@ -63,6 +64,7 @@ const BlogPostPipes = () => {
               <div className="bg-blue-50 border-l-4 border-[#0095DA] p-6 rounded-r-2xl my-8">
                 <p className="m-0 font-medium">Беспокоит шум в сантехнике? Я проведу профессиональную диагностику и устраню причину гула быстро и с гарантией.</p>
               </div>
+              <ArticleServiceGuide guide="pipes" />
             </div>
 
             <div className="bg-orange-50 border-t border-orange-100 p-8 md:p-12 text-center">

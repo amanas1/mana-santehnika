@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import { Calendar, User, ArrowLeft, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
 const BlogPostClog = () => {
   return (
@@ -39,7 +40,7 @@ const BlogPostClog = () => {
                   Как убрать засор на кухне и не повредить трубы
                 </h1>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium">
-                  <span className="flex items-center gap-2"><Calendar size={18} /> 15 Февраля 2024</span>
+                  <span className="flex items-center gap-2"><Calendar size={18} /> Обновлено 28 сентября 2026</span>
                   <span className="flex items-center gap-2"><User size={18} /> Мастер Манас</span>
                   <span className="flex items-center gap-2"><Eye size={18} /> 9 184 просмотра</span>
                 </div>
@@ -127,6 +128,7 @@ const BlogPostClog = () => {
                   Если нужен сантехник в Алматы для прочистки кухни от засора, можно сразу вызвать мастера и решить вопрос без лишнего риска для труб.
                 </p>
               </div>
+              <ArticleServiceGuide guide="clog" />
             </div>
 
             <div className="bg-gradient-to-br from-emerald-500 to-emerald-700 p-8 md:p-12 text-center text-white">

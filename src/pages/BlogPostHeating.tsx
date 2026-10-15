@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import { Calendar, User, ArrowLeft, ThermometerSun } from "lucide-react";
 import { Link } from "react-router-dom";
+import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
 const BlogPostHeating = () => {
   return (
@@ -39,7 +40,7 @@ const BlogPostHeating = () => {
                   Как подготовить батареи к зиме и почему они не греют?
                 </h1>
                 <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium">
-                  <span className="flex items-center gap-2"><Calendar size={18} /> 10 Марта 2024</span>
+                  <span className="flex items-center gap-2"><Calendar size={18} /> Обновлено 28 сентября 2026</span>
                   <span className="flex items-center gap-2"><User size={18} /> Мастер Манас</span>
                 </div>
               </div>
@@ -75,6 +76,7 @@ const BlogPostHeating = () => {
               <p>
                 Я помогу вам грамотно заменить старые чугунные гармошки на современные биметаллические радиаторы с высокой теплоотдачей. Все сделаю аккуратно, быстро и с гарантией на герметичность всех швов.
               </p>
+              <ArticleServiceGuide guide="heating" />
             </div>
 
             <div className="bg-orange-50 border-t border-orange-100 p-8 md:p-12 text-center">

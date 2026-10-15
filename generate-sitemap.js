@@ -52,10 +52,7 @@ const generateSitemap = () => {
     '/blog/clog-removal',
     '/blog/faucet-repair',
     '/blog/leak-repair',
-    '/blog/leak-prevention',
-    '/blog/heating-maintenance',
     '/blog/heating-repair',
-    '/blog/appliance-installation',
     '/blog/appliances-install',
     '/blog/water-saving',
     '/blog/noisy-pipes'

@@ -99,7 +99,7 @@ const Header = () => {
             <Link to="/portfolio" className={navLinkClass("/portfolio")}>Портфолио</Link>
             <Link to="/prices" className={navLinkClass("/prices")}>Цены</Link>
             <Link to="/reviews" className={navLinkClass("/reviews")}>Отзывы</Link>
-            <Link to="/about" className={navLinkClass("/about")}>О нас</Link>
+            <Link to="/about" className={navLinkClass("/about")}>О мастере</Link>
             <Link to="/contacts" className={navLinkClass("/contacts")}>Контакты</Link>
 
             {/* Инструменты Dropdown */}
@@ -206,7 +206,7 @@ const Header = () => {
                 { path: "/portfolio", label: "Портфолио" },
                 { path: "/prices", label: "Цены" },
                 { path: "/reviews", label: "Отзывы" },
-                { path: "/about", label: "О нас" },
+                { path: "/about", label: "О мастере" },
                 { path: "/contacts", label: "Контакты" },
               ].map((item, index) => (
                 <div key={item.path}>
