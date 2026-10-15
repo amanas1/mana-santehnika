@@ -118,7 +118,7 @@ const buildHtml = ({ route, title, description, keywords = '', canonical, schema
     .replace(/<meta name="twitter:image" content=".*?"\s*\/>/, `<meta name="twitter:image" content="${imageUrl}" />`);
   if (schema) {
     const json = JSON.stringify(schema).replace(/</g, '\\u003c');
-    html = html.replace('</head>', `    <script type="application/ld+json" data-seo-schema="true">${json}</script>\n  </head>`);
+    html = html.replace('</head>', `    <script type="application/ld+json" data-seo-schema="true" data-seo-path="${escapeHtml(route)}">${json}</script>\n  </head>`);
   }
   return html.replace('<div id="root"></div>', `<div id="root">${render(route)}</div>`);
 };

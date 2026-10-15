@@ -69,6 +69,9 @@ const ServiceDistrictPage = () => {
               name: "Мастер Манас — сантехник в Алматы",
               url: "https://mana.kz/",
               telephone: "+77055535332",
+              address: { "@type": "PostalAddress", addressLocality: "Алматы", addressCountry: "KZ" },
+              image: "https://mana.kz/images/services/manas-real.jpg",
+              openingHours: "Mo-Su 09:00-21:00",
               areaServed: { "@type": "City", name: "Алматы" },
             },
             {
@@ -83,6 +86,14 @@ const ServiceDistrictPage = () => {
                 price: service.price.replace(/[^0-9]/g, ""),
                 url: `https://mana.kz/${service.id}-almaty`,
               },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Главная", item: "https://mana.kz/" },
+                { "@type": "ListItem", position: 2, name: "Услуги", item: "https://mana.kz/services" },
+                { "@type": "ListItem", position: 3, name: service.title, item: `https://mana.kz/${service.id}-almaty` },
+              ],
             },
             ...(intent ? [{
               "@type": "FAQPage",

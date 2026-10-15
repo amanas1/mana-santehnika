@@ -77,11 +77,14 @@ const SEO = ({ title, description, keywords, canonical, ogImage, schema }: SEOPr
 
     // JSON-LD Schema
     const existingScript = document.querySelector('script[data-seo-schema]');
-    if (existingScript) existingScript.remove();
+    if (existingScript && (schema || existingScript.getAttribute("data-seo-path") !== pagePath)) {
+      existingScript.remove();
+    }
     if (schema) {
       const script = document.createElement("script");
       script.type = "application/ld+json";
       script.setAttribute("data-seo-schema", "true");
+      script.setAttribute("data-seo-path", pagePath);
       script.textContent = JSON.stringify(schema);
       document.head.appendChild(script);
     }
