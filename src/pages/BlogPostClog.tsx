@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Засор на кухне: что проверить и когда нужен мастер | Манас",
+  "description": "Вода стоит в кухонной мойке: как отличить засор сифона от проблемы дальше в трубе, чего избегать и что сообщить сантехнику перед прочисткой.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/clog-removal",
+  "image": "https://mana.kz/images/services/sink.jpg"
+};
+
 const BlogPostClog = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO
+        schema={articleSchema}
         title="Засор на кухне: что проверить и когда нужен мастер | Манас"
         description="Вода стоит в кухонной мойке: как отличить засор сифона от проблемы дальше в трубе, чего избегать и что сообщить сантехнику перед прочисткой."
       />

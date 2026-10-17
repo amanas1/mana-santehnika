@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Подключение стиральной и посудомоечной машины: проверка | Манас",
+  "description": "Что проверить перед подключением машины: транспортировочные крепления, воду, слив, шланги и электропитание. Подготовка места и тестовый запуск.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/appliances-install",
+  "image": "https://mana.kz/images/services/washer-install.jpg"
+};
+
 const BlogPostAppliances = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Подключение стиральной и посудомоечной машины: проверка | Манас"
         description="Что проверить перед подключением машины: транспортировочные крепления, воду, слив, шланги и электропитание. Подготовка места и тестовый запуск."
       />

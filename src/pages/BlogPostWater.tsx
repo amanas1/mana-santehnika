@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, Droplets } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как уменьшить расход воды: течи, аэратор и бачок | Манас",
+  "description": "С чего начать экономию воды: проверить скрытые потери, подобрать аэратор и настроить исправный бачок. Простой замер расхода без обещаний процентов.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/water-saving",
+  "image": "https://mana.kz/images/services/filter-install.jpg"
+};
+
 const BlogPostWater = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Как уменьшить расход воды: течи, аэратор и бачок | Манас"
         description="С чего начать экономию воды: проверить скрытые потери, подобрать аэратор и настроить исправный бачок. Простой замер расхода без обещаний процентов."
       />

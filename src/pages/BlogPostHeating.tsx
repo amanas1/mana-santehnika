@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, ThermometerSun } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Батарея не греет: что проверить и когда нужен мастер | Манас",
+  "description": "Холодная батарея, шум или течь: как описать симптом, отличить проблему радиатора от стояка и подготовить ремонт отопления в квартире.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/heating-repair",
+  "image": "https://mana.kz/images/services/batarei-repair.jpg"
+};
+
 const BlogPostHeating = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Батарея не греет: что проверить и когда нужен мастер | Манас"
         description="Холодная батарея, шум или течь: как описать симптом, отличить проблему радиатора от стояка и подготовить ремонт отопления в квартире."
       />

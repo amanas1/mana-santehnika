@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, Tag, Share2, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как выбрать смеситель для ванной и кухни | Мастер Манас",
+  "description": "Что проверить перед покупкой смесителя: крепление, длину излива, подводки, материал и доступность картриджа. Советы по выбору и установке в Алматы.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/article",
+  "image": "https://mana.kz/images/services/smesitel-install.jpg"
+};
+
 const BlogPost = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Как выбрать смеситель для ванной и кухни | Мастер Манас"
         description="Что проверить перед покупкой смесителя: крепление, длину излива, подводки, материал и доступность картриджа. Советы по выбору и установке в Алматы."
       />

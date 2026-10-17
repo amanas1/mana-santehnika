@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Прорвало трубу: что делать до приезда сантехника | Манас",
+  "description": "Как действовать при протечке: остановить подачу воды, избежать контакта с электричеством и подготовить доступ. Что сообщить сантехнику в Алматы.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/leak-repair",
+  "image": "https://mana.kz/images/services/protechki.jpg"
+};
+
 const BlogPostLeak = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Прорвало трубу: что делать до приезда сантехника | Манас"
         description="Как действовать при протечке: остановить подачу воды, избежать контакта с электричеством и подготовить доступ. Что сообщить сантехнику в Алматы."
       />

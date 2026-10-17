@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, Volume2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Почему гудят и стучат трубы: как найти причину | Манас",
+  "description": "Гул при открытии крана, удар после закрытия и щелчки при нагреве: чем отличаются симптомы, что записать и когда обращаться к сантехнику.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/noisy-pipes",
+  "image": "https://mana.kz/images/services/remont-plastikovyh-trub.jpg"
+};
+
 const BlogPostPipes = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Почему гудят и стучат трубы: как найти причину | Манас"
         description="Гул при открытии крана, удар после закрытия и щелчки при нагреве: чем отличаются симптомы, что записать и когда обращаться к сантехнику."
       />

@@ -3,10 +3,31 @@ import { Calendar, User, ArrowLeft, Eye, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import ArticleServiceGuide from "../components/ArticleServiceGuide";
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Капает кран: картридж, прокладки или замена смесителя | Манас",
+  "description": "Как отличить течь из излива, под ручкой и у основания смесителя. Когда помогает замена картриджа, какие данные нужны для подбора детали и ремонта.",
+  "dateModified": "2026-10-18",
+  "author": {
+    "@type": "Person",
+    "name": "Манас",
+    "url": "https://mana.kz/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Мастер Манас",
+    "url": "https://mana.kz/"
+  },
+  "mainEntityOfPage": "https://mana.kz/blog/faucet-repair",
+  "image": "https://mana.kz/images/services/smesitel-repair.jpg"
+};
+
 const BlogPostFaucet = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <SEO 
+        schema={articleSchema}
         title="Капает кран: картридж, прокладки или замена смесителя | Манас"
         description="Как отличить течь из излива, под ручкой и у основания смесителя. Когда помогает замена картриджа, какие данные нужны для подбора детали и ремонта."
       />
