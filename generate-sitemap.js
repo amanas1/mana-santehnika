@@ -2,7 +2,9 @@ import fs from 'fs';
 const seoData = JSON.parse(fs.readFileSync('./src/data/seo-data.json', 'utf8'));
 
 const BASE_URL = 'https://mana.kz';
-const currentDate = new Date().toISOString().split('T')[0];
+// Deployment dates must not make unchanged content look freshly edited.
+const contentDates = { '/prices': '2026-10-18' };
+const lastModified = (route) => contentDates[route] || '2026-10-15';
 
 const generateSitemap = () => {
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -11,7 +13,7 @@ const generateSitemap = () => {
   // Homepage
   xml += `  <url>
     <loc>${BASE_URL}/</loc>
-    <lastmod>${currentDate}</lastmod>
+    <lastmod>${lastModified('/')}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>\n`;
@@ -30,7 +32,7 @@ const generateSitemap = () => {
   staticPages.forEach(page => {
     xml += `  <url>
     <loc>${BASE_URL}${page}</loc>
-    <lastmod>${currentDate}</lastmod>
+    <lastmod>${lastModified(page)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>\n`;
@@ -40,7 +42,7 @@ const generateSitemap = () => {
   seoData.services.forEach(service => {
     xml += `  <url>
     <loc>${BASE_URL}/${service.id}-almaty</loc>
-    <lastmod>${currentDate}</lastmod>
+    <lastmod>${lastModified(`/${service.id}-almaty`)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>\n`;
@@ -61,7 +63,7 @@ const generateSitemap = () => {
   blogPages.forEach(page => {
     xml += `  <url>
     <loc>${BASE_URL}${page}</loc>
-    <lastmod>${currentDate}</lastmod>
+    <lastmod>${lastModified(page)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>\n`;

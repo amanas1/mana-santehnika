@@ -92,13 +92,11 @@ const priceCategories: PriceCategory[] = [
 const Prices = () => {
   const [activeTab, setActiveTab] = useState("drainage");
 
-  const activeCategory = priceCategories.find((c) => c.id === activeTab)!;
-
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col pt-16 md:pt-20">
       <SEO 
-        title="Цены на услуги сантехника в Алматы 2026 — Прайс-лист | Мастер Манас"
-        description="Актуальный прайс-лист на все виды сантехнических услуг в Алматы. Прозрачные цены без скрытых платежей. Выезд и диагностика входят в стоимость."
+        title="Цены на услуги сантехника в Алматы — прайс | Мастер Манас"
+        description="Прайс сантехника в Алматы: смесители, унитазы, засоры, трубы и отопление. Начальные цены за работу и условия выезда; итог согласую после осмотра."
         keywords="цены сантехника алматы, стоимость услуг сантехника, сколько стоит вызвать сантехника алматы, прайс-лист сантехника"
         canonical="https://mana.kz/prices"
         ogImage="/images/services/tools.jpg"
@@ -157,15 +155,16 @@ const Prices = () => {
             </div>
 
             {/* Price Table */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12 animate-fade-in" key={activeTab}>
+            {priceCategories.map((category) => (
+            <div hidden={activeTab !== category.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12 animate-fade-in" key={category.id}>
               <div className="p-8 pb-4">
                 <h2 className="text-2xl font-extrabold text-gray-900 flex items-center gap-3">
-                  <activeCategory.icon className="text-[#1173D4]" size={28} />
-                  {activeCategory.name}
+                  <category.icon className="text-[#1173D4]" size={28} />
+                  {category.name}
                 </h2>
               </div>
               <div className="divide-y divide-gray-50 px-8 pb-8">
-                {activeCategory.items.map((item, idx) => (
+                {category.items.map((item, idx) => (
                   <div key={idx} className="py-4 flex flex-col md:flex-row md:items-center justify-between gap-4 group">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 flex-wrap">
@@ -185,6 +184,7 @@ const Prices = () => {
                 ))}
               </div>
             </div>
+            ))}
 
             {/* Contact CTA */}
             <div className="bg-gradient-to-br from-[#1173D4] to-[#13B6EC] rounded-3xl p-10 text-center text-white relative overflow-hidden">
