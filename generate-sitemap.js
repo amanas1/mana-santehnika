@@ -3,7 +3,18 @@ const seoData = JSON.parse(fs.readFileSync('./src/data/seo-data.json', 'utf8'));
 
 const BASE_URL = 'https://mana.kz';
 // Deployment dates must not make unchanged content look freshly edited.
-const contentDates = { '/prices': '2026-10-18' };
+const contentDates = {
+  '/prices': '2026-10-18',
+  '/blog': '2026-10-18',
+  '/blog/article': '2026-10-18',
+  '/blog/clog-removal': '2026-10-18',
+  '/blog/faucet-repair': '2026-10-18',
+  '/blog/leak-repair': '2026-10-18',
+  '/blog/heating-repair': '2026-10-18',
+  '/blog/appliances-install': '2026-10-18',
+  '/blog/water-saving': '2026-10-18',
+  '/blog/noisy-pipes': '2026-10-18',
+};
 const lastModified = (route) => contentDates[route] || '2026-10-15';
 
 const generateSitemap = () => {
